@@ -1,11 +1,9 @@
 Canvas / Slack group number:
     20
+
 Names of the team members:
-    Max Huang
-    Tommy Huynh
-    Kshitij Kapoor
-    Brendan Malone
-    Richie Wahidin
+    Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
+
 name of the project:
 
 the proposed project:
