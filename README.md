@@ -1,8 +1,8 @@
-# Canvas / Slack group number:
-    20
+# Canvas / Slack group number
+20
 
-# Names of the team members:
-    Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
+# Names of the team members
+Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
 
 # Name of the project: STDHelp
 
@@ -51,25 +51,25 @@
 
 # instances of each model must connect to instances of at least two other models:
 1)
-    a) Different treatment centers in the city (model 3)
-    b) Information about STDs in the city (model 2)
+    A) Different treatment centers in the city (model 3).  
+    B) Information about STDs in the city (model 2).  
 2)
-    a) Treatment centers that handle different STDs (model 3)
-    b) STDs prevalence in different areas (model 1)
+    A) Treatment centers that handle different STDs (model 3).  
+    B) STDs prevalence in different areas (model 1).  
 3)
-    a) Information about STD prevalence in city (model 1)
-    b) Details about STDs handled by treatment center (model 2)
+    A) Information about STD prevalence in city (model 1).  
+    B) Details about STDs handled by treatment center (model 2).  
 
 # instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.):
 ## describe two types of media for instances of each model:
 1)
-    Map
+    Map,  
     Image of city
 2)
-    Text
+    Text,  
     Informational videos (youtube)
 3)
-    Map
+    Map,  
     Text about center (what diseases it is well-equipped for)
 
 # describe three questions that your site will answer:
