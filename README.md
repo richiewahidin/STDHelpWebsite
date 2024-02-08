@@ -49,7 +49,7 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
     d) Treatment Services based on type of STD
     e) Phone Number
 
-# instances of each model must connect to instances of at least two other models:
+# Instances of each model must connect to instances of at least two other models:
 1)
     A) Different treatment centers in the city (model 3).  
     B) Information about STDs in the city (model 2).  
@@ -60,7 +60,7 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
     A) Information about STD prevalence in city (model 1).  
     B) Details about STDs handled by treatment center (model 2).  
 
-# instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.):
+# Instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.):
 ## describe two types of media for instances of each model:
 1)
     Map,  
@@ -72,7 +72,7 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
     Map,  
     Text about center (what diseases it is well-equipped for)
 
-# describe three questions that your site will answer:
+# Describe three questions that your site will answer:
 1) How widespread are certain STDs?
 2) Where to get treatment for certain STDs?
 3) What cities have STD epidemics?
