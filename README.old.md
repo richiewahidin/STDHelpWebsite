@@ -8,7 +8,7 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
 
 # The proposed project:
 STD cases in California are relatively higher when compared to the rest of the country. There is a stigma against STD testing, so we want to raise
-more awareness and encourage people to go get tested and treated. To do this we will inform our audience on differnet types of STDs along with where
+more awareness and encourage people to go get tested and treated. To do this we will inform our audience on differnet types of STDs along with where 
 in California they can find a treatment center.
 
 # URLs of at least three data sources that you will programmatically scrape:
@@ -58,25 +58,25 @@ in California they can find a treatment center.
 # Instances of each model must connect to instances of at least two other models:
 1) Statistics on different counties in California.
     A) STDs with high percentages link to high number of cases. (model 2)
-    B) Link to treatment centers in the county (model 3).
+    B) Link to treatment centers in the county (model 3).  
 2) Prevalence of STI on sex in different years.
-    A) Link to counties with high number of cases of STDs with high perentages (model 1).
+    A) Link to counties with high number of cases of STDs with high perentages (model 1).  
     B) Display and link related content (model 3).
 3) Treatment Center Locator
-    A) Link to the statistic of the county it is located in (model 1).
-    B) Display and link related content (model 2).
+    A) Link to the statistic of the county it is located in (model 1).  
+    B) Display and link related content (model 2).  
 
 # Instances of each model must be rich with different media (e.g., feeds, images, maps, text, videos, etc.):
 ## describe two types of media for instances of each model:
 1) Statistics on different counties in California.
-    Map,
+    Map,  
     Image of county/county flag
-2) Prevalence of STI on sex in different years.
+2) Prevalence of STI on sex in different years. 
     Images,
     Google trends graph
 
 3) Treatment Center Locator
-    Map,
+    Map,  
     Text about center (what diseases it is well-equipped for)
 
 # Describe three questions that your site will answer:
