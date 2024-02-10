@@ -83,3 +83,9 @@ in California they can find a treatment center.
 1) How has the prevelance of STDs changed over the years?
 2) Where to get treatment for certain STDs?
 3) What cities have a lack of treatment?
+
+# Estimated completion time: 
+15
+
+# Actual completion time: 
+[N/A]
