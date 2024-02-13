@@ -9,6 +9,7 @@ import {
 import NB from './components/Navbar';
 import Landing from './pages/Landing';
 import About from './pages/About';
+import Counties from './pages/Counties';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Routes>
                 <Route path="/home" element={<Landing />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/counties" element={<Counties />} />
             </Routes>
         </Router>
     );
