@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Landing from './pages/Landing';
 import reportWebVitals from './reportWebVitals';
-import Counties from './pages/Counties';
+import Counties from './pages/ModelOne/Counties';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -5,9 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NB from "./components/Navbar";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
-import Counties from "./pages/Counties";
+import Counties from "./pages/ModelOne/Counties";
 import Locator from "./pages/Locator";
 import Prevalence from "./pages/ModelTwo/Prevalence";
+import Alameda from "./pages/ModelOne/Alameda";
+import LosAngeles from "./pages/ModelOne/LosAngeles";
+import Merced from "./pages/ModelOne/Merced";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/counties" element={<Counties />} />
         <Route path="/locator" element={<Locator />} />
         <Route path="/prevalence" element={<Prevalence />} />
+        <Route path="/counties/alameda" element={<Alameda />} />
+        <Route path="/counties/losangeles" element={<LosAngeles />} />
+        <Route path="/counties/merced" element={<Merced />} />
       </Routes>
     </Router>
   );
