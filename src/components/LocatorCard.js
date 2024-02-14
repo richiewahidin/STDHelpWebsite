@@ -1,12 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Card = ({ title, Address, Website, Services, Phone, imageUrl, url}) => {
   const nav = useNavigate();
 
   const handleClick = () => {
     nav(url);
   };
+  // //for hovering
+  // const handleEnter = () => {
+  //   setIsHovered(true);
+  // };
+
+  // const handleLeave = () => {
+  //   setIsHovered(false);
+  // };
 
   return (
     <div onClick={handleClick} className="card">
