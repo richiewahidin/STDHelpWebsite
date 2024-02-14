@@ -13,6 +13,8 @@ function NB() {
           <Nav className="me-auto">
             <Nav.Link href="home">Home</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
+            <Nav.Link href="counties">Counties</Nav.Link>
+            <Nav.Link href="locator">Locator</Nav.Link>
             <Nav.Link href="prevalence">Prevalence</Nav.Link>
           </Nav>
         </Navbar.Collapse>
