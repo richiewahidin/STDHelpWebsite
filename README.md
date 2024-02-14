@@ -50,8 +50,8 @@ in California they can find a treatment center.
     f) Percent HIV
 3) Treatment Center Locator
     a) Address
-    b) Zip Code
-    c) State
+    b) Name
+    c) Website
     d) Treatment Services based on type of STD
     e) Phone Number
 
