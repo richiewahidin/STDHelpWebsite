@@ -61,14 +61,6 @@ function Landing() {
                 </Col>
             </Row>
         </Container>
-            <Container style={{ position: 'relative' }}> {/* Content */}
-                <Row className="justify-content-md-center">
-                    <Col md="auto" style={styles.content}>
-                        <h1 style={styles.title}>STDHelp</h1>
-                        <h3>Here for you</h3>
-                    </Col>
-                </Row>
-            </Container>
         </div>
         <div style={styles.contentContainer}>
             <div style = {{paddingTop: '3rem'}}>
