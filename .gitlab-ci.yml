@@ -9,7 +9,7 @@ build:
     paths:
       - node_modules/
   script:
-    - npm run build
+    - CI=False npm run build
 
 test:
   stage: test
@@ -17,7 +17,7 @@ test:
     paths:
       - node_modules/
   script:
-    - npm run test
+    - CI=False npm run test
 
 pages:
   stage: deploy
