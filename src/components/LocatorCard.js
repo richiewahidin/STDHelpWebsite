@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Card = ({ title, Address, Website, Services, Phone, imageUrl }) => {
+const Card = ({ title, Address, Website, Services, Phone, imageUrl, url}) => {
+  const nav = useNavigate();
+
+  const handleClick = () => {
+    nav(url);
+  };
+
   return (
-    <div className="card">
+    <div onClick={handleClick} className="card">
       <img src={imageUrl} alt={title} />
       <div className="card-content">
         <h5><strong>{title}</strong></h5>

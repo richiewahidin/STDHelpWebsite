@@ -6,12 +6,13 @@ import NB from "./components/Navbar";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
 import Counties from "./pages/ModelOne/Counties";
-import Locator from "./pages/Locator";
+import Locator from "./pages/Model3/Locator";
 import Prevalence from "./pages/ModelTwo/Prevalence";
 import Alameda from "./pages/ModelOne/Alameda";
 import LosAngeles from "./pages/ModelOne/LosAngeles";
 import Merced from "./pages/ModelOne/Merced";
 import InstancePrevalence from "./pages/ModelTwo/InstancePrevalence";
+import LocatorInstance from "./pages/Model3/LocatorInstance";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/counties/losangeles" element={<LosAngeles />} />
         <Route path="/counties/merced" element={<Merced />} />
         <Route path="/prevalence/:id" element={<InstancePrevalence />} />
+        <Route path="/locator/:id" element={<LocatorInstance />} />
       </Routes>
     </Router>
   );
