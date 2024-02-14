@@ -13,17 +13,18 @@ import Counties from './pages/Counties';
 import Locator from './pages/Locator';
 
 function App() {
-    return (
-        <Router>
-            <NB/>
-            <Routes>
-                <Route path="/home" element={<Landing />} />
-                <Route path="/about" element={<About />} />
+  return (
+    <Router>
+      <NB />
+      <Routes>
+        <Route path="/home" element={<Landing />} />
+        <Route path="/about" element={<About />} />
                 <Route path="/counties" element={<Counties />} />
                 <Route path="/locator" element={<Locator />} />
-            </Routes>
-        </Router>
-    );
+        <Route path="/prevalence" element={<Prevalence />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
