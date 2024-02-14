@@ -1,4 +1,38 @@
 import React from 'react';
+import Card from "../../components/LocatorCard";
+import ALPA from '../../images/Model3/APLA.png';
+import AltaMed from '../../images/Model3/AltaMed.png';
+import Torrance from '../../images/Model3/Torrance.png';
+
+const cardData = [
+    {
+      title: "ALPA Health",
+      Address: "5901 W Olympic Blvd Ste 310 Los Angeles",
+      ZipCode: "90036",
+      Services: "HIV testing",
+      Phone: "3232151725",
+      imageUrl: ALPA,
+      url: "/locator/ALPA"
+    },
+    {
+      title: "AltaMed Medical Group",
+      Address: "5427 E Whittier Blvd Los Angeles, CA 90022",
+      ZipCode: "90022",
+      Services: "STI testing and Treatment, Mpox Vaccine",
+      Phone: "3234006399, 8884999303 (Mpox Vaccine)",
+      imageUrl: AltaMed,
+      url: "/locator/Alta"
+    },
+    {
+      title: "Torrance Urgent Care",
+      Address: "2195 Sepulveda Blvd Torrance US, CA 90501",
+      ZipCode: "90501",
+      Services: "PEP",
+      Phone: "4243371600",
+      imageUrl: Torrance,
+      url: "/locator/Torrance"
+    },
+  ];
 
 function LosAngeles() {
     return (
@@ -22,7 +56,22 @@ function LosAngeles() {
             <div style={{ marginBottom: '20px', clear: 'both' }}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1697927.7597786395!2d-119.61837116972995!3d33.77965027979438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2ad30164cd31%3A0x837d28d6cfbd392a!2sLos%20Angeles%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1707891783465!5m2!1sen!2sus" style={{ width: "100%", height: "400px", border: "0", allowfullscreen: "", loading: "lazy", referrerpolicy: "no-referrer-when-downgrade" }}></iframe>
             </div>
-
+            <br></br>
+            <h4> <strong> Locations in this county *(locations not correct for this phase): </strong></h4>
+            <div className="grid" style={{alignContent:'flex-start'}} >
+      {cardData.map((item, index) => (
+        <Card
+          key={index}
+          title={item.title}
+          Address={item.Address}
+          ZipCode={item.ZipCode}
+          Services={item.Services}
+          Phone={item.Phone}
+          imageUrl={item.imageUrl}
+          url={item.url}
+        />
+      ))}
+    </div>
         </div>
     )
 }
