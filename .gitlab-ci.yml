@@ -10,6 +10,9 @@ build:
       - node_modules/
   script:
     - CI=false npm run build
+  artifacts:
+    paths:
+      - build
 
 test:
   stage: test
