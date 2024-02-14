@@ -14,7 +14,13 @@
       "early_syphilis_cases": "166",
       "early_syphilis_rate": "0.9 cases per 100,000 women",
       "hiv": "24%",
-      "image": "https://as1.ftcdn.net/v2/jpg/02/79/35/06/1000_F_279350666_MPo4pmWLXmqk3TCLkjVugy3cIXb7ouG1.jpg"
+      "image": "https://as1.ftcdn.net/v2/jpg/02/79/35/06/1000_F_279350666_MPo4pmWLXmqk3TCLkjVugy3cIXb7ouG1.jpg",
+      "related_counties_1": "Alameda",
+      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_counties_2": "Los Angeles",
+      "related_link_2": "http://localhost:3000/counties/losangeles",
+      "related_counties_3": "Merced",
+      "related_link_3": "http://localhost:3000/counties/merced"
     },
     {
       "id": "male2003",
@@ -30,7 +36,13 @@
       "early_syphilis_cases": "1953",
       "early_syphilis_rate": "11.1 cases per 100,000 men",
       "hiv": "24%",
-      "image": "https://catchtheanswers.utah.gov/wp-content/uploads/YouthRiskFactors-forSTIs.jpg"
+      "image": "https://catchtheanswers.utah.gov/wp-content/uploads/YouthRiskFactors-forSTIs.jpg",
+      "related_counties_1": "Alameda",
+      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_counties_2": "Los Angeles",
+      "related_link_2": "http://localhost:3000/counties/losangeles",
+      "related_counties_3": "Merced",
+      "related_link_3": "http://localhost:3000/counties/merced"
     },
     {
       "id": "female2004",
@@ -46,7 +58,13 @@
       "early_syphilis_cases": "167",
       "early_syphilis_rate": "0.9 cases per 100,000 women",
       "hiv": "24%",
-      "image": "https://flo.health/uploads/media/sulu-1000x-inset/06/886-Chlamydia.jpg?v=1-0"
+      "image": "https://flo.health/uploads/media/sulu-1000x-inset/06/886-Chlamydia.jpg?v=1-0",
+      "related_counties_1": "Alameda",
+      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_counties_2": "Los Angeles",
+      "related_link_2": "http://localhost:3000/counties/losangeles",
+      "related_counties_3": "Merced",
+      "related_link_3": "http://localhost:3000/counties/merced"
     },
     {
       "id": "male2004",
@@ -62,7 +80,13 @@
       "early_syphilis_cases": "2,080",
       "early_syphilis_rate": "11.7 cases per 100,000 men",
       "hiv": "24%",
-      "image": "https://thepioneeronline.com/wp-content/uploads/2016/11/20161116-STD-TamDuongJr-WEB-896x900.png"
+      "image": "https://thepioneeronline.com/wp-content/uploads/2016/11/20161116-STD-TamDuongJr-WEB-896x900.png",
+      "related_counties_1": "Alameda",
+      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_counties_2": "Los Angeles",
+      "related_link_2": "http://localhost:3000/counties/losangeles",
+      "related_counties_3": "Merced",
+      "related_link_3": "http://localhost:3000/counties/merced"
     }
   ]
 }
