@@ -36,10 +36,20 @@ const styles = {
     title: {
         fontSize: '5em',
     },
+    contentContainer: {
+        position: 'relative', // Needed for the positioning of the overlay
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '30vh',
+        overflow: 'hidden', // Prevents any overflow from the container
+        flexDirection: 'column',
+    },
 };
 
 function Landing() {
   return (
+    <div>
     <div style={styles.container}>
         <div style={styles.backgroundLayer}></div> {/* Background image */}
         <div style={styles.tintLayer}></div> {/* Dark tint overlay */}
@@ -51,6 +61,15 @@ function Landing() {
                 </Col>
             </Row>
         </Container>
+        </div>
+        <div style={styles.contentContainer}>
+            <div style = {{paddingTop: '3rem'}}>
+                <h1>Help us combat STDs in the state of California.</h1>
+            </div>
+
+            <h4 style = {{paddingTop: '1rem'}}>We provide you valuable information the spread and treatment of Sexually Transmitted Diseses.</h4>
+            <h5 style={{width: '70%', paddingTop: '1rem', marginBottom: '2rem'}}>STDs can drastically impact the quality of life for those affected. Please seek help if you think that you are risk, as treatment is effective. If you think you are at risk, you can find a clinic near you on this website.</h5>
+        </div>
     </div>
   );
 }
