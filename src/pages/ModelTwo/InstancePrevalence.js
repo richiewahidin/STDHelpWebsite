@@ -112,6 +112,31 @@ const InstancePrevalence = () => {
         alt="Description of the image"
         style={{ width: "100%", marginTop: "20px" }}
       />
+      <Card className="Related" style={{ marginBottom: "20px" }}>
+        <Card.Header>Related Content</Card.Header>
+        <Card.Body>
+          <Row>
+            <Col>
+              <Card.Header>{data.related_counties_1}</Card.Header>
+              <Card.Body>
+                <a href={data.related_link_1} rel="noopener noreferrer">Learn More</a>
+              </Card.Body>
+            </Col>
+            <Col>
+              <Card.Header>{data.related_counties_2}</Card.Header>
+              <Card.Body>
+                <a href={data.related_link_2} rel="noopener noreferrer">Learn More</a>
+              </Card.Body>
+            </Col>
+            <Col>
+              <Card.Header>{data.related_counties_3}</Card.Header>
+              <Card.Body>
+                <a href={data.related_link_3} rel="noopener noreferrer">Learn More</a>
+              </Card.Body>
+            </Col>
+          </Row>
+        </Card.Body>
+      </Card>
     </Container>
   );
 };
