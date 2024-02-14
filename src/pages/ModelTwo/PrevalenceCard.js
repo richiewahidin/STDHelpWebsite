@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Card = ({ title, cases, gender, rate, imageUrl }) => {
+const Card = ({ title, cases, gender, rate, imageUrl, url }) => {
   return (
     <div className="card">
       <img src={imageUrl} alt={title} />
@@ -9,6 +10,7 @@ const Card = ({ title, cases, gender, rate, imageUrl }) => {
         <p><strong>Gender: </strong> {gender}</p>
         <p><strong>Number of cases: </strong>{cases}</p>
         <p><strong>Per 100,000 people: </strong>{rate}</p>
+        <a href={url} rel="noopener noreferrer">More Stats</a>
       </div>
     </div>
   );

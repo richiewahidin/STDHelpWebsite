@@ -11,6 +11,7 @@ import Prevalence from "./pages/ModelTwo/Prevalence";
 import Alameda from "./pages/ModelOne/Alameda";
 import LosAngeles from "./pages/ModelOne/LosAngeles";
 import Merced from "./pages/ModelOne/Merced";
+import InstancePrevalence from "./pages/ModelTwo/InstancePrevalence";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/counties/alameda" element={<Alameda />} />
         <Route path="/counties/losangeles" element={<LosAngeles />} />
         <Route path="/counties/merced" element={<Merced />} />
+        <Route path="/prevalence/:id" element={<InstancePrevalence />} />
       </Routes>
     </Router>
   );

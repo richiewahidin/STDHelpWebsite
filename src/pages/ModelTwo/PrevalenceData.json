@@ -1,0 +1,68 @@
+{
+  "prevalence": [
+    {
+      "id": "female2003",
+      "title": "Overview of STDs and Women (2003)",
+      "population": "17,782,868",
+      "chlamydia": "57%",
+      "chlamydia_cases": "85,153",
+      "chlamydia_rate": "478.8 cases per 100,000 women",
+      "gonorrhea": "54%",
+      "gonorrhea_cases": "11,780",
+      "gonorrhea_rate": "66.2 cases per 100,000 women",
+      "syphilis": "22%",
+      "early_syphilis_cases": "166",
+      "early_syphilis_rate": "0.9 cases per 100,000 women",
+      "hiv": "24%",
+      "image": "https://as1.ftcdn.net/v2/jpg/02/79/35/06/1000_F_279350666_MPo4pmWLXmqk3TCLkjVugy3cIXb7ouG1.jpg"
+    },
+    {
+      "id": "male2003",
+      "title": "Overview of STDs and Men (2003)",
+      "population": "17,606,060",
+      "chlamydia": "64%",
+      "chlamydia_cases": "31,007",
+      "chlamydia_rate": "176.1 cases per 100,000 men",
+      "gonorrhea": "63%",
+      "gonorrhea_cases": "13,830",
+      "gonorrhea_rate": "78.6 cases per 100,000 men",
+      "syphilis": "48%",
+      "early_syphilis_cases": "1953",
+      "early_syphilis_rate": "11.1 cases per 100,000 men",
+      "hiv": "24%",
+      "image": "https://catchtheanswers.utah.gov/wp-content/uploads/YouthRiskFactors-forSTIs.jpg"
+    },
+    {
+      "id": "female2004",
+      "title": "Overview of STDs and Women (2004)",
+      "population": "17,968,347",
+      "chlamydia": "57%",
+      "chlamydia_cases": "89,438",
+      "chlamydia_rate": "497.8 cases per 100,000 women",
+      "gonorrhea": "53%",
+      "gonorrhea_cases": "13,783",
+      "gonorrhea_rate": "76.7 cases per 100,000 women",
+      "syphilis": "24%",
+      "early_syphilis_cases": "167",
+      "early_syphilis_rate": "0.9 cases per 100,000 women",
+      "hiv": "24%",
+      "image": "https://flo.health/uploads/media/sulu-1000x-inset/06/886-Chlamydia.jpg?v=1-0"
+    },
+    {
+      "id": "male2004",
+      "title": "Overview of STDs and Men (2004)",
+      "population": "17,784,418",
+      "chlamydia": "67%",
+      "chlamydia_cases": "33,652",
+      "chlamydia_rate": "189.2 cases per 100,000 men",
+      "gonorrhea": "66%",
+      "gonorrhea_cases": "16,615",
+      "gonorrhea_rate": "93.4 cases per 100,000 men",
+      "syphilis": "50%",
+      "early_syphilis_cases": "2,080",
+      "early_syphilis_rate": "11.7 cases per 100,000 men",
+      "hiv": "24%",
+      "image": "https://thepioneeronline.com/wp-content/uploads/2016/11/20161116-STD-TamDuongJr-WEB-896x900.png"
+    }
+  ]
+}
