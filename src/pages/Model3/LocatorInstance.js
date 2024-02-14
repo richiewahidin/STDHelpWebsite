@@ -14,6 +14,7 @@ const LocatorInstance = () => {
         <Card.Body>
           <Card.Text>Address: {data.Address}</Card.Text>
           <Card.Text>Website: {data.Website}</Card.Text>
+          <Card.Text>Services offered: {data.Services}</Card.Text>
           <Card.Text>{data.About}</Card.Text>
           <Card.Header>Insurance Offered:</Card.Header>
           <Card.Text>{data.Insurance}</Card.Text>

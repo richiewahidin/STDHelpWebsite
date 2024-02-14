@@ -3,7 +3,6 @@ import Card from "../../components/LocatorCard";
 import ALPA from '../../images/Model3/APLA.png';
 import AltaMed from '../../images/Model3/AltaMed.png';
 import Torrance from '../../images/Model3/Torrance.png';
-//import "../components/card.css";
 
 const Locator = () => {
   const cardData = [
