@@ -1,0 +1,29 @@
+image: node:20.11.0 # change to match your node version
+
+before_script:
+  - npm install
+
+build:
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm run build
+
+test:
+  stage: test
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm run test
+
+pages:
+  stage: deploy
+  script:
+    - rm -rf public
+    - mv build public
+  artifacts:
+    paths:
+      - public 
