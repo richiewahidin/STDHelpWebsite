@@ -11,6 +11,9 @@ STD cases in California are relatively higher when compared to the rest of the c
 more awareness and encourage people to go get tested and treated. To do this we will inform our audience on differnet types of STDs along with where
 in California they can find a treatment center.
 
+# API Documentation
+- https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21
+
 # URLs of at least three data sources that you will programmatically scrape:
 - https://npin.cdc.gov/search?query=&f%5B0%5D=testing_services%3A7931&f%5B1%5D=type%3Aorganization'
 - https://www.hiv.gov/locator/#api
