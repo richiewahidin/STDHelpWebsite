@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Counties from "./pages/Counties";
 import Locator from "./pages/Locator";
 import Prevalence from "./pages/ModelTwo/Prevalence";
+import InstancePrevalence from "./pages/ModelTwo/InstancePrevalence";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/counties" element={<Counties />} />
         <Route path="/locator" element={<Locator />} />
         <Route path="/prevalence" element={<Prevalence />} />
+        <Route path="/prevalence/:id" element={<InstancePrevalence />} />
       </Routes>
     </Router>
   );
