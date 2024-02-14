@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function Counties() {
     return (
         <div>
+            {/* so content is not exactly on the left */}
             <div style={{ padding: '20px' }}>
             <h1>Counties</h1>
-            <p style ={{position: 'absolute', bottom: '0'}}> *This refers to Primary and Secondary Syphilis.</p>
             </div>
             <Row>
                 <Col className="d-flex justify-content-center">
@@ -16,6 +16,7 @@ function Counties() {
                         <Card.Body>
                             <Card.Title>Alameda</Card.Title>
                             <Card.Text>
+                                {/* listgroup separates different types of data */}
                                 <ListGroup className='list-group-flush'>
                                     <ListGroupItem>
                                         County Seat: Oakland<br></br>
@@ -80,6 +81,9 @@ function Counties() {
                     </Card>
                 </Col>
             </Row>
+            <br></br>
+            <br></br>
+            <p style ={{position: 'relative', bottom: '0px'}}> *This refers to Primary and Secondary Syphilis.</p>
         </div>
     );
 }
