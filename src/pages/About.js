@@ -181,6 +181,9 @@ function About() {
                         <Card.Body>
                             <Card.Title>Max Huang</Card.Title>
                             <Card.Text>
+                                I am a junior studying Computer Science. I like to play chess and practice wushu.
+                            </Card.Text>
+                            <Card.Text>
                                 Commits: {individualCommits[3]}
                             </Card.Text>
                             <Card.Text>
@@ -195,7 +198,7 @@ function About() {
                         <Card.Body>
                             <Card.Title>Brendan Malone</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                I am a junior studying Computer Science. I like bouldering and playing video games.
                             </Card.Text>
                             <Card.Text>
                                 Commits: {individualCommits[4]}
@@ -214,6 +217,7 @@ function About() {
                     <h2>Total Issues: {totalIssues}</h2>
                 </Col>
             </Row>
+            <h5>Link to API: https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21"</h5>
         </div>
     </div>
   );
