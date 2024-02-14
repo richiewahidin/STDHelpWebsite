@@ -1,0 +1,339 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "0.0.1",
+    "title": "STDHelp API",
+    "description": "Get info about STIs in California"
+  },
+  "paths": {
+    "/counties/{countyName}": {
+      "parameters": [
+        {
+          "name": "countyName",
+          "description": "The name of the county.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/CountyName"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Read a county's data",
+        "responses": {
+          "200": {
+            "description": "`countyName` county",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/County"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No county `countyName`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/counties": {
+        "get": {
+            "summary": "All counties with data",
+            "responses": {
+                "200": {
+                  "description": "Currently available counties",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Counties"
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "Unexpected error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                }
+            }
+        }
+    },
+    "/locator/{locationid}": {
+      "parameters": [
+        {
+          "name": "locationid",
+          "description": "The id of the location.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/Location"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Read a location's data",
+        "responses": {
+          "200": {
+            "description": "`locationid`'s basic information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Location"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No location `locationid`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/locator": {
+        "get": {
+            "summary": "All locations with data",
+            "responses": {
+                "200": {
+                  "description": "Currently available locations",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Locations"
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "Unexpected error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                }
+            }
+        }
+    },
+    "/prevalence/{dataEntry}": {
+      "parameters": [
+        {
+          "name": "dataEntry",
+          "description": "The id of the data entry.",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/TableDataEntry"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Read a location's data",
+        "responses": {
+          "200": {
+            "description": "Gives the data from the entry `dataEntry`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableDataEntry"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No entry `dataEntry`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/prevalence": {
+        "get": {
+            "summary": "All data entries",
+            "responses": {
+                "200": {
+                  "description": "All data entries",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/TableDataEntries"
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "Unexpected error",
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/Error"
+                      }
+                    }
+                  }
+                }
+            }
+        }
+    }
+  },
+  "components": {
+    "schemas": {
+        "CountyName": {
+            "description": "The unique identifier of a county. Excludes the word \"county.\" and is lowercase",
+            "type": "string"
+        },
+        "County": {
+            "type": "object",
+            "properties": {
+                "id": {"$ref": "#/components/schemas/CountyName"},
+                "Name": {"type": "string"},
+                "County Seat": {"type": "string"},
+                "Year": {"type": "integer"},
+                "STIs": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "Name": {"type": "string"},
+                            "Male": {"type": "number"}, 
+                            "Female": {"type": "number"}, 
+                            "County Rank": {"type": "integer"}
+                        }
+                    }
+                }           
+            }
+        },
+        "Location": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "string"},
+                "title": {"type": "string"},
+                "Address": {"type": "string"},
+                "Website": {"type": "string"},
+                "Services": {"type": "string"},
+                "Phone": {"type": "string"},
+                "About": {"type": "string"}
+            }
+        },
+        "Locations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "#/components/schemas/Location"
+            }
+        },
+        "TableDataEntry": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "string"},
+                "title": {"type": "string"},
+                "population": {"type": "integer"},
+                "chlamydia": {"type": "integer"},
+                "chlamydia_cases": {"type": "integer"},
+                "chlamydia_rate": {"type": "number"},
+                "gonorrhea": {"type": "integer"},
+                "gonorrhea_cases": {"type": "integer"},
+                "gonorrhea_rate": {"type": "number"},
+                "syphilis": {"type": "integer"},
+                "early_syphilis_cases": {"type": "integer"},
+                "early_syphilis_rate": {"type": "number"}
+            }
+        },
+        "TableDataEntries": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "#/components/schemas/Location"
+            }
+        },
+        "Counties": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "#/components/schemas/County"
+            }
+        },
+        "Error": {
+          "type": "object",
+          "required": [
+            "message"
+          ],
+          "properties": {
+            "message": {
+              "description": "A human readable error message",
+              "type": "string"
+            }
+          }
+        }
+    },
+    "securitySchemes": {
+        "ApiKey": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "X-Api-Key"
+        }
+    }
+  },
+
+    "security": [
+        {
+          "ApiKey": []
+        }
+    ]
+}
