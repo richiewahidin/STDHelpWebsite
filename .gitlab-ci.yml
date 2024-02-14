@@ -13,7 +13,8 @@ build:
   artifacts:
     paths:
       - build
-
+  allow_failure: true
+  
 test:
   stage: test
   cache:
@@ -21,15 +22,5 @@ test:
       - node_modules/
   script:
     - npm run test
-  allow_failure: true
+  
 
-pages:
-  stage: deploy
-  dependencies:
-    - build
-  script:
-    - rm -rf public
-    - mv build public
-  artifacts:
-    paths:
-      - public 
