@@ -7,6 +7,7 @@ function Counties() {
         <div>
             <div style={{ padding: '20px' }}>
             <h1>Counties</h1>
+            <p style ={{position: 'absolute', bottom: '0'}}> *This refers to Primary and Secondary Syphilis.</p>
             </div>
             <Row>
                 <Col className="d-flex justify-content-center">
@@ -21,14 +22,14 @@ function Counties() {
                                         Population: 1,682,353<br></br>
                                     </ListGroupItem>
                                     <ListGroupItem>
-                                        2021 cases:<br></br>
-                                        &emsp; Chlamydia: 7,455<br></br>
-                                        &emsp; Gonnorhea: 3,810<br></br>
-                                        &emsp; Syphilis: 197<br></br>
+                                        <strong>2021 cases:</strong><br></br>
+                                        &ensp; Chlamydia: 7,455<br></br>
+                                        &ensp; Gonnorhea: 3,810<br></br>
+                                        &ensp; Syphilis*: 197<br></br>
                                     </ListGroupItem>
                                 </ListGroup>
                             </Card.Text>
-                            <Link to="/home" className="btn btn-primary">Learn more</Link>
+                            <Link to="/counties/alameda" className="btn btn-primary">Learn more</Link>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -44,14 +45,14 @@ function Counties() {
                                         Population: 9,861,224<br></br>
                                     </ListGroupItem>
                                     <ListGroupItem>
-                                        2021 cases:<br></br>
-                                        &emsp; Chlamydia: 56,690<br></br>
-                                        &emsp; Gonnorhea: 30,840<br></br>
-                                        &emsp; Syphilis: 2,693<br></br>
+                                        <strong>2021 cases:</strong><br></br>
+                                        &ensp; Chlamydia: 56,690<br></br>
+                                        &ensp; Gonnorhea: 30,840<br></br>
+                                        &ensp; Syphilis*: 2,693<br></br>
                                     </ListGroupItem>
                                 </ListGroup>
                             </Card.Text>
-                            <Button variant="primary">Learn more</Button>
+                            <Link to="/counties/losangeles" className="btn btn-primary">Learn more</Link>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -67,14 +68,14 @@ function Counties() {
                                         Population: 281,202<br></br>
                                     </ListGroupItem>
                                     <ListGroupItem>
-                                        2021 cases:<br></br>
-                                        &emsp; Chlamydia: 1,101<br></br>
-                                        &emsp; Gonnorhea: 490<br></br>
-                                        &emsp; Syphilis: 75<br></br>
+                                        <strong>2021 cases:</strong><br></br>
+                                        &ensp; Chlamydia: 1,101<br></br>
+                                        &ensp; Gonnorhea: 490<br></br>
+                                        &ensp; Syphilis*: 75<br></br>
                                     </ListGroupItem>
                                 </ListGroup>
                             </Card.Text>
-                            <Button variant="primary">Learn more</Button>
+                            <Link to="/counties/merced" className="btn btn-primary">Learn more</Link>
                         </Card.Body>
                     </Card>
                 </Col>
