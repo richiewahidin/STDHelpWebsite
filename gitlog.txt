@@ -1,0 +1,530 @@
+commit 789e907c2741c9ff74d924c047de071119738d2a
+Merge: d5805d6 9401217
+Author: Brendan Malone <brendan.malone@utexas.edu>
+Date:   Thu Feb 15 05:20:23 2024 +0000
+
+    Merge branch 'roles' into 'main'
+    
+    added roles
+    
+    See merge request tommyhuynh02n/cs373-group-20!25
+
+commit 94012179c190a7ceb6f2fe105031a622cc49f8e4
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 23:17:42 2024 -0600
+
+    added roles
+
+commit d5805d62a2c188c46ec4a487d2affdbbe5544256
+Merge: a3e1c02 991c2c2
+Author: Brendan Malone <brendan.malone@utexas.edu>
+Date:   Thu Feb 15 05:00:56 2024 +0000
+
+    Merge branch 'develop_branch' into 'main'
+    
+    Develop branch
+    
+    See merge request tommyhuynh02n/cs373-group-20!24
+
+commit 991c2c23cf4ac0eebe13fa7d15f8ec80f58d87f7
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 22:02:39 2024 -0600
+
+    added inline comments
+
+commit 2cfc3be49631123c29b1d9c3ef866b6934d475e5
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 17:47:01 2024 -0600
+
+    develop
+
+commit a3e1c02d8af3c048f215bb0fff42cb840ed22e56
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 17:45:35 2024 -0600
+
+    changed homepage url
+
+commit f407e065df3461ed3f3f937fe09d116ef412eecc
+Merge: fba6394 05552c5
+Author: Kshitij Kapoor <kshitij@utexas.edu>
+Date:   Wed Feb 14 23:29:21 2024 +0000
+
+    Merge branch 'postmanConcept' into 'main'
+    
+    makefile, update readme, add api concept
+    
+    Closes #3 and #23
+    
+    See merge request tommyhuynh02n/cs373-group-20!23
+
+commit 05552c5235dc4ccfb0874f3d3e9209c5561238e6
+Author: Brendan <br7@bluesand.org>
+Date:   Wed Feb 14 17:25:20 2024 -0600
+
+    makefile, update readme, add api concept
+
+commit fba6394f633f5a2de0e879c87d1cec60bb0b8d0f
+Merge: 8515bff 95ec7eb
+Author: Max Huang <maxyuzehuang@gmail.com>
+Date:   Wed Feb 14 23:22:03 2024 +0000
+
+    Merge branch 'about' into 'main'
+    
+    all req met
+    
+    See merge request tommyhuynh02n/cs373-group-20!22
+
+commit 95ec7ebdda4beede44af2ce3986d5aa701c866bc
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 17:19:32 2024 -0600
+
+    all req met
+
+commit 8515bff6cdb33fb3e9b8312929971da8869e7a80
+Merge: 941aa63 66b441d
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 23:00:32 2024 +0000
+
+    Merge branch 'about' into 'main'
+    
+    about/landing
+    
+    See merge request tommyhuynh02n/cs373-group-20!19
+
+commit 66b441d0868b3955296c6c70dbebb767116c0a25
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 16:57:56 2024 -0600
+
+    fixed tests
+
+commit 6df589f7266f3653003864c824c75574f4cad054
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 16:35:19 2024 -0600
+
+    fixed errors
+
+commit 941aa634349bc40e02fdaa40b3e0bbfb8ecdf7a2
+Merge: 3244df6 8e808fa
+Author: Kshitij Kapoor <kshitij@utexas.edu>
+Date:   Wed Feb 14 22:32:01 2024 +0000
+
+    Merge branch 'm3' into 'main'
+    
+    M3
+    
+    See merge request tommyhuynh02n/cs373-group-20!21
+
+commit 8e808fac5f5de204f57fec5eeb54d3c1605bfae1
+Author: Huang Max <maxhuang@wireless-10-155-54-184.public.utexas.edu>
+Date:   Wed Feb 14 16:31:07 2024 -0600
+
+    user story, hover
+
+commit 3244df670fdbed4aa5f332c67b07e9e4669c3c6d
+Merge: 4d3c077 d7b1dd7
+Author: Richie A Wahidin <richiewahidin@utexas.edu>
+Date:   Wed Feb 14 22:31:02 2024 +0000
+
+    Merge branch 'counties' into 'main'
+    
+    fixed the last line in model page, added comments
+    
+    See merge request tommyhuynh02n/cs373-group-20!20
+
+commit d7b1dd7a69bac3f26445ac74456f8cd8e37b3de0
+Author: Richie Wahidin <richie@wireless-10-155-127-114.public.utexas.edu>
+Date:   Wed Feb 14 16:30:09 2024 -0600
+
+    fixed the last line in model page, added comments
+
+commit e9a68f7c6e8c4b64cc2482030b7bef7145ef918b
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 14 16:27:22 2024 -0600
+
+    about/landing
+
+commit 4d3c0770c538a84454dc1f6de2dbb5ac05ee1024
+Merge: b5dd311 5253006
+Author: Richie A Wahidin <richiewahidin@utexas.edu>
+Date:   Wed Feb 14 22:07:24 2024 +0000
+
+    Merge branch 'counties' into 'main'
+    
+    added connections between model 1 and model 3
+    
+    See merge request tommyhuynh02n/cs373-group-20!17
+
+commit 52530065de5f180b81862438f39a106ed8058b4c
+Author: Richie Wahidin <richie@wireless-10-155-127-114.public.utexas.edu>
+Date:   Wed Feb 14 16:02:41 2024 -0600
+
+    added connections between model 1 and model 3
+
+commit 13e0e1b4250dffd20a30e46c9a621f9afa42b7d8
+Author: Huang Max <maxhuang@wireless-10-155-54-184.public.utexas.edu>
+Date:   Wed Feb 14 15:39:07 2024 -0600
+
+    added insurance info, took out map
+
+commit b5dd31155205a273c0d8671a4367969024114a4b
+Merge: 49fbba0 e4ed9f8
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 20:58:07 2024 +0000
+
+    Merge branch 'm3_instance' into 'main'
+    
+    M3 instance
+    
+    See merge request tommyhuynh02n/cs373-group-20!14
+
+commit 49fbba0f830cec65da45c729a83277e74ba830a7
+Merge: 655d674 b9e4a01
+Author: Max Huang <maxyuzehuang@gmail.com>
+Date:   Wed Feb 14 20:55:10 2024 +0000
+
+    Merge branch 'tommydev' into 'main'
+    
+    Added related content section with links to related content
+    
+    See merge request tommyhuynh02n/cs373-group-20!13
+
+commit e4ed9f81352820a968be6de818b5c6cf0478a2dc
+Author: Huang Max <maxhuang@wireless-10-155-54-184.public.utexas.edu>
+Date:   Wed Feb 14 14:32:54 2024 -0600
+
+    instance pages, clickability, might take out google map embed
+
+commit b9e4a01ff1263136e5cae8a6abc82b54235366ec
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 13:01:34 2024 -0600
+
+    Added related content section with links to related content
+
+commit 2898600b8386aeeaeffc3f61e151147d497f8355
+Author: Huang Max <maxhuang@wireless-10-155-54-184.public.utexas.edu>
+Date:   Wed Feb 14 12:21:46 2024 -0600
+
+    changed readme to reflect new fields
+
+commit 14ffd7246bffdd1520124a91b4e2c87ce3deb7d9
+Author: Huang Max <maxhuang@wireless-10-155-54-184.public.utexas.edu>
+Date:   Wed Feb 14 12:20:17 2024 -0600
+
+    condensed address and zip, added web url
+
+commit 655d674c33470c9e1a03dd320e5647892d82affb
+Merge: 41a3bc9 241bf6f
+Author: Brendan Malone <brendan.malone@utexas.edu>
+Date:   Wed Feb 14 16:41:18 2024 +0000
+
+    Merge branch 'tommydev' into 'main'
+    
+    Add link to bottom of cards to more info also changed cards to fit to screens of different sizes
+    
+    See merge request tommyhuynh02n/cs373-group-20!12
+
+commit 241bf6f33e983cd1f6317ce31025a3b4ce982101
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 03:26:24 2024 -0600
+
+    Finished up instance pages
+
+commit e4d949a59c200cfad376bec31960cf3b5f8fab31
+Merge: 73558bf 41a3bc9
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 00:57:40 2024 -0600
+
+    Merge branch 'main' into tommydev
+
+commit 73558bf17e96ab37c8049c0db3fe1d006fb367e2
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 00:56:21 2024 -0600
+
+    Add link to bottom of cards to more info also changed cards to fit to screens of different sizes
+
+commit 41a3bc9f0aefd532ca9169cc0870cdd54318f417
+Merge: 5d60620 738e27f
+Author: Richie A Wahidin <richiewahidin@utexas.edu>
+Date:   Wed Feb 14 06:56:02 2024 +0000
+
+    Merge branch 'counties' into 'main'
+    
+    added instance pages for model one
+    
+    See merge request tommyhuynh02n/cs373-group-20!11
+
+commit 738e27f36f66aac3f9fe723373b77fcb908fb55f
+Author: Richie Wahidin <richie@Richies-MBP-2.lan>
+Date:   Wed Feb 14 00:53:20 2024 -0600
+
+    added instance pages for model one
+
+commit 5d6062099e23de666128bd1f81ed49ca6a282dcd
+Merge: b1148c1 ecfed73
+Author: Brendan Malone <brendan.malone@utexas.edu>
+Date:   Wed Feb 14 04:55:18 2024 +0000
+
+    Merge branch 'model3' into 'main'
+    
+    Model3
+    
+    See merge request tommyhuynh02n/cs373-group-20!10
+
+commit b1148c1d9372c701e10b49d1cbf66c15fad316ac
+Merge: 411f63c 93d90b1
+Author: Max Huang <maxyuzehuang@gmail.com>
+Date:   Wed Feb 14 04:46:22 2024 +0000
+
+    Merge branch 'pipeline' into 'main'
+    
+    Add ci/cd pipeline, fix blank landing page
+    
+    Closes #9 and #10
+    
+    See merge request tommyhuynh02n/cs373-group-20!8
+
+commit ecfed735a9500d1e9493e94717cc243c3ba4dc1b
+Author: Huang Max <maxhuang@wireless-10-154-73-16.public.utexas.edu>
+Date:   Tue Feb 13 22:29:37 2024 -0600
+
+    finish basic model 3 page
+
+commit 93d90b10ebdbb08ea890864a7e164d2b8b5d4101
+Author: Brendan <br7@bluesand.org>
+Date:   Tue Feb 13 22:23:59 2024 -0600
+
+    scrapped pages, incompatible with local running.
+
+commit cb3d41377c0b2d3dfe8c1dd8971a9210b08202d7
+Author: Brendan <br7@bluesand.org>
+Date:   Tue Feb 13 22:08:29 2024 -0600
+
+    added build artifacts so deploy works
+
+commit 124a861c37b7476bb36521ea3b325ac341fe63e5
+Author: Brendan <br7@bluesand.org>
+Date:   Tue Feb 13 22:00:23 2024 -0600
+
+    added dependency for build stage to deploy
+
+commit 863747263b05ed219e49d0ab86e218226cb105b0
+Author: Huang Max <maxhuang@wireless-10-154-73-16.public.utexas.edu>
+Date:   Tue Feb 13 21:55:26 2024 -0600
+
+    some progress on model 3
+
+commit 0880e017a967a67e666d99e5ef4fe2254a567d4d
+Author: Brendan <br7@bluesand.org>
+Date:   Tue Feb 13 21:54:55 2024 -0600
+
+    allow failure on test stage
+
+commit 3ba26048a8f2f56a8e19d8242f505d1785968a12
+Author: Brendan <br7@bluesand.org>
+Date:   Tue Feb 13 21:50:18 2024 -0600
+
+    env.ci = false for now. ignore warnings on build
+
+commit 1dcdc91bcac90a801d49d238f7e3a0772aa7e169
+Author: Brendan <br7@bluesand.org>
+Date:   Tue Feb 13 21:43:22 2024 -0600
+
+    added basic pipeline that deploys to gitlab pages
+
+commit 411f63c1debbc659e16a3f86ea739c575109a839
+Merge: 1d86f88 039a0e0
+Author: Max Huang <maxyuzehuang@gmail.com>
+Date:   Wed Feb 14 02:27:34 2024 +0000
+
+    Merge branch 'tommydev' into 'main'
+    
+    Finished grid for model page
+    
+    See merge request tommyhuynh02n/cs373-group-20!7
+
+commit 039a0e008abb1e3b2439575f929b57ce581626ea
+Merge: 44e4860 1d86f88
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Tue Feb 13 20:21:48 2024 -0600
+
+    ?
+
+commit 44e486028a21014ab5c9c24c50a5ea3c774286fb
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Tue Feb 13 20:19:18 2024 -0600
+
+    Finished model two page TODO work on adding a button and linking to instance pages
+
+commit 1d86f885481201872adddeab2b8c2eaf202ede6d
+Merge: 59beccf 8451f9c
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 02:05:39 2024 +0000
+
+    Merge branch 'tommydev' into 'main'
+    
+    Tommydev
+    
+    See merge request tommyhuynh02n/cs373-group-20!6
+
+commit 8451f9ccafc85e9d8bddf36f054e0134940ef08a
+Merge: 7cccf25 59beccf
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Tue Feb 13 18:14:32 2024 -0600
+
+    Merge branch 'main' into tommydev
+
+commit 7cccf258499e24ac5cda69740fae74b0b1fb9ba1
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Tue Feb 13 18:11:23 2024 -0600
+
+    added model two to navbar
+
+commit 59beccf50f8d226e80ca69e86bd0219c35352e07
+Merge: 451761f fff48c0
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 00:08:01 2024 +0000
+
+    Merge branch 'counties' into 'main'
+    
+    model page of counties
+    
+    See merge request tommyhuynh02n/cs373-group-20!5
+
+commit fff48c00a46146462f6c49304ec9479b093d34cb
+Merge: b10ae76 451761f
+Author: Richie A Wahidin <richiewahidin@utexas.edu>
+Date:   Tue Feb 13 04:16:27 2024 +0000
+
+    Merge branch 'main' into 'counties'
+    
+    # Conflicts:
+    #   src/App.js
+    #   src/components/Navbar.js
+
+commit b10ae76feffc6444ab739ec0860199d39f91412d
+Author: Richie Wahidin <richie@Richies-MBP-2.lan>
+Date:   Mon Feb 12 22:12:18 2024 -0600
+
+    model page of counties
+
+commit 451761f3fd75dcec1f697b5d398f9e63620111ee
+Merge: 6ab4f66 50b21a0
+Author: Max Huang <maxyuzehuang@gmail.com>
+Date:   Tue Feb 13 04:09:00 2024 +0000
+
+    Merge branch 'locator_skeleton' into 'main'
+    
+    locator navlink
+    
+    See merge request tommyhuynh02n/cs373-group-20!4
+
+commit 6ab4f662bc99f4ad6bc26babe3fc18aff726a6a0
+Merge: 1aea66b 8ec783d
+Author: Kshitij Kapoor <kshitij@utexas.edu>
+Date:   Mon Feb 12 23:06:27 2024 +0000
+
+    Merge branch 'landing_page' into 'main'
+    
+    landing page
+    
+    See merge request tommyhuynh02n/cs373-group-20!3
+
+commit 8ec783d4dff7226635dfedd14068b4d7c75aa958
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Mon Feb 12 16:59:08 2024 -0600
+
+    landing page
+
+commit 50b21a0049479db11d2af8c2dfc58dcadb736cfa
+Author: Huang Max <maxhuang@Huangs-MacBook-Pro.local>
+Date:   Sun Feb 11 03:15:17 2024 -0600
+
+    locator navlink
+
+commit 1aea66b9c103cac3ffa619faf3872404e80fa0fe
+Merge: bb25119 218894e
+Author: Kshitij Kapoor <kshitij@utexas.edu>
+Date:   Sun Feb 11 02:47:49 2024 +0000
+
+    Merge branch 'routing' into 'main'
+    
+    added routing
+    
+    See merge request tommyhuynh02n/cs373-group-20!2
+
+commit 218894e962031d78b8d169a1fc43fc2d305a6900
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Sat Feb 10 20:45:26 2024 -0600
+
+    added routing
+
+commit bb2511935b1643cd5b5913e69e1f201ece4074d1
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Fri Feb 9 21:04:19 2024 -0600
+
+    Estimated time to complete added
+
+commit 8e2d0802fd5fd33cacb2ddc4ee6621a5015f35a6
+Merge: b117c80 a0acd36
+Author: Brendan Malone <brendan.malone@utexas.edu>
+Date:   Fri Feb 9 17:56:51 2024 +0000
+
+    Merge branch 'project-setup' into 'main'
+    
+    set up react-app
+    
+    See merge request tommyhuynh02n/cs373-group-20!1
+
+commit a0acd36c3a3031720f67647d2be1bdaf78726f9f
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Fri Feb 9 09:39:58 2024 -0600
+
+    set up react-app
+
+commit b117c8080bcf6441859342ac1c88a5c8d8f1b16e
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Thu Feb 8 06:04:01 2024 +0000
+
+    Updated readme
+
+commit a78094cbd51fe35f6e19a59ae5fc46f3f6b7765f
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Thu Feb 8 05:01:56 2024 +0000
+
+    Capitalized some sentences.
+
+commit 2b64587a0936f9c4aa9667ce009efffaa4081478
+Author: Kshitij Kapoor <kshitij@utexas.edu>
+Date:   Wed Feb 7 07:23:52 2024 +0000
+
+    Formatted
+
+commit f9aa2a247531e18bfd3b9dd4506d8b9f5650dc7c
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 7 01:20:57 2024 -0600
+
+    formatted readme
+
+commit f101f15438399c74f79d00374f761465c4e223be
+Author: KshitijKapoor8 <kshitijkapoor8@gmail.com>
+Date:   Wed Feb 7 00:49:27 2024 -0600
+
+    readme done
+
+commit 3746ad6b6c21ce5663a6ed396ab2f6021eee0239
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Mon Feb 5 21:40:29 2024 +0000
+
+    Update README.md
+
+commit 0ef0dce7ae733527a1fa725e4aa75765e086bee5
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Mon Feb 5 15:39:00 2024 -0600
+
+    Updated read me
+
+commit 16eace248d2cd689e1e381e6d362dff61dcbfe29
+Author: Tommy Huynh <tommyhuynh02n@gmail.com>
+Date:   Mon Feb 5 21:29:16 2024 +0000
+
+    Initial commit
