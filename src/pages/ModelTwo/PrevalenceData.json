@@ -16,11 +16,11 @@
       "hiv": "24%",
       "image": "https://as1.ftcdn.net/v2/jpg/02/79/35/06/1000_F_279350666_MPo4pmWLXmqk3TCLkjVugy3cIXb7ouG1.jpg",
       "related_counties_1": "Alameda",
-      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_link_1": "/counties/alameda",
       "related_counties_2": "Los Angeles",
-      "related_link_2": "http://localhost:3000/counties/losangeles",
-      "related_counties_3": "Merced",
-      "related_link_3": "http://localhost:3000/counties/merced"
+      "related_link_2": "/counties/losangeles",
+      "related_counties_3": "ALPA",
+      "related_link_3": "/locator/ALPA"
     },
     {
       "id": "male2003",
@@ -38,11 +38,11 @@
       "hiv": "24%",
       "image": "https://catchtheanswers.utah.gov/wp-content/uploads/YouthRiskFactors-forSTIs.jpg",
       "related_counties_1": "Alameda",
-      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_link_1": "/counties/alameda",
       "related_counties_2": "Los Angeles",
-      "related_link_2": "http://localhost:3000/counties/losangeles",
-      "related_counties_3": "Merced",
-      "related_link_3": "http://localhost:3000/counties/merced"
+      "related_link_2": "/counties/losangeles",
+      "related_counties_3": "ALPA",
+      "related_link_3": "/locator/ALPA"
     },
     {
       "id": "female2004",
@@ -60,11 +60,11 @@
       "hiv": "24%",
       "image": "https://flo.health/uploads/media/sulu-1000x-inset/06/886-Chlamydia.jpg?v=1-0",
       "related_counties_1": "Alameda",
-      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_link_1": "/counties/alameda",
       "related_counties_2": "Los Angeles",
-      "related_link_2": "http://localhost:3000/counties/losangeles",
-      "related_counties_3": "Merced",
-      "related_link_3": "http://localhost:3000/counties/merced"
+      "related_link_2": "/counties/losangeles",
+      "related_counties_3": "ALPA",
+      "related_link_3": "/locator/ALPA"
     },
     {
       "id": "male2004",
@@ -82,11 +82,11 @@
       "hiv": "24%",
       "image": "https://thepioneeronline.com/wp-content/uploads/2016/11/20161116-STD-TamDuongJr-WEB-896x900.png",
       "related_counties_1": "Alameda",
-      "related_link_1": "http://localhost:3000/counties/alameda",
+      "related_link_1": "/counties/alameda",
       "related_counties_2": "Los Angeles",
-      "related_link_2": "http://localhost:3000/counties/losangeles",
-      "related_counties_3": "Merced",
-      "related_link_3": "http://localhost:3000/counties/merced"
+      "related_link_2": "/counties/losangeles",
+      "related_counties_3": "ALPA",
+      "related_link_3": "/locator/ALPA"
     }
   ]
 }
