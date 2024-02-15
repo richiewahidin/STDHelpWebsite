@@ -60,6 +60,7 @@ function About() {
 
 
     useEffect(() => {
+        // get contributors commits
         axios.get("https://gitlab.com/api/v4/projects/54614721/repository/contributors/")
         .then((res) => {
             let indC = [0, 0, 0, 0, 0];
@@ -83,6 +84,7 @@ function About() {
             console.error("Error fetching contributors: ", error);
         });
 
+        // contributor names
         let names = ["tommyhuynh02n", "richiewahidin", "kshitij9250504", "maxyuzehuang", "bmalonepub"];
         let issues = [0, 0, 0, 0, 0];
         var count = 0;
