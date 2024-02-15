@@ -19,7 +19,7 @@ function App() {
     <Router>
       <NB />
       <Routes>
-        <Route path="/home" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/counties" element={<Counties />} />
         <Route path="/locator" element={<Locator />} />
