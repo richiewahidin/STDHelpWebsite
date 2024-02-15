@@ -6,6 +6,16 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
 
 # Name of the project: STDHelp
 
+# Link to project (temporary, will change)
+https://main.d108trr6f94ndc.amplifyapp.com	
+
+# Gitlab SHA
+- 52a34d32a02912d36a44299bd28c7b47ad658487
+
+# Gitlab Pipeline URL
+- https://gitlab.com/tommyhuynh02n/cs373-group-20/-/pipelines/1177329596
+
+
 # The proposed project:
 STD cases in California are relatively higher when compared to the rest of the country. There is a stigma against STD testing, so we want to raise
 more awareness and encourage people to go get tested and treated. To do this we will inform our audience on differnet types of STDs along with where
