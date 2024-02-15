@@ -130,6 +130,9 @@ function About() {
                         <Card.Body>
                             <Card.Title>Tommy Huynh</Card.Title>
                             <Card.Text>
+                                Role: Full stack developer
+                            </Card.Text>
+                            <Card.Text>
                                 I am a senior studying Computer Science at UT Austin. I am interested in soccer and fashion.
                             </Card.Text>
                             <Card.Text>
@@ -147,6 +150,9 @@ function About() {
                         <Card.Body>
                             <Card.Title>Richie Wahidin</Card.Title>
                             <Card.Text>
+                                Role: Full stack developer
+                            </Card.Text>
+                            <Card.Text>
                                 I am a senior studying Computer Science from Indonesia. I like to play soccer and pingpong.
                             </Card.Text>
                             <Card.Text>
@@ -163,6 +169,9 @@ function About() {
                         <Card.Img variant="top" src={k} style={styles.cardImageStyle}/>
                         <Card.Body>
                             <Card.Title>Kshitij Kapoor</Card.Title>
+                            <Card.Text>
+                                Role: Full stack developer
+                            </Card.Text>
                             <Card.Text>
                                 I am a sophomore studying Computer Science. I like to draw and watch American Football.
                             </Card.Text>
@@ -183,6 +192,9 @@ function About() {
                         <Card.Body>
                             <Card.Title>Max Huang</Card.Title>
                             <Card.Text>
+                                Role: Full stack developer
+                            </Card.Text>
+                            <Card.Text>
                                 I am a junior studying Computer Science. I like to play chess and practice wushu.
                             </Card.Text>
                             <Card.Text>
@@ -199,6 +211,9 @@ function About() {
                         <Card.Img variant="top" src={b} style={styles.cardImageStyle}/>
                         <Card.Body>
                             <Card.Title>Brendan Malone</Card.Title>
+                            <Card.Text>
+                                Role: Backend developer
+                            </Card.Text>
                             <Card.Text>
                                 I am a junior studying Computer Science. I like bouldering and playing video games.
                             </Card.Text>
