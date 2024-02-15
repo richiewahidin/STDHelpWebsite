@@ -1,3 +1,33 @@
+commit 13b18858e9d1b5e4291f6bfd4cff3b746c186298
+Author: Huang Max <maxhuang@wireless-10-146-173-30.public.utexas.edu>
+Date:   Thu Feb 15 14:20:50 2024 -0600
+
+    fixed home issue
+
+commit 08bc556534ee2cf740360144f11c06bb376a5e32
+Author: Huang Max <maxhuang@wireless-10-154-28-36.public.utexas.edu>
+Date:   Thu Feb 15 02:26:41 2024 -0600
+
+    l
+
+commit d5527d4c44cb9382c5acd6ca4895ba6b9b870f30
+Author: Huang Max <maxhuang@wireless-10-154-28-36.public.utexas.edu>
+Date:   Thu Feb 15 02:20:48 2024 -0600
+
+    l
+
+commit 4220017627496aa8ad261ac510d2cb868aaf4807
+Author: Kshitij Kapoor <kshitij@utexas.edu>
+Date:   Thu Feb 15 05:46:47 2024 +0000
+
+    Update README.md
+
+commit 52a34d32a02912d36a44299bd28c7b47ad658487
+Author: tommyh2o <tommyhuynh02n@gmail.com>
+Date:   Wed Feb 14 23:34:42 2024 -0600
+
+    Fixed links and gitlog.txt
+
 commit cd1ec2551fb0671266598d2461387b7d08f75ab4
 Merge: 789e907 3e4bb34
 Author: Brendan Malone <brendan.malone@utexas.edu>
