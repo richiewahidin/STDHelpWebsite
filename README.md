@@ -6,8 +6,8 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
 
 # Name of the project: STDHelp
 
-# Link to project (temporary, will change)
-https://main.d108trr6f94ndc.amplifyapp.com	
+# Link to project
+https://www.stdhelp.site/
 
 # Gitlab SHA
 - 52a34d32a02912d36a44299bd28c7b47ad658487
