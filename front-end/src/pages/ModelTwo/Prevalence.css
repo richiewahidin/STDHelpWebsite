@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .container {
+    margin: auto;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.card-container {
+    margin: auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  } */
