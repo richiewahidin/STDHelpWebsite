@@ -1,13 +1,18 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .centered-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
 /* .container {
     margin: auto;
