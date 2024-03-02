@@ -1,16 +1,12 @@
-import { serve } from '@hono/node-server'
-import { Hono } from 'hono'
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
+import { mainRouter } from "@/routers";
 
-const app = new Hono()
-
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
-
-const port = 3000
-console.log(`Server is running on port ${port}`)
+const app = new Hono().use("*").route("/", mainRouter);
 
 serve({
   fetch: app.fetch,
-  port
-})
+  port: 3000,
+}).on("listening", () => {
+  console.log(">>> API running on: http://localhost:3000");
+});
