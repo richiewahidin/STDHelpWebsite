@@ -3,12 +3,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import logo from '../images/stdhelplogo.png';
 
 function NB() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" style={{ paddingTop: '0', paddingBottom: '0'}}>
       <Container>
-        <Navbar.Brand href="">STDHelp</Navbar.Brand>
+        <Navbar.Brand href="">
+          <img
+            src={logo}
+            height="40"
+          />
+          STDHelp
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
