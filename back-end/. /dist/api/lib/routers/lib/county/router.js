@@ -3,9 +3,7 @@ import pool from "../../../../../db/index.js";
 export const countyRouter = new Hono()
     .get("/", async (c) => {
     try {
-        const client = await pool.connect();
-        const res = await client.query("SELECT * FROM county");
-        client.release();
+        const res = await pool.query("SELECT * FROM county");
         return c.json(res);
     }
     catch (err) {
@@ -15,13 +13,19 @@ export const countyRouter = new Hono()
 })
     .post("/", async (c) => {
     try {
-        const { year, gender, cases, casesper100k } = await c.req.json();
-        console.log("INPUTS: ", year, gender, cases, casesper100k);
-        const queryText = "INSERT INTO county(year, gender, cases, casesper100k) VALUES($1, $2, $3, $4)";
-        const queryValues = [year, gender, cases, casesper100k];
-        const client = await pool.connect();
-        const res = await client.query(queryText, queryValues);
-        client.release();
+        const { name, population, ccases, gcases, scases, escases, tscases, udcases, } = await c.req.json();
+        const queryText = "INSERT INTO county(name, population, ccases, gcases, scases, escases, tscases, udcases) VALUES($1, $2, $3, $4, $5, $6, $7, $8)";
+        const queryValues = [
+            name,
+            population,
+            ccases,
+            gcases,
+            scases,
+            escases,
+            tscases,
+            udcases,
+        ];
+        const res = await pool.query(queryText, queryValues);
         return c.json(res);
     }
     catch (err) {

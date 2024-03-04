@@ -4,9 +4,7 @@ import pool from "../../../../../db/index.js";
 export const prevalenceRouter = new Hono()
   .get("/", async (c) => {
     try {
-      const client = await pool.connect();
-      const res = await client.query("SELECT * FROM prevalence");
-      client.release();
+      const res = await pool.query("SELECT * FROM prevalence");
       return c.json(res);
     } catch (err) {
       console.log(err);
@@ -19,9 +17,7 @@ export const prevalenceRouter = new Hono()
       const queryText =
         "INSERT INTO prevalence(year, gender, cases, casesper100k) VALUES($1, $2, $3, $4) RETURNING *";
       const queryValues = [year, gender, cases, casesper100k];
-      const client = await pool.connect();
-      const res = await client.query(queryText, queryValues);
-      client.release();
+      const res = await pool.query(queryText, queryValues);
       return c.json(res);
     } catch (err) {
       console.log(err);
