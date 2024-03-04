@@ -366,9 +366,21 @@ function About() {
           </Col>
         </Row>
 
-        <h5 style={{ paddingTop: "40px" }}>
-          Link to API:
-          https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21"
+        {/* Additional Links */}
+        <Row style={{ paddingTop: "30px" }}>
+          <Col className="text-center">
+            <h2>Additional Links:</h2>
+          </Col>
+        </Row>
+        <h5 style={{ paddingTop: "20px" }}>
+          <a href="https://gitlab.com/tommyhuynh02n/cs373-group-20">
+            GitLab Repository
+          </a>
+        </h5>
+        <h5 style={{ paddingTop: "20px" }}>
+          <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21">
+            Postman API
+          </a>
         </h5>
       </div>
     </div>
