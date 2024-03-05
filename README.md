@@ -35,6 +35,7 @@ in California they can find a treatment center.
 - https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/STD-Data.aspx (Model 1)
 - https://data.chhs.ca.gov/dataset/?tags=STI (Model 2)
 - https://www.hiv.gov/locator/#api (Model 3)
+- https://www.beintheknow.org/hiv-and-stis/stis/stories
 
 # At least three models:
 1) Statistics on different counties in California.
