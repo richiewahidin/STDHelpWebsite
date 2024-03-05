@@ -4,7 +4,7 @@ import k from "../images/k.png";
 import b from "../images/b.png";
 import r from "../images/r.png";
 import m from "../images/m.png";
-import t from "../images/t.png";
+import t from "../images/t.jpg";
 import gitlab from "../images/ToolsUsed/gitlab.png";
 import postman from "../images/ToolsUsed/postman.svg";
 import react from "../images/ToolsUsed/react.png";
