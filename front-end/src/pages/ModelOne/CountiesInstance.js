@@ -1,15 +1,12 @@
 import React from 'react';
 import Card from "../../components/LocatorCard";
-import ALPA from '../../images/Model3/APLA.png';
-import AltaMed from '../../images/Model3/AltaMed.png';
-import Torrance from '../../images/Model3/Torrance.png';
 import CountiesData from "./CountiesData.json";
 import { useParams } from 'react-router-dom';
-import { cardData } from "../Model3/Locator"
 
 const CountiesInstance = () => {
   let { id } = useParams();
   const county = CountiesData.counties.find((county) => county.id === id);
+  const cardData = CountiesData.counties;
 
   if (!county) {
     return <div>County not found</div>;
