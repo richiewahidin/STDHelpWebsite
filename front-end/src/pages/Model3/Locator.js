@@ -18,6 +18,7 @@ const Locator = () => {
   };
   const currentItems = cardData.slice(indexOfFirstItem, indexOfLastItem);
 
+const Locator = () => {
   return (
     <div className="container">
       <h1>Locator</h1>

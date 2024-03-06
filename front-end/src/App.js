@@ -8,9 +8,7 @@ import About from "./pages/About";
 import Counties from "./pages/ModelOne/Counties";
 import Locator from "./pages/Model3/Locator";
 import Prevalence from "./pages/ModelTwo/Prevalence";
-import Alameda from "./pages/ModelOne/Alameda";
-import LosAngeles from "./pages/ModelOne/LosAngeles";
-import Merced from "./pages/ModelOne/Merced";
+import CountiesInstance from "./pages/ModelOne/CountiesInstance";
 import InstancePrevalence from "./pages/ModelTwo/InstancePrevalence";
 import LocatorInstance from "./pages/Model3/LocatorInstance";
 
@@ -24,9 +22,7 @@ function App() {
         <Route path="/counties" element={<Counties />} />
         <Route path="/locator" element={<Locator />} />
         <Route path="/prevalence" element={<Prevalence />} />
-        <Route path="/counties/alameda" element={<Alameda />} />
-        <Route path="/counties/losangeles" element={<LosAngeles />} />
-        <Route path="/counties/merced" element={<Merced />} />
+        <Route path="/counties/:id" element={<CountiesInstance />} />
         <Route path="/prevalence/:id" element={<InstancePrevalence />} />
         <Route path="/locator/:id" element={<LocatorInstance />} />
       </Routes>
