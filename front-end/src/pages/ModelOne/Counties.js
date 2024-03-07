@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, Col, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import CountiesData from "./CountiesData.json";
 import Pagination from "@mui/material/Pagination";
 import './Counties.css';
+import { useNavigate } from 'react-router-dom';
 
 const Counties = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -18,6 +18,12 @@ const Counties = () => {
     setCurrentPage(value);
   };
 
+  const nav = useNavigate();
+
+  const handleClick = (id) => {
+    nav("/counties/" + id);
+  };
+
   return (
     <div className="container">
       <div style={{ padding: '20px' }}>
@@ -26,7 +32,7 @@ const Counties = () => {
       <Row>
         {currentItems.map((item, index) => (
           <Col key={index} className="d-flex justify-content-center">
-            <Card style={{ width: '20rem' }}>
+            <Card style={{ width: '20rem' }} onClick={() => handleClick(item.id)}>
               <Card.Img src={item.imageUrl} width="200" height="200" />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
@@ -44,7 +50,6 @@ const Counties = () => {
                     </ListGroupItem>
                   </ListGroup>
                 </Card.Text>
-                <Link to={item.relatedLink} className="btn btn-primary">Learn more</Link>
               </Card.Body>
             </Card>
           </Col>

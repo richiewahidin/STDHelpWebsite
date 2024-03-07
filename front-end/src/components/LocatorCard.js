@@ -7,7 +7,7 @@ const Card = ({id, title, Address, Website, Services, Phone, imageUrl}) => {
 
   const handleClick = () => {
     //url = "locator/" + id;
-    nav(id);
+    nav("/locator/" + id);
   };
   // //for hovering
   // const handleEnter = () => {
