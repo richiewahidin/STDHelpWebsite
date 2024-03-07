@@ -35,4 +35,4 @@ selenium_tests:
     - mv chromedriver /usr/local/bin
     - chmod +x /usr/local/bin/chromedriver
   script:
-    - python -m unittest LocatorUnitTests.py
+    - python -m unittest LandingUnitTests.py
