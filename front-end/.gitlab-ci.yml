@@ -23,4 +23,16 @@ test:
   script:
     - npm run test
   
-
+selenium_tests:
+  stage: test
+  image: python:3.8
+  before_script:
+    - pip install selenium
+    - wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O latest_release
+    - export CHROMEDRIVER_VERSION=$(cat latest_release)
+    - wget https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+    - unzip chromedriver_linux64.zip
+    - mv chromedriver /usr/local/bin
+    - chmod +x /usr/local/bin/chromedriver
+  script:
+    - python -m unittest LocatorUnitTests.py
