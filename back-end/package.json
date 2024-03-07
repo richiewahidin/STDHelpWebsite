@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "tsc watch src/index.ts",
+    "build": "tsc",
     "dev": "tsx watch src/index.ts"
   },
   "dependencies": {

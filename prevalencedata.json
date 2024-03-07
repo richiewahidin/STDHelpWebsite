@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 1,
+    "disease": "Chlamydia",
+    "year": 2003,
+    "sex": "Female",
+    "cases": 85153,
+    "population": 17782868,
+    "rate": 478.8,
+    "percent_tested": "57%"
+  },
+  {
+    "id": 2,
+    "disease": "Chlamydia",
+    "year": 2003,
+    "sex": "Male",
+    "cases": 31007,
+    "population": 17606060,
+    "rate": 176.1,
+    "percent_tested": "64%"
+  },
+  {
+    "id": 3,
+    "disease": "Chlamydia",
+    "year": 2004,
+    "sex": "Female",
+    "cases": 89438,
+    "population": 17968347,
+    "rate": 497.8,
+    "percent_tested": "57%"
+  },
+  {
+    "id": 4,
+    "disease": "Chlamydia",
+    "year": 2004,
+    "sex": "Male",
+    "cases": 33652,
+    "population": 17784418,
+    "rate": 189.2,
+    "percent_tested": "67%"
+  },
+  {
+    "id": 5,
+    "disease": "Chlamydia",
+    "year": 2005,
+    "sex": "Female",
+    "cases": 92362,
+    "population": 18087299,
+    "rate": 510.6,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 6,
+    "disease": "Chlamydia",
+    "year": 2005,
+    "sex": "Male",
+    "cases": 36227,
+    "population": 17898283,
+    "rate": 202.4,
+    "percent_tested": "64%"
+  },
+  {
+    "id": 7,
+    "disease": "Chlamydia",
+    "year": 2006,
+    "sex": "Female",
+    "cases": 97737,
+    "population": 18219378,
+    "rate": 536.4,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 8,
+    "disease": "Chlamydia",
+    "year": 2006,
+    "sex": "Male",
+    "cases": 38105,
+    "population": 18027444,
+    "rate": 211.4,
+    "percent_tested": "65%"
+  },
+  {
+    "id": 9,
+    "disease": "Chlamydia",
+    "year": 2007,
+    "sex": "Female",
+    "cases": 101893,
+    "population": 18372905,
+    "rate": 554.6,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 10,
+    "disease": "Chlamydia",
+    "year": 2007,
+    "sex": "Male",
+    "cases": 40605,
+    "population": 18179624,
+    "rate": 223.4,
+    "percent_tested": "68%"
+  },
+  {
+    "id": 11,
+    "disease": "Chlamydia",
+    "year": 2008,
+    "sex": "Female",
+    "cases": 104555,
+    "population": 18525551,
+    "rate": 564.4,
+    "percent_tested": "61%"
+  },
+  {
+    "id": 12,
+    "disease": "Chlamydia",
+    "year": 2008,
+    "sex": "Male",
+    "cases": 44163,
+    "population": 18330671,
+    "rate": 240.9,
+    "percent_tested": "73%"
+  },
+  {
+    "id": 13,
+    "disease": "Chlamydia",
+    "year": 2009,
+    "sex": "Female",
+    "cases": 102007,
+    "population": 18632980,
+    "rate": 547.5,
+    "percent_tested": "61%"
+  },
+  {
+    "id": 14,
+    "disease": "Chlamydia",
+    "year": 2009,
+    "sex": "Male",
+    "cases": 45093,
+    "population": 18444224,
+    "rate": 244.5,
+    "percent_tested": "74%"
+  },
+  {
+    "id": 15,
+    "disease": "Chlamydia",
+    "year": 2010,
+    "sex": "Female",
+    "cases": 106382,
+    "population": 18781184,
+    "rate": 566.4,
+    "percent_tested": "62%"
+  },
+  {
+    "id": 16,
+    "disease": "Chlamydia",
+    "year": 2010,
+    "sex": "Male",
+    "cases": 48372,
+    "population": 18582184,
+    "rate": 260.3,
+    "percent_tested": "75%"
+  },
+  {
+    "id": 17,
+    "disease": "Chlamydia",
+    "year": 2011,
+    "sex": "Female",
+    "cases": 113119,
+    "population": 18938400,
+    "rate": 597.3,
+    "percent_tested": "63%"
+  },
+  {
+    "id": 18,
+    "disease": "Chlamydia",
+    "year": 2011,
+    "sex": "Male",
+    "cases": 50990,
+    "population": 18765193,
+    "rate": 271.7,
+    "percent_tested": "76%"
+  },
+  {
+    "id": 19,
+    "disease": "Chlamydia",
+    "year": 2012,
+    "sex": "Female",
+    "cases": 115481,
+    "population": 19110226,
+    "rate": 604.3,
+    "percent_tested": "63%"
+  },
+  {
+    "id": 20,
+    "disease": "Chlamydia",
+    "year": 2012,
+    "sex": "Male",
+    "cases": 53670,
+    "population": 18945559,
+    "rate": 283.3,
+    "percent_tested": "77%"
+  },
+  {
+    "id": 21,
+    "disease": "Chlamydia",
+    "year": 2013,
+    "sex": "Female",
+    "cases": 112750,
+    "population": 19242306,
+    "rate": 585.9,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 22,
+    "disease": "Chlamydia",
+    "year": 2013,
+    "sex": "Male",
+    "cases": 54880,
+    "population": 19100336,
+    "rate": 287.3,
+    "percent_tested": "78%"
+  },
+  {
+    "id": 23,
+    "disease": "Chlamydia",
+    "year": 2014,
+    "sex": "Female",
+    "cases": 114008,
+    "population": 19383492,
+    "rate": 588.2,
+    "percent_tested": "53%"
+  },
+  {
+    "id": 24,
+    "disease": "Chlamydia",
+    "year": 2014,
+    "sex": "Male",
+    "cases": 59985,
+    "population": 19261310,
+    "rate": 311.4,
+    "percent_tested": "75%"
+  },
+  {
+    "id": 25,
+    "disease": "Chlamydia",
+    "year": 2015,
+    "sex": "Female",
+    "cases": 121743,
+    "population": 19509584,
+    "rate": 624,
+    "percent_tested": "51%"
+  },
+  {
+    "id": 26,
+    "disease": "Chlamydia",
+    "year": 2015,
+    "sex": "Male",
+    "cases": 67680,
+    "population": 19403923,
+    "rate": 348.8,
+    "percent_tested": "71%"
+  },
+  {
+    "id": 27,
+    "disease": "Chlamydia",
+    "year": 2016,
+    "sex": "Female",
+    "cases": 123947,
+    "population": 19610517,
+    "rate": 632,
+    "percent_tested": "59%"
+  },
+  {
+    "id": 28,
+    "disease": "Chlamydia",
+    "year": 2016,
+    "sex": "Male",
+    "cases": 73678,
+    "population": 19517338,
+    "rate": 377.5,
+    "percent_tested": "80%"
+  },
+  {
+    "id": 29,
+    "disease": "Chlamydia",
+    "year": 2017,
+    "sex": "Female",
+    "cases": 135165,
+    "population": 19705966,
+    "rate": 685.9,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 30,
+    "disease": "Chlamydia",
+    "year": 2017,
+    "sex": "Male",
+    "cases": 83301,
+    "population": 19622960,
+    "rate": 424.5,
+    "percent_tested": "76%"
+  },
+  {
+    "id": 31,
+    "disease": "Chlamydia",
+    "year": 2018,
+    "sex": "Female",
+    "cases": 142606,
+    "population": 19773580,
+    "rate": 721.2,
+    "percent_tested": "61%"
+  },
+  {
+    "id": 32,
+    "disease": "Chlamydia",
+    "year": 2018,
+    "sex": "Male",
+    "cases": 89292,
+    "population": 19702484,
+    "rate": 453.2,
+    "percent_tested": "81%"
+  },
+  {
+    "id": 33,
+    "disease": "Chlamydia",
+    "year": 2019,
+    "sex": "Female",
+    "cases": 143932,
+    "population": 19798757,
+    "rate": 727,
+    "percent_tested": "57%"
+  },
+  {
+    "id": 34,
+    "disease": "Chlamydia",
+    "year": 2019,
+    "sex": "Male",
+    "cases": 92970,
+    "population": 19730809,
+    "rate": 471.2,
+    "percent_tested": "78%"
+  },
+  {
+    "id": 35,
+    "disease": "Chlamydia",
+    "year": 2020,
+    "sex": "Female",
+    "cases": 108472,
+    "population": 19849130,
+    "rate": 546.5,
+    "percent_tested": "50%"
+  },
+  {
+    "id": 36,
+    "disease": "Chlamydia",
+    "year": 2020,
+    "sex": "Male",
+    "cases": 68226,
+    "population": 19670941,
+    "rate": 346.8,
+    "percent_tested": "75%"
+  },
+  {
+    "id": 37,
+    "disease": "Chlamydia",
+    "year": 2021,
+    "sex": "Female",
+    "cases": 114923,
+    "population": 19719675,
+    "rate": 582.8,
+    "percent_tested": ""
+  },
+  {
+    "id": 38,
+    "disease": "Chlamydia",
+    "year": 2021,
+    "sex": "Male",
+    "cases": 75156,
+    "population": 19519878,
+    "rate": 385,
+    "percent_tested": ""
+  },
+  {
+    "id": 39,
+    "disease": "Early Syphilis",
+    "year": 2003,
+    "sex": "Female",
+    "cases": 166,
+    "population": 17782868,
+    "rate": 0.9,
+    "percent_tested": "22%"
+  },
+  {
+    "id": 40,
+    "disease": "Early Syphilis",
+    "year": 2003,
+    "sex": "Male",
+    "cases": 1953,
+    "population": 17606060,
+    "rate": 11.1,
+    "percent_tested": "48%"
+  },
+  {
+    "id": 41,
+    "disease": "Early Syphilis",
+    "year": 2004,
+    "sex": "Female",
+    "cases": 167,
+    "population": 17968347,
+    "rate": 0.9,
+    "percent_tested": "24%"
+  },
+  {
+    "id": 42,
+    "disease": "Early Syphilis",
+    "year": 2004,
+    "sex": "Male",
+    "cases": 2080,
+    "population": 17784418,
+    "rate": 11.7,
+    "percent_tested": "50%"
+  },
+  {
+    "id": 43,
+    "disease": "Early Syphilis",
+    "year": 2005,
+    "sex": "Female",
+    "cases": 288,
+    "population": 18087299,
+    "rate": 1.6,
+    "percent_tested": "24%"
+  },
+  {
+    "id": 44,
+    "disease": "Early Syphilis",
+    "year": 2005,
+    "sex": "Male",
+    "cases": 2490,
+    "population": 17898283,
+    "rate": 13.9,
+    "percent_tested": "47%"
+  },
+  {
+    "id": 45,
+    "disease": "Early Syphilis",
+    "year": 2006,
+    "sex": "Female",
+    "cases": 315,
+    "population": 18219378,
+    "rate": 1.7,
+    "percent_tested": "24%"
+  },
+  {
+    "id": 46,
+    "disease": "Early Syphilis",
+    "year": 2006,
+    "sex": "Male",
+    "cases": 2908,
+    "population": 18027444,
+    "rate": 16.1,
+    "percent_tested": "49%"
+  },
+  {
+    "id": 47,
+    "disease": "Early Syphilis",
+    "year": 2007,
+    "sex": "Female",
+    "cases": 333,
+    "population": 18372905,
+    "rate": 1.8,
+    "percent_tested": "22%"
+  },
+  {
+    "id": 48,
+    "disease": "Early Syphilis",
+    "year": 2007,
+    "sex": "Male",
+    "cases": 3217,
+    "population": 18179624,
+    "rate": 17.7,
+    "percent_tested": "51%"
+  },
+  {
+    "id": 49,
+    "disease": "Early Syphilis",
+    "year": 2008,
+    "sex": "Female",
+    "cases": 294,
+    "population": 18525551,
+    "rate": 1.6,
+    "percent_tested": "24%"
+  },
+  {
+    "id": 50,
+    "disease": "Early Syphilis",
+    "year": 2008,
+    "sex": "Male",
+    "cases": 3531,
+    "population": 18330671,
+    "rate": 19.3,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 51,
+    "disease": "Early Syphilis",
+    "year": 2009,
+    "sex": "Female",
+    "cases": 249,
+    "population": 18632980,
+    "rate": 1.3,
+    "percent_tested": "23%"
+  },
+  {
+    "id": 52,
+    "disease": "Early Syphilis",
+    "year": 2009,
+    "sex": "Male",
+    "cases": 3491,
+    "population": 18444224,
+    "rate": 18.9,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 53,
+    "disease": "Early Syphilis",
+    "year": 2010,
+    "sex": "Female",
+    "cases": 227,
+    "population": 18781184,
+    "rate": 1.2,
+    "percent_tested": "23%"
+  },
+  {
+    "id": 54,
+    "disease": "Early Syphilis",
+    "year": 2010,
+    "sex": "Male",
+    "cases": 3631,
+    "population": 18582184,
+    "rate": 19.5,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 55,
+    "disease": "Early Syphilis",
+    "year": 2011,
+    "sex": "Female",
+    "cases": 258,
+    "population": 18938400,
+    "rate": 1.4,
+    "percent_tested": "26%"
+  },
+  {
+    "id": 56,
+    "disease": "Early Syphilis",
+    "year": 2011,
+    "sex": "Male",
+    "cases": 4237,
+    "population": 18765193,
+    "rate": 22.6,
+    "percent_tested": "57%"
+  },
+  {
+    "id": 57,
+    "disease": "Early Syphilis",
+    "year": 2012,
+    "sex": "Female",
+    "cases": 313,
+    "population": 19110226,
+    "rate": 1.6,
+    "percent_tested": "23%"
+  },
+  {
+    "id": 58,
+    "disease": "Early Syphilis",
+    "year": 2012,
+    "sex": "Male",
+    "cases": 5160,
+    "population": 18945559,
+    "rate": 27.2,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 59,
+    "disease": "Early Syphilis",
+    "year": 2013,
+    "sex": "Female",
+    "cases": 462,
+    "population": 19242306,
+    "rate": 2.4,
+    "percent_tested": "22%"
+  },
+  {
+    "id": 60,
+    "disease": "Early Syphilis",
+    "year": 2013,
+    "sex": "Male",
+    "cases": 5981,
+    "population": 19100336,
+    "rate": 31.3,
+    "percent_tested": "57%"
+  },
+  {
+    "id": 61,
+    "disease": "Early Syphilis",
+    "year": 2014,
+    "sex": "Female",
+    "cases": 686,
+    "population": 19383492,
+    "rate": 3.5,
+    "percent_tested": "22%"
+  },
+  {
+    "id": 62,
+    "disease": "Early Syphilis",
+    "year": 2014,
+    "sex": "Male",
+    "cases": 6563,
+    "population": 19261310,
+    "rate": 34.1,
+    "percent_tested": "55%"
+  },
+  {
+    "id": 63,
+    "disease": "Early Syphilis",
+    "year": 2015,
+    "sex": "Female",
+    "cases": 952,
+    "population": 19509584,
+    "rate": 4.9,
+    "percent_tested": "22%"
+  },
+  {
+    "id": 64,
+    "disease": "Early Syphilis",
+    "year": 2015,
+    "sex": "Male",
+    "cases": 8434,
+    "population": 19403923,
+    "rate": 43.5,
+    "percent_tested": "51%"
+  },
+  {
+    "id": 65,
+    "disease": "Early Syphilis",
+    "year": 2016,
+    "sex": "Female",
+    "cases": 1445,
+    "population": 19610517,
+    "rate": 7.4,
+    "percent_tested": "23%"
+  },
+  {
+    "id": 66,
+    "disease": "Early Syphilis",
+    "year": 2016,
+    "sex": "Male",
+    "cases": 9738,
+    "population": 19517338,
+    "rate": 49.9,
+    "percent_tested": "55%"
+  },
+  {
+    "id": 67,
+    "disease": "Early Syphilis",
+    "year": 2017,
+    "sex": "Female",
+    "cases": 1859,
+    "population": 19705966,
+    "rate": 9.4,
+    "percent_tested": "24%"
+  },
+  {
+    "id": 68,
+    "disease": "Early Syphilis",
+    "year": 2017,
+    "sex": "Male",
+    "cases": 11831,
+    "population": 19622960,
+    "rate": 60.3,
+    "percent_tested": "54%"
+  },
+  {
+    "id": 69,
+    "disease": "Early Syphilis",
+    "year": 2018,
+    "sex": "Female",
+    "cases": 2557,
+    "population": 19773580,
+    "rate": 12.9,
+    "percent_tested": "27%"
+  },
+  {
+    "id": 70,
+    "disease": "Early Syphilis",
+    "year": 2018,
+    "sex": "Male",
+    "cases": 12819,
+    "population": 19702484,
+    "rate": 65.1,
+    "percent_tested": "59%"
+  },
+  {
+    "id": 71,
+    "disease": "Early Syphilis",
+    "year": 2019,
+    "sex": "Female",
+    "cases": 3009,
+    "population": 19798757,
+    "rate": 15.2,
+    "percent_tested": "25%"
+  },
+  {
+    "id": 72,
+    "disease": "Early Syphilis",
+    "year": 2019,
+    "sex": "Male",
+    "cases": 13589,
+    "population": 19730809,
+    "rate": 68.9,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 73,
+    "disease": "Early Syphilis",
+    "year": 2020,
+    "sex": "Female",
+    "cases": 2931,
+    "population": 19849130,
+    "rate": 14.8,
+    "percent_tested": "20%"
+  },
+  {
+    "id": 74,
+    "disease": "Early Syphilis",
+    "year": 2020,
+    "sex": "Male",
+    "cases": 12326,
+    "population": 19670941,
+    "rate": 62.7,
+    "percent_tested": "49%"
+  },
+  {
+    "id": 75,
+    "disease": "Early Syphilis",
+    "year": 2021,
+    "sex": "Female",
+    "cases": 3798,
+    "population": 19719675,
+    "rate": 19.3,
+    "percent_tested": ""
+  },
+  {
+    "id": 76,
+    "disease": "Early Syphilis",
+    "year": 2021,
+    "sex": "Male",
+    "cases": 13468,
+    "population": 19519878,
+    "rate": 69,
+    "percent_tested": ""
+  },
+  {
+    "id": 77,
+    "disease": "Gonorrhea",
+    "year": 2003,
+    "sex": "Female",
+    "cases": 11780,
+    "population": 17782868,
+    "rate": 66.2,
+    "percent_tested": "54%"
+  },
+  {
+    "id": 78,
+    "disease": "Gonorrhea",
+    "year": 2003,
+    "sex": "Male",
+    "cases": 13830,
+    "population": 17606060,
+    "rate": 78.6,
+    "percent_tested": "63%"
+  },
+  {
+    "id": 79,
+    "disease": "Gonorrhea",
+    "year": 2004,
+    "sex": "Female",
+    "cases": 13783,
+    "population": 17968347,
+    "rate": 76.7,
+    "percent_tested": "53%"
+  },
+  {
+    "id": 80,
+    "disease": "Gonorrhea",
+    "year": 2004,
+    "sex": "Male",
+    "cases": 16615,
+    "population": 17784418,
+    "rate": 93.4,
+    "percent_tested": "66%"
+  },
+  {
+    "id": 81,
+    "disease": "Gonorrhea",
+    "year": 2005,
+    "sex": "Female",
+    "cases": 15712,
+    "population": 18087299,
+    "rate": 86.9,
+    "percent_tested": "52%"
+  },
+  {
+    "id": 82,
+    "disease": "Gonorrhea",
+    "year": 2005,
+    "sex": "Male",
+    "cases": 18240,
+    "population": 17898283,
+    "rate": 101.9,
+    "percent_tested": "62%"
+  },
+  {
+    "id": 83,
+    "disease": "Gonorrhea",
+    "year": 2006,
+    "sex": "Female",
+    "cases": 15729,
+    "population": 18219378,
+    "rate": 86.3,
+    "percent_tested": "53%"
+  },
+  {
+    "id": 84,
+    "disease": "Gonorrhea",
+    "year": 2006,
+    "sex": "Male",
+    "cases": 17895,
+    "population": 18027444,
+    "rate": 99.3,
+    "percent_tested": "64%"
+  },
+  {
+    "id": 85,
+    "disease": "Gonorrhea",
+    "year": 2007,
+    "sex": "Female",
+    "cases": 14490,
+    "population": 18372905,
+    "rate": 78.9,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 86,
+    "disease": "Gonorrhea",
+    "year": 2007,
+    "sex": "Male",
+    "cases": 16576,
+    "population": 18179624,
+    "rate": 91.2,
+    "percent_tested": "67%"
+  },
+  {
+    "id": 87,
+    "disease": "Gonorrhea",
+    "year": 2008,
+    "sex": "Female",
+    "cases": 11477,
+    "population": 18525551,
+    "rate": 62,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 88,
+    "disease": "Gonorrhea",
+    "year": 2008,
+    "sex": "Male",
+    "cases": 13880,
+    "population": 18330671,
+    "rate": 75.7,
+    "percent_tested": "73%"
+  },
+  {
+    "id": 89,
+    "disease": "Gonorrhea",
+    "year": 2009,
+    "sex": "Female",
+    "cases": 9848,
+    "population": 18632980,
+    "rate": 52.9,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 90,
+    "disease": "Gonorrhea",
+    "year": 2009,
+    "sex": "Male",
+    "cases": 14063,
+    "population": 18444224,
+    "rate": 76.2,
+    "percent_tested": "74%"
+  },
+  {
+    "id": 91,
+    "disease": "Gonorrhea",
+    "year": 2010,
+    "sex": "Female",
+    "cases": 10761,
+    "population": 18781184,
+    "rate": 57.3,
+    "percent_tested": "60%"
+  },
+  {
+    "id": 92,
+    "disease": "Gonorrhea",
+    "year": 2010,
+    "sex": "Male",
+    "cases": 15961,
+    "population": 18582184,
+    "rate": 85.9,
+    "percent_tested": "75%"
+  },
+  {
+    "id": 93,
+    "disease": "Gonorrhea",
+    "year": 2011,
+    "sex": "Female",
+    "cases": 10815,
+    "population": 18938400,
+    "rate": 57.1,
+    "percent_tested": "62%"
+  },
+  {
+    "id": 94,
+    "disease": "Gonorrhea",
+    "year": 2011,
+    "sex": "Male",
+    "cases": 16528,
+    "population": 18765193,
+    "rate": 88.1,
+    "percent_tested": "76%"
+  },
+  {
+    "id": 95,
+    "disease": "Gonorrhea",
+    "year": 2012,
+    "sex": "Female",
+    "cases": 13111,
+    "population": 19110226,
+    "rate": 68.6,
+    "percent_tested": "62%"
+  },
+  {
+    "id": 96,
+    "disease": "Gonorrhea",
+    "year": 2012,
+    "sex": "Male",
+    "cases": 20542,
+    "population": 18945559,
+    "rate": 108.4,
+    "percent_tested": "77%"
+  },
+  {
+    "id": 97,
+    "disease": "Gonorrhea",
+    "year": 2013,
+    "sex": "Female",
+    "cases": 14280,
+    "population": 19242306,
+    "rate": 74.2,
+    "percent_tested": "56%"
+  },
+  {
+    "id": 98,
+    "disease": "Gonorrhea",
+    "year": 2013,
+    "sex": "Male",
+    "cases": 23989,
+    "population": 19100336,
+    "rate": 125.6,
+    "percent_tested": "76%"
+  },
+  {
+    "id": 99,
+    "disease": "Gonorrhea",
+    "year": 2014,
+    "sex": "Female",
+    "cases": 15850,
+    "population": 19383492,
+    "rate": 81.8,
+    "percent_tested": "53%"
+  },
+  {
+    "id": 100,
+    "disease": "Gonorrhea",
+    "year": 2014,
+    "sex": "Male",
+    "cases": 28976,
+    "population": 19261310,
+    "rate": 150.4,
+    "percent_tested": "75%"
+  },
+  {
+    "id": 101,
+    "disease": "Gonorrhea",
+    "year": 2015,
+    "sex": "Female",
+    "cases": 18417,
+    "population": 19509584,
+    "rate": 94.4,
+    "percent_tested": "51%"
+  },
+  {
+    "id": 102,
+    "disease": "Gonorrhea",
+    "year": 2015,
+    "sex": "Male",
+    "cases": 35655,
+    "population": 19403923,
+    "rate": 183.8,
+    "percent_tested": "71%"
+  },
+  {
+    "id": 103,
+    "disease": "Gonorrhea",
+    "year": 2016,
+    "sex": "Female",
+    "cases": 20934,
+    "population": 19610517,
+    "rate": 106.7,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 104,
+    "disease": "Gonorrhea",
+    "year": 2016,
+    "sex": "Male",
+    "cases": 43294,
+    "population": 19517338,
+    "rate": 221.8,
+    "percent_tested": "80%"
+  },
+  {
+    "id": 105,
+    "disease": "Gonorrhea",
+    "year": 2017,
+    "sex": "Female",
+    "cases": 24569,
+    "population": 19705966,
+    "rate": 124.7,
+    "percent_tested": "58%"
+  },
+  {
+    "id": 106,
+    "disease": "Gonorrhea",
+    "year": 2017,
+    "sex": "Male",
+    "cases": 50516,
+    "population": 19622960,
+    "rate": 257.4,
+    "percent_tested": "76%"
+  },
+  {
+    "id": 107,
+    "disease": "Gonorrhea",
+    "year": 2018,
+    "sex": "Female",
+    "cases": 26491,
+    "population": 19773580,
+    "rate": 134,
+    "percent_tested": "61%"
+  },
+  {
+    "id": 108,
+    "disease": "Gonorrhea",
+    "year": 2018,
+    "sex": "Male",
+    "cases": 52649,
+    "population": 19702484,
+    "rate": 267.2,
+    "percent_tested": "81%"
+  },
+  {
+    "id": 109,
+    "disease": "Gonorrhea",
+    "year": 2019,
+    "sex": "Female",
+    "cases": 27525,
+    "population": 19798757,
+    "rate": 139,
+    "percent_tested": "57%"
+  },
+  {
+    "id": 110,
+    "disease": "Gonorrhea",
+    "year": 2019,
+    "sex": "Male",
+    "cases": 52879,
+    "population": 19730809,
+    "rate": 268,
+    "percent_tested": "79%"
+  },
+  {
+    "id": 111,
+    "disease": "Gonorrhea",
+    "year": 2020,
+    "sex": "Female",
+    "cases": 28145,
+    "population": 19849130,
+    "rate": 141.8,
+    "percent_tested": "51%"
+  },
+  {
+    "id": 112,
+    "disease": "Gonorrhea",
+    "year": 2020,
+    "sex": "Male",
+    "cases": 49401,
+    "population": 19670941,
+    "rate": 251.1,
+    "percent_tested": "75%"
+  },
+  {
+    "id": 113,
+    "disease": "Gonorrhea",
+    "year": 2021,
+    "sex": "Female",
+    "cases": 31248,
+    "population": 19719675,
+    "rate": 158.5,
+    "percent_tested": ""
+  },
+  {
+    "id": 114,
+    "disease": "Gonorrhea",
+    "year": 2021,
+    "sex": "Male",
+    "cases": 59306,
+    "population": 19519878,
+    "rate": 303.8,
+    "percent_tested": ""
+  }
+]

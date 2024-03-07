@@ -13,10 +13,11 @@ export const prevalenceRouter = new Hono()
   })
   .post("/", async (c) => {
     try {
-      const { year, gender, cases, casesper100k } = await c.req.json();
+      const { year, disease, sex, cases, rate, percent_tested } =
+        await c.req.json();
       const queryText =
-        "INSERT INTO prevalence(year, gender, cases, casesper100k) VALUES($1, $2, $3, $4) RETURNING *";
-      const queryValues = [year, gender, cases, casesper100k];
+        "INSERT INTO prevalence(year, disease, sex, cases, rate, percent_tested) VALUES($1, $2, $3, $4, $5, $6) RETURNING *";
+      const queryValues = [year, disease, sex, cases, rate, percent_tested];
       const res = await pool.query(queryText, queryValues);
       return c.json(res);
     } catch (err) {
