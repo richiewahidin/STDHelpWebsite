@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LocatorCard from "../../components/LocatorCard";
-//import "./Loca.css";
 import LocatorData from "./LocatorData.json";
 import Pagination from "@mui/material/Pagination";
 
@@ -16,16 +15,16 @@ const Locator = () => {
   const handleChange = (event, value) => {
     setCurrentPage(value);
   };
+
+  // Only display 10 items per page.
   const currentItems = cardData.slice(indexOfFirstItem, indexOfLastItem);
 
-const Locator = () => {
   return (
     <div className="container">
       <h1>Locator</h1>
       <div className="grid">
-        {/* Map over currentItems instead of cardData */}
         {currentItems.map((item, index) => (
-          <PrevalenceCard key={index} {...item} />
+          <LocatorCard key={index} {...item} />
         ))}
       </div>
       <Pagination
