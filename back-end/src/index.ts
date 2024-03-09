@@ -10,3 +10,5 @@ serve({
 }).on("listening", () => {
   console.log(">>> API running on: http://localhost:3000");
 });
+
+export default mainRouter;

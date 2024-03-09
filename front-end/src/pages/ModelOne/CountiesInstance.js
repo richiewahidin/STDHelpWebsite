@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from "../../components/LocatorCard";
+import LocatorCard from "../../components/LocatorCard";
 import CountiesData from "./CountiesData.json";
 import { useParams } from 'react-router-dom';
+import LocatorData from '../Model3/LocatorData.json';
 
 const CountiesInstance = () => {
   let { id } = useParams();
   const county = CountiesData.counties.find((county) => county.id === id);
-  const cardData = CountiesData.counties;
 
   if (!county) {
     return <div>County not found</div>;
@@ -45,18 +45,9 @@ const CountiesInstance = () => {
         {/* Adds links to other instances from model 1 */}
         <h4> <strong> Locations in this county *(locations not correct for this phase): </strong></h4>
         <div className="grid" style={{alignContent:'flex-start', justifyContent: 'center'}} >
-            {cardData.map((item, index) => (
-                <Card
-                  key={index}
-                  title={item.title}
-                  Address={item.Address}
-                  ZipCode={item.ZipCode}
-                  Services={item.Services}
-                  Phone={item.Phone}
-                  imageUrl={item.imageUrl}
-                  url={item.url}
-                />
-                ))}
+            {LocatorData.Locator.map((item, index) => (
+                <LocatorCard key={index} {...item} />
+            ))}
         </div>  
     </div>
   );
