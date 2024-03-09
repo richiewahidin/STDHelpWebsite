@@ -2,7 +2,7 @@ image: nikolaik/python-nodejs:latest # change to match your node version
 
 before_script:
   - npm install
-  - python3 -m pip3 install selenium
+  - python3 -m pip install selenium
 
 build:
   stage: build
@@ -23,7 +23,6 @@ test:
       - node_modules/
   script:
     - set CI=false
-
     - python3 front-end/src/AboutUnitTests.py
     - python3 front-end/src/LandingUnitTests.py
     - python3 front-end/src/LocatorUnitTests.py
