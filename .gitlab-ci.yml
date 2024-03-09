@@ -20,8 +20,10 @@ test:
   cache:
     paths:
       - node_modules/
+      -
   script:
     - set CI=false
+    - python -m pip install selenium #temp fix
     - python3 front-end/src/AboutUnitTests.py
     - python3 front-end/src/LandingUnitTests.py
     - python3 front-end/src/LocatorUnitTests.py
