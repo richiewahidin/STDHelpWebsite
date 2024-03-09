@@ -1,4 +1,4 @@
-image: nikolaik/python3.12-nodejs21 # change to match your node version
+image: nikolaik/python-nodejs:latest # change to match your node version
 
 before_script:
   - npm install
