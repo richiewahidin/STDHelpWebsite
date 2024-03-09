@@ -21,7 +21,7 @@ test:
     paths:
       - node_modules/
   script:
-    - export process.env.CI=false
+    - set CI=false
     - npm run test
     - python3 front-end/src/AboutUnitTests.py
     - python3 front-end/src/LandingUnitTests.py
