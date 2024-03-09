@@ -21,6 +21,18 @@ test:
     paths:
       - node_modules/
   script:
+    - export process.env.CI=false
     - npm run test
+    - python3 front-end/src/AboutUnitTests.py
+    - python3 front-end/src/LandingUnitTests.py
+    - python3 front-end/src/LocatorUnitTests.py
+    - python3 front-end/src/CountiesUnitTests.py
+    - python3 front-end/src/Prevelance.py
+    - pushd front-end
+    - npx jest
+    - popd
+    - npx tsx ./testing/index.ts
+
+
   
 
