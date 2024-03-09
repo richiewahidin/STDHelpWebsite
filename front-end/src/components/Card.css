@@ -7,6 +7,7 @@
 }
 
 .container {
+  position: relative;
   text-align: center;
   padding: 20px;
 }
@@ -31,4 +32,20 @@
 .card:hover {
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   transition: box-shadow 0.3s ease-in-out;
+}
+
+.transparent-image {
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; /* Text color */
+  font-size: 64px; /* Text size */
+  font-family: Roboto; /* Text font */
+  opacity: 1; /* Set opacity to 1 to make the text fully visible */
+  text-align: center;
 }

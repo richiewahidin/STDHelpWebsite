@@ -7,9 +7,12 @@ const Card = ({ year, disease, sex, cases, rate, id }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const diseaseImageMap = {
-    Chlamydia: "https://assets.lybrate.com/imgs/tic/enadp/what-are-the-types-of-chlamydia.webp",
-    Gonorrhea: "https://sexualhealth.gov.mt/sites/default/files/Gonorrhea%20Image%20848px.jpg",
-    "Early Syphilis": "https://previews.123rf.com/images/artinspiring/artinspiring1909/artinspiring190900408/129656179-syphilis-symptoms-and-risk-factor-infographic-dangerous.jpg"
+    Chlamydia:
+      "https://assets.lybrate.com/imgs/tic/enadp/what-are-the-types-of-chlamydia.webp",
+    Gonorrhea:
+      "https://sexualhealth.gov.mt/sites/default/files/Gonorrhea%20Image%20848px.jpg",
+    "Early Syphilis":
+      "https://previews.123rf.com/images/artinspiring/artinspiring1909/artinspiring190900408/129656179-syphilis-symptoms-and-risk-factor-infographic-dangerous.jpg",
   };
 
   const getImageUrlForDisease = (disease) => {
@@ -17,8 +20,9 @@ const Card = ({ year, disease, sex, cases, rate, id }) => {
   };
 
   const handleClick = () => {
-    // Pass the object as state along with the URL
-    nav(`/prevalence/${id}`, { state: { year, disease, sex, cases, rate, id } });
+    nav(`/prevalence/${id}`, {
+      state: { year, disease, sex, cases, rate, id },
+    });
   };
 
   return (
@@ -27,8 +31,20 @@ const Card = ({ year, disease, sex, cases, rate, id }) => {
       className={`card ${isHovered ? "hovered" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      data-testid="card-container" // Added data-testid for testing
     >
-      <img src={getImageUrlForDisease(disease)} alt={disease} />
+      <div className="container">
+        <img
+          src={getImageUrlForDisease(disease)}
+          alt={disease}
+          className="transparent-image" // Corrected to className
+        />
+        <div className="overlay">
+          {" "}
+          {/* Corrected to className */}
+          <b>{year}</b>
+        </div>
+      </div>
       <div className="card-content">
         <h5>
           <strong>About: </strong>Overview of {sex} {disease} cases in {year}
