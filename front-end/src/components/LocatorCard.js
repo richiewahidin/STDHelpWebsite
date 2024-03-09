@@ -2,31 +2,22 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-const Card = ({id, title, Address, Website, Services, Phone, imageUrl}) => {
+const Card = ({id, name, address, website, phonenumber,imageUrl}) => {
   const nav = useNavigate();
 
   const handleClick = () => {
     //url = "locator/" + id;
-    nav("/locator/" + id);
+    nav(`/locator/${id}`, { state: { id, name, address, website, phonenumber } });
   };
-  // //for hovering
-  // const handleEnter = () => {
-  //   setIsHovered(true);
-  // };
-
-  // const handleLeave = () => {
-  //   setIsHovered(false);
-  // };
 
   return (
     <div onClick={handleClick} className="card">
-      <img src={imageUrl} alt={title} />
+      <img src={imageUrl} alt={name} />
       <div className="card-content">
-        <h5><strong>{title}</strong></h5>
-        <p><strong>Address: </strong> {Address}</p>
-        <p><strong>Website: </strong> {Website}</p>
-        <p><strong>Services: </strong>{Services}</p>
-        <p><strong>Phone: </strong>{Phone}</p>
+        <h5><strong>{name}</strong></h5>
+        <p><strong>Address: </strong> {address}</p>
+        <p><strong>Website: </strong> {website}</p>
+        <p><strong>Phone: </strong>{phonenumber}</p>
       </div>
     </div>
   );

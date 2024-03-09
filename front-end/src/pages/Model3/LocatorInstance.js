@@ -1,23 +1,28 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import LocatorData from "./LocatorData.json";
+import { useLocation } from "react-router-dom";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 const LocatorInstance = () => {
-  let { id } = useParams();
-  var data = LocatorData.Locator.find((i) => i.id.toString() === id);
+  const location = useLocation();
+  const { name, address, website, phonenumber} = location.state;
+
+  const locatorInstance = {
+    name: name,
+    address: address,
+    website: website,
+    phonenumber: phonenumber,
+  };
 
   return (
     <Container className="container" style={{ flexDirection: "column" }}>
       <Card className="Intro" style={{ marginBottom: "20px" }}>
-        <Card.Header>{data.title}</Card.Header>
+        <Card.Header>{name}</Card.Header>
         <Card.Body>
-          <Card.Text>Address: {data.Address}</Card.Text>
-          <Card.Text>Website: {data.Website}</Card.Text>
-          <Card.Text>Services offered: {data.Services}</Card.Text>
-          <Card.Text>{data.About}</Card.Text>
-          <Card.Header>Insurance Offered:</Card.Header>
-          <Card.Text>{data.Insurance}</Card.Text>
+          <Card.Text>Address: {address}</Card.Text>
+          <Card.Text>Website: {website}</Card.Text>
+          <Card.Text>Phone Number: {phonenumber}</Card.Text>
         </Card.Body>
       </Card>
     </Container>

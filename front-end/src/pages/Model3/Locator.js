@@ -1,12 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LocatorCard from "../../components/LocatorCard";
 import LocatorData from "./LocatorData.json";
 import Pagination from "@mui/material/Pagination";
+import axios from "axios";
 
 const Locator = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
-  const cardData = LocatorData.Locator;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://ec2-3-128-33-29.us-east-2.compute.amazonaws.com/api/v1/treatmentcenter"
+        );
+        setData(response.data.rows); // Update state with fetched data rows
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   // Find indexes of items to display
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -17,7 +34,7 @@ const Locator = () => {
   };
 
   // Only display 10 items per page.
-  const currentItems = cardData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <div className="container">
@@ -28,7 +45,7 @@ const Locator = () => {
         ))}
       </div>
       <Pagination
-        count={Math.ceil(cardData.length / itemsPerPage)}
+        count={Math.ceil(data.length / itemsPerPage)}
         page={currentPage}
         onChange={handleChange}
         variant="outlined"
@@ -38,7 +55,7 @@ const Locator = () => {
       />
       <div style={{ padding: 15, paddingBottom: 20 }}>
         Displaying: {indexOfFirstItem + 1} -{" "}
-        {Math.min(indexOfLastItem, cardData.length)} out of {cardData.length}
+        {Math.min(indexOfLastItem, data.length)} out of {data.length}
       </div>
     </div>
   );
