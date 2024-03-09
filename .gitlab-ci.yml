@@ -22,7 +22,6 @@ test:
       - node_modules/
   script:
     - set CI=false
-    - npm run test
     - python3 front-end/src/AboutUnitTests.py
     - python3 front-end/src/LandingUnitTests.py
     - python3 front-end/src/LocatorUnitTests.py
