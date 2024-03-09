@@ -5,7 +5,7 @@ export const treatmentCenterRouter = new Hono()
   .get("/", async (c) => {
     try {
       const client = await pool.connect();
-      const res = await client.query("SELECT * FROM prevalence");
+      const res = await client.query("SELECT * FROM treatmentcenter");
       client.release();
       return c.json(res);
     } catch (err) {
@@ -18,7 +18,7 @@ export const treatmentCenterRouter = new Hono()
       const { name, address, countyId, distance, phoneNumber, website } =
         await c.req.json();
       const queryText =
-        "INSERT INTO prevalence(name, address, countyId, distance, phoneNumber, website) VALUES($1, $2, $3, $4, $5, $6) RETURNING *";
+        "INSERT INTO treatmentcenter(name, address, countyId, distance, phoneNumber, website) VALUES($1, $2, $3, $4, $5, $6) RETURNING *";
       const queryValues = [
         name,
         address,

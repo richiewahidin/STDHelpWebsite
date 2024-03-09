@@ -7,6 +7,6 @@ export const mainRouter = new Hono()
   .basePath("/api/v1")
   .route("/prevalence", prevalenceRouter)
   .route("/county", countyRouter)
-  .route("/treatment-center", treatmentCenterRouter);
+  .route("/treatmentcenter", treatmentCenterRouter);
 
 export type AppType = typeof mainRouter;
