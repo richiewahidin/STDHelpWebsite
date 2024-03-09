@@ -1,61 +1,62 @@
-import React from "react";
-import Card from "./PrevalenceCard";
-import "./card.css";
+import React, { useState, useEffect } from "react";
+import PrevalenceCard from "../../components/PrevalenceCard";
+import "./Prevalence.css";
+import Pagination from "@mui/material/Pagination";
+import axios from "axios";
 
 const Prevalence = () => {
-  const cardData = [
-    {
-      title: "An overview of female STD cases for the year of 2003.",
-      gender: "Female",
-      cases: "85,153",
-      rate: "479",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/57/Zahl_2003.jpg?20190929125532",
-      url: "/prevalence/female2003",
-    },
-    {
-      title: "An overview of male STD cases for the year of 2003.",
-      gender: "Male",
-      cases: "31,004",
-      rate: "176",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/57/Zahl_2003.jpg?20190929125532",
-      url: "/prevalence/male2003",
-    },
-    {
-      title: "An overview of female STD cases for the year of 2004.",
-      gender: "Female",
-      cases: "89,438",
-      rate: "497.8",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Zahl_2004.jpg?20190929125535",
-      url: "/prevalence/female2004",
-    },
-    {
-      title: "An overview of male STD cases for the year of 2004.",
-      gender: "Male",
-      cases: "33,652",
-      rate: "189.2",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Zahl_2004.jpg?20190929125535",
-      url: "/prevalence/male2004",
-    },
-    // Add more card data as needed
-  ];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(10);
+  const [data, setData] = useState([]); // Initialize data state as an empty array
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://ec2-3-93-193-224.compute-1.amazonaws.com/api/v1/prevalence"
+        );
+        setData(response.data.rows); // Update state with fetched data rows
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Find indexes of items to display
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  // Only display 10 items per page based on fetched data
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handleChange = (event, value) => {
+    setCurrentPage(value);
+  };
 
   return (
     <div className="container">
-    <h1 className="centered-header">STD Numbers and Stats 2003-2021 (by gender)</h1>
-    <div className="grid">
-      {cardData.map((item, index) => (
-        <Card
-          key={index}
-          title={item.title}
-          gender={item.gender}
-          cases={item.cases}
-          rate={item.rate}
-          imageUrl={item.imageUrl}
-          url={item.url}
-        />
-      ))}
+      <h1>Prevalence of STDs from 2003-2021</h1>
+      <div className="grid">
+        {currentItems.map((item, index) => (
+          <PrevalenceCard key={index} {...item} />
+        ))}
+      </div>
+      <Pagination
+        count={Math.ceil(data.length / itemsPerPage)}
+        page={currentPage}
+        onChange={handleChange}
+        variant="outlined"
+        shape="rounded"
+        size="large"
+        className="pagination"
+      />
+      <div style={{ padding: 15, paddingBottom: 20 }}>
+        Displaying: {indexOfFirstItem + 1} -{" "}
+        {Math.min(indexOfLastItem, data.length)} out of {data.length}
+      </div>
     </div>
-  </div>
   );
 };
 

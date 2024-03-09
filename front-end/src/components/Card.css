@@ -1,0 +1,51 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 20px;
+  padding-left: 40px; /* Add padding to the left */
+  padding-right: 40px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto; /* Change to auto to maintain aspect ratio */
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.card-content {
+  margin-top: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.transparent-image {
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black; /* Text color */
+  font-size: 64px; /* Text size */
+  font-family: Roboto; /* Text font */
+  opacity: 1; /* Set opacity to 1 to make the text fully visible */
+  text-align: center;
+}
