@@ -1,7 +1,8 @@
-image: node:20.11.0 # change to match your node version
+image: python3.12-nodejs21 # change to match your node version
 
 before_script:
   - npm install
+  - python3 -m pip3 install selenium
 
 build:
   stage: build
@@ -22,7 +23,7 @@ test:
       - node_modules/
   script:
     - set CI=false
-    - python3 -m pip3 install selenium
+
     - python3 front-end/src/AboutUnitTests.py
     - python3 front-end/src/LandingUnitTests.py
     - python3 front-end/src/LocatorUnitTests.py
