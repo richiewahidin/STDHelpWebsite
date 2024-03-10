@@ -13,6 +13,18 @@ export const treatmentCenterRouter = new Hono()
       return c.json(err);
     }
   })
+  .get("/:id", async (c) => {
+    try {
+      const reqId = c.req.param("id");
+      const res = await pool.query(
+        "SELECT * FROM treatmentcenter WHERE id = $1",
+        [reqId],
+      );
+      return c.json(res);
+    } catch (err) {
+      console.log(err);
+    }
+  })
   .post("/", async (c) => {
     try {
       const { name, address, countyId, distance, phoneNumber, website } =
