@@ -13,7 +13,7 @@ const Locator = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://ec2-3-128-33-29.us-east-2.compute.amazonaws.com/api/v1/treatmentcenter"
+          "https://d1ahbxgizovdow.cloudfront.net/treatmentcenter"
         );
         setData(response.data.rows); // Update state with fetched data rows
         console.log(response.data);
