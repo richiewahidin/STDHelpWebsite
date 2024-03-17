@@ -13,7 +13,7 @@ const Prevalence = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://ec2-3-93-193-224.compute-1.amazonaws.com/api/v1/prevalence"
+          "https://d1ahbxgizovdow.cloudfront.net/prevalence",
         );
         setData(response.data.rows); // Update state with fetched data rows
       } catch (error) {
