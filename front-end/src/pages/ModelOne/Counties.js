@@ -15,7 +15,7 @@ const Counties = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://ec2-3-93-193-224.compute-1.amazonaws.com/api/v1/county"
+          "https://d1ahbxgizovdow.cloudfront.net/county"
         );
         setData(response.data.rows); // Update state with fetched data rows
         console.log(response.data.rows);
@@ -35,9 +35,9 @@ const Counties = () => {
     setCurrentPage(value);
   };
 
-  const handleClick = (id, name, population, ccases, gcases, scases, escases, tscases, udcases) => {
+  const handleClick = (id, name, population, ccases, gcases, scases, escases, tscases, udcases, map, flag) => {
     // Pass the object as state along with the URL
-    nav(`/counties/${name}`, { state: {id, name, population, ccases, gcases, scases, escases, tscases, udcases} });
+    nav(`/counties/${name}`, { state: {id, name, population, ccases, gcases, scases, escases, tscases, udcases, map, flag} });
   };
 
   return (
@@ -47,15 +47,14 @@ const Counties = () => {
       </div>
       <Row>
         {currentItems.map((item, index) => (
-          <Col key={index} className="d-flex justify-content-center" onClick={() => handleClick(item.id, item.name, item.population, item.ccases, item.gcases, item.scases, item.escases, item.tscases, item.udcases, item.mapurl, item.flagurl, item.countyseat)}>
+          <Col key={index} className="d-flex justify-content-center" onClick={() => handleClick(item.id, item.name, item.population, item.ccases, item.gcases, item.scases, item.escases, item.tscases, item.udcases, item.map, item.flag)}>
             <Card style={{ width: '20rem' }}>
-              <Card.Img src={item.imgurl} width="200" height="200" />
+              <Card.Img src={item.img} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>
                   <ListGroup className='list-group-flush'>
                     <ListGroupItem>
-                      County Seat: {item.countyseat}<br />
                       Population: {item.population}<br />
                     </ListGroupItem>
                     <ListGroupItem>
