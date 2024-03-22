@@ -5,8 +5,8 @@ import { useLocation } from "react-router-dom";
 const InstancePrevalence = () => {
   const location = useLocation();
   const {
-    id,
-    countyid,
+    // id,
+    // countyid,
     year,
     sex,
     population,
@@ -17,29 +17,60 @@ const InstancePrevalence = () => {
     g_cases,
     g_rate,
     countyimage,
+    countyName,
   } = location.state;
 
   return (
     <Container className="mt-4">
       <Card>
-        <Card.Header as="h5">Prevalence Details</Card.Header>
+        <Card.Header as="h5">
+          <b>
+            {countyName} {year}
+          </b>
+        </Card.Header>
         <Card.Body>
           <Image
             src={countyimage}
             alt="County Image"
-            rounded
             className="mb-3"
-            style={{ maxWidth: "100%", height: "auto" }}
+            style={{ maxWidth: "80%", height: "500px" }}
           />
           <Row className="mb-3">
-            <Col md={4}><strong>Year:</strong> {year}</Col>
-            <Col md={4}><strong>Sex:</strong> {sex}</Col>
-            <Col md={4}><strong>Population:</strong> {population}</Col>
+            <Col>
+              <div className="border p-3 mb-3">
+                <strong>Description:</strong> The {sex === "Total" ? "Male and Female" : sex} population in {countyName} during the year {year} was {population}. Below details the number of Chlamydia, Syphilis, and Gonorrhea cases for {sex} during this time.
+              </div>
+            </Col>
           </Row>
-          <Row className="mb-3">
-            <Col md={4}><strong>Chlamydia cases:</strong> {c_cases} ({c_rate} per 100,000)</Col>
-            <Col md={4}><strong>Syphilis cases:</strong> {s_cases} ({s_rate} per 100,000)</Col>
-            <Col md={4}><strong>Gonorrhea cases:</strong> {g_cases} ({g_rate} per 100,000)</Col>
+          <Row>
+            <Col>
+              <Row>
+                <Col md={4}>
+                  <Card>
+                    <Card.Body>
+                      <strong>Chlamydia cases:</strong><br />
+                      {c_cases} ({c_rate} cases per 100,000 people)
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={4}>
+                  <Card>
+                    <Card.Body>
+                      <strong>Syphilis cases:</strong><br />
+                      {s_cases} ({s_rate} cases per 100,000 people)
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={4}>
+                  <Card>
+                    <Card.Body>
+                      <strong>Gonorrhea cases:</strong><br />
+                      {g_cases} ({g_rate} cases per 100,000 people)
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Col>
           </Row>
         </Card.Body>
       </Card>
