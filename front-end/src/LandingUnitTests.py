@@ -10,6 +10,7 @@ class TestGui(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         options = Options()
+        options.add_argument("--headless")
         cls.driver = webdriver.Chrome(options=options)
         cls.driver.get(HOME_PAGE_URL)
         cls.soup = BeautifulSoup(cls.driver.page_source, 'html.parser')
