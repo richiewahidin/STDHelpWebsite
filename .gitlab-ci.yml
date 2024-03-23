@@ -4,7 +4,7 @@ before_script:
   - npm install
   - python3 -m pip install selenium
   - apt update
-  - apt-get install -y chromium-browser
+  - apt-get install -y chromium
   - python3 -m pip install bs4
 
 build:
