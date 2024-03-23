@@ -5,12 +5,13 @@ from bs4 import BeautifulSoup
 import unittest
 from selenium.webdriver.common.by import By
 
-HOME_PAGE_URL = "http://localhost:3000/locator"
+HOME_PAGE_URL = "https://stdhelp.site/locator"
 
 class TestGui(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         options = Options()
+        options.add_argument("--no-sandbox")
         options.add_argument("--headless")
         cls.driver = webdriver.Chrome(options=options)
         cls.driver.get(HOME_PAGE_URL)

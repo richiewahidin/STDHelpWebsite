@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import unittest
 from selenium.webdriver.common.by import By
 
-HOME_PAGE_URL = "https://stdhelp.site/"
+HOME_PAGE_URL = "https://stdhelp.site/about"
 
 class TestGui(unittest.TestCase):
     @classmethod
