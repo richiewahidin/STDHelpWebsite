@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 import unittest
 
-HOME_PAGE_URL = "httpsd://stdhelp.site"
+HOME_PAGE_URL = "https://stdhelp.site"
 
 class TestGui(unittest.TestCase):
     @classmethod
