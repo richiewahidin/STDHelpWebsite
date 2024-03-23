@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
@@ -29,15 +31,17 @@ class TestGui(unittest.TestCase):
         self.assertEqual(next(iter(title)).text, "Locator")
 
     def test_card_clickable(self):
-        # card_element = self.driver.find_element(By.CLASS_NAME, 'card')
+        card = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "card"))
+        )
         
-        # #Before URL
-        # initial_url = self.driver.current_url
-        # card_element.click()
-        # #After URL
-        # new_url = self.driver.current_url
-        # #URL changed?
-        # self.assertNotEqual(initial_url, new_url)
+        #Before URL
+        initial_url = self.driver.current_url
+        card.click()
+        #After URL
+        new_url = self.driver.current_url
+        #URL changed?
+        self.assertNotEqual(initial_url, new_url)
         return True
 
 if __name__ == "__main__":
