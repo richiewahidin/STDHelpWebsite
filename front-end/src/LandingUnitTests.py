@@ -4,12 +4,14 @@ from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 import unittest
 
-HOME_PAGE_URL = "http://localhost:3000"
+HOME_PAGE_URL = "https://stdhelp.site"
 
 class TestGui(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         options = Options()
+        options.add_argument("--no-sandbox")
+        options.add_argument("--headless")
         cls.driver = webdriver.Chrome(options=options)
         cls.driver.get(HOME_PAGE_URL)
         cls.soup = BeautifulSoup(cls.driver.page_source, 'html.parser')

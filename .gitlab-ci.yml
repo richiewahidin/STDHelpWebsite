@@ -2,6 +2,8 @@ image: nikolaik/python-nodejs:latest # change to match your node version
 
 before_script:
   - npm install
+  - apt update
+  - apt-get install -y chromium
   - python3 -m pip install selenium
   - python3 -m pip install bs4
 
