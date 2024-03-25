@@ -10,7 +10,8 @@ const LocatorInstance = ({ google }) => {
   const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0});
   const [placeDetails, setPlaceDetails] = useState();
   const mapRef = useRef(null);
-
+  const key = process.env.REACT_APP_API_KEY;
+  console.log("API Key:", `${process.env.REACT_APP_API_KEY}`);
   const locatorInstance = {
     name: name,
     address: address,
@@ -108,6 +109,6 @@ const LocatorInstance = ({ google }) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyBkvQOgjAyLDVuxm4knp-09YDLJDnlGo1o"
+  apiKey: process.env.REACT_APP_API_KEY
 })(LocatorInstance);
 
