@@ -1,0 +1,61 @@
+Berkeley
+Alameda
+Amador
+Calaveras
+Butte
+Colusa
+Contra Costa
+Alpine
+Del Norte
+El Dorado
+Fresno
+Humboldt
+Glenn
+Imperial
+Inyo
+Kern
+Lake
+Kings
+Los Angeles
+Lassen
+Pasadena
+Madera
+Long Beach
+Marin
+Mendocino
+Mariposa
+Merced
+Modoc
+Mono
+Napa
+Monterey
+Nevada
+Orange
+Plumas
+Placer
+Sacramento
+Riverside
+San Bernardino
+San Benito
+San Francisco
+San Diego
+San Luis Obispo
+San Joaquin
+San Mateo
+Santa Cruz
+Santa Barbara
+Santa Clara
+Sierra
+Shasta
+Siskiyou
+Solano
+Sonoma
+Stanislaus
+Sutter
+Trinity
+Tehama
+Tuolumne
+Tulare
+Yolo
+Ventura
+Yuba
