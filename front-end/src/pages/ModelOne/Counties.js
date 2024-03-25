@@ -4,6 +4,7 @@ import Pagination from "@mui/material/Pagination";
 import './Counties.css';
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import CountiesCard from './CountiesCard';
 
 const Counties = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -48,25 +49,7 @@ const Counties = () => {
       <Row>
         {currentItems.map((item, index) => (
           <Col key={index} className="d-flex justify-content-center" onClick={() => handleClick(item.id, item.name, item.population, item.ccases, item.gcases, item.scases, item.escases, item.tscases, item.udcases, item.map, item.flag)}>
-            <Card style={{ width: '20rem' }}>
-              <Card.Img src={item.img} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>
-                  <ListGroup className='list-group-flush'>
-                    <ListGroupItem>
-                      Population: {item.population}<br />
-                    </ListGroupItem>
-                    <ListGroupItem>
-                      <strong>2021 cases:</strong><br />
-                      &ensp; Chlamydia: {item.ccases}<br />
-                      &ensp; Gonorrhea: {item.gcases}<br />
-                      &ensp; Syphilis*: {item.scases}<br />
-                    </ListGroupItem>
-                  </ListGroup>
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <CountiesCard item={item} onClick={() => handleClick(item.id, item.name, item.population, item.ccases, item.gcases, item.scases, item.escases, item.tscases, item.udcases, item.map, item.flag)} />
           </Col>
         ))}
       </Row>

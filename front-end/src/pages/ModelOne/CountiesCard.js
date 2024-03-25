@@ -1,31 +1,29 @@
+// CountiesCard.js
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-const Card = ({ imageUrl, county, countySeat, chlamydia, gonnorhea, syphilis }) => {
+const CountiesCard = ({ item, onClick }) => {
   return (
-    <Card style={{ width: '20rem' }}>
-    <Card.Img src="imageUrl" width = "200" height = "200"/>
-    <Card.Body>
-        <Card.Title>county</Card.Title>
+    <Card style={{ width: '20rem' }} onClick={onClick}>
+      <Card.Img src={item.img} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+      <Card.Body>
+        <Card.Title>{item.name}</Card.Title>
         <Card.Text>
-            <ListGroup className='list-group-flush'>
-                <ListGroupItem>
-                    <strong>County Seat: </strong>{countySeat}<br></br>
-                    <strong>Population: </strong>{population}<br></br>
-                </ListGroupItem>
-                <ListGroupItem>
-                    2021 cases:<br></br>
-                    <strong> &emsp; Chlamydia: </strong>{chlamydia}<br></br>
-                    <strong> &emsp; Gonnorhea: </strong>{gonnorhea}<br></br>
-                    <strong> &emsp; Primary and Secondary Syphilis: </strong>{syphilis}<br></br>
-                </ListGroupItem>
-            </ListGroup>
+          <ListGroup className='list-group-flush'>
+            <ListGroupItem>
+              Population: {item.population}<br />
+            </ListGroupItem>
+            <ListGroupItem>
+              <strong>2021 cases:</strong><br />
+              &ensp; Chlamydia: {item.ccases}<br />
+              &ensp; Gonorrhea: {item.gcases}<br />
+              &ensp; Syphilis*: {item.scases}<br />
+            </ListGroupItem>
+          </ListGroup>
         </Card.Text>
-        <Link to="/home" className="btn btn-primary">Learn more</Link>
-    </Card.Body>
-</Card>
+      </Card.Body>
+    </Card>
   );
 };
 
-export default Card;
+export default CountiesCard;
