@@ -55,7 +55,52 @@ func processLocator(zip string) ([]types.LocatorInResponse, error) {
 	return loc, nil
 }
 
-func constructLocatorOut(in types.LocatorInResponse, i int) string {
+func mapCityCounty() (map[string]string, map[string]int, error) {
+	cityMap := make(map[string]string)
+	filename := "counties.csv"
+	cityFile, err := os.OpenFile(filename, os.O_RDONLY, 0755)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	numMap := make(map[string]int)
+	filename = "countyref.txt"
+	countyNumFile, err := os.OpenFile(filename, os.O_RDONLY, 0755)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	cityReader := bufio.NewScanner(cityFile)
+	for cityReader.Scan() {
+		splitLine := strings.Split(cityReader.Text(), ",") //Assuming that there will ALWAYS and ONLY be 2 parts of a line in the format "County,City"
+		cityMap[splitLine[1]] = splitLine[0]
+	}
+	if cityReader.Err() != nil {
+		return nil, nil, err
+	}
+
+	numReader := bufio.NewScanner(countyNumFile)
+	id := 0
+	for numReader.Scan() {
+		numMap[numReader.Text()] = id
+		id++
+	}
+	if numReader.Err() != nil {
+		return nil, nil, err
+	}
+
+	return cityMap, numMap, nil
+}
+
+func getCountyId(cityMap map[string]string, numMap map[string]int, in types.LocatorInResponse) int {
+	value, exists := numMap[cityMap[in.Attributes.Address.City]]
+	if !exists {
+		return 0
+	}
+	return value
+}
+
+func constructLocatorOut(in types.LocatorInResponse, i int, countyid int) string {
 	var sb strings.Builder
 	sb.WriteString(fmt.Sprint(i))
 	sb.WriteString(",")
@@ -72,7 +117,7 @@ func constructLocatorOut(in types.LocatorInResponse, i int) string {
 	sb.WriteString(in.Attributes.Address.Zip)
 	sb.WriteString("\",")
 
-	sb.WriteString("0")
+	sb.WriteString(fmt.Sprint(countyid))
 	sb.WriteString(",")
 
 	sb.WriteString(fmt.Sprintf("%.2f", in.Attributes.Distance))
@@ -81,10 +126,11 @@ func constructLocatorOut(in types.LocatorInResponse, i int) string {
 	sb.WriteString(sanitize.AlphaNumeric(in.Attributes.Contact.PhoneRaw, true))
 	sb.WriteString(",")
 
-	sb.WriteString(in.Attributes.Contact.Website)
-	sb.WriteString(",")
-
-	sb.WriteString(in.Attributes.Address.Zip)
+	if len(in.Attributes.Contact.Website) == 0 {
+		sb.WriteString("no website")
+	} else {
+		sb.WriteString(in.Attributes.Contact.Website)
+	}
 	sb.WriteString("\n")
 
 	return sb.String()
@@ -114,13 +160,19 @@ func main() {
 	writer := bufio.NewWriter(f)
 	i := 0
 
+	cityMap, numMap, err := mapCityCounty()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 	for _, zipcode := range zipList {
 		loc, err := processLocator(zipcode)
 		if err != nil {
 			fmt.Println(err)
 		}
 		for _, clinic := range loc {
-			writer.Write([]byte(constructLocatorOut(clinic, i)))
+			writer.Write([]byte(constructLocatorOut(clinic, i, getCountyId(cityMap, numMap, clinic))))
 			i++
 		}
 	}

@@ -25,6 +25,12 @@
   border-radius: 5px;
 }
 
+.container img.transparent-image {
+  width: 100%; /* or a specific px value */
+  height: 200px; /* or a specific height that fits your design */
+  object-fit: cover; /* cover, contain, or scale-down as needed */
+}
+
 .card-content {
   margin-top: 10px;
 }

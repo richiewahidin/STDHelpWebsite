@@ -6,14 +6,14 @@ import axios from "axios";
 
 const Prevalence = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10);
+  const [itemsPerPage] = useState(9);
   const [data, setData] = useState([]); // Initialize data state as an empty array
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://d1ahbxgizovdow.cloudfront.net/prevalence",
+          "https://d1ahbxgizovdow.cloudfront.net/prevalence"
         );
         setData(response.data.rows); // Update state with fetched data rows
       } catch (error) {

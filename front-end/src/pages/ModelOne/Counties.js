@@ -4,6 +4,7 @@ import Pagination from "@mui/material/Pagination";
 import "./Counties.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import CountiesCard from './CountiesCard';
 
 const Counties = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,7 +16,7 @@ const Counties = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://d1ahbxgizovdow.cloudfront.net/county",
+          "https://d1ahbxgizovdow.cloudfront.net/county"
         );
         setData(response.data.rows); // Update state with fetched data rows
         console.log(response.data.rows);
@@ -35,31 +36,9 @@ const Counties = () => {
     setCurrentPage(value);
   };
 
-  const handleClick = (
-    id,
-    name,
-    population,
-    ccases,
-    gcases,
-    scases,
-    escases,
-    tscases,
-    udcases,
-  ) => {
+  const handleClick = (id, name, population, ccases, gcases, scases, escases, tscases, udcases, map, flag) => {
     // Pass the object as state along with the URL
-    nav(`/counties/${name}`, {
-      state: {
-        id,
-        name,
-        population,
-        ccases,
-        gcases,
-        scases,
-        escases,
-        tscases,
-        udcases,
-      },
-    });
+    nav(`/counties/${name}`, { state: {id, name, population, ccases, gcases, scases, escases, tscases, udcases, map, flag} });
   };
 
   return (
@@ -69,52 +48,8 @@ const Counties = () => {
       </div>
       <Row>
         {currentItems.map((item, index) => (
-          <Col
-            key={index}
-            className="d-flex justify-content-center"
-            onClick={() =>
-              handleClick(
-                item.id,
-                item.name,
-                item.population,
-                item.ccases,
-                item.gcases,
-                item.scases,
-                item.escases,
-                item.tscases,
-                item.udcases,
-                item.mapurl,
-                item.flagurl,
-                item.countyseat,
-              )
-            }
-          >
-            <Card style={{ width: "20rem" }}>
-              <Card.Img src={item.imgurl} width="200" height="200" />
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>
-                  <ListGroup className="list-group-flush">
-                    <ListGroupItem>
-                      County Seat: {item.countyseat}
-                      <br />
-                      Population: {item.population}
-                      <br />
-                    </ListGroupItem>
-                    <ListGroupItem>
-                      <strong>2021 cases:</strong>
-                      <br />
-                      &ensp; Chlamydia: {item.ccases}
-                      <br />
-                      &ensp; Gonorrhea: {item.gcases}
-                      <br />
-                      &ensp; Syphilis*: {item.scases}
-                      <br />
-                    </ListGroupItem>
-                  </ListGroup>
-                </Card.Text>
-              </Card.Body>
-            </Card>
+          <Col key={index} className="d-flex justify-content-center" onClick={() => handleClick(item.id, item.name, item.population, item.ccases, item.gcases, item.scases, item.escases, item.tscases, item.udcases, item.map, item.flag)}>
+            <CountiesCard item={item} onClick={() => handleClick(item.id, item.name, item.population, item.ccases, item.gcases, item.scases, item.escases, item.tscases, item.udcases, item.map, item.flag)} />
           </Col>
         ))}
       </Row>

@@ -1,27 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ year, disease, sex, cases, rate, id }) => {
+const Card = ({ id, countyid, year, sex, population, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyimage }) => {
   const nav = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
 
-  const diseaseImageMap = {
-    Chlamydia:
-      "https://assets.lybrate.com/imgs/tic/enadp/what-are-the-types-of-chlamydia.webp",
-    Gonorrhea:
-      "https://sexualhealth.gov.mt/sites/default/files/Gonorrhea%20Image%20848px.jpg",
-    "Early Syphilis":
-      "https://previews.123rf.com/images/artinspiring/artinspiring1909/artinspiring190900408/129656179-syphilis-symptoms-and-risk-factor-infographic-dangerous.jpg",
-  };
+  const [countyName, setCountyName] = useState('');
 
-  const getImageUrlForDisease = (disease) => {
-    return diseaseImageMap[disease] || "https://example.com/default.jpg";
-  };
+  useEffect(() => {
+    fetch(`https://d1ahbxgizovdow.cloudfront.net/county/${countyid}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.rows && data.rows.length > 0) {
+          setCountyName(data.rows[0].name);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+      });
+  }, [id]);
 
   const handleClick = () => {
     nav(`/prevalence/${id}`, {
-      state: { year, disease, sex, cases, rate, id },
+      state: { id, year, sex, population, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyimage, countyName },
     });
   };
 
@@ -31,13 +33,13 @@ const Card = ({ year, disease, sex, cases, rate, id }) => {
       className={`card ${isHovered ? "hovered" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      data-testid="card-container" // Added data-testid for testing
+      data-testid="card-container"
     >
       <div className="container">
         <img
-          src={getImageUrlForDisease(disease)}
-          alt={disease}
-          className="transparent-image" // Corrected to className
+          src={countyimage}
+          alt={countyimage}
+          className="transparent-image"
         />
         <div className="overlay">
           {" "}
@@ -47,18 +49,22 @@ const Card = ({ year, disease, sex, cases, rate, id }) => {
       </div>
       <div className="card-content">
         <h5>
-          <strong>About: </strong>Overview of {sex} {disease} cases in {year}
+          <strong>About: </strong>Overview of {sex} STD cases for {countyName} in {year}
         </h5>
         <p>
           <strong>Gender: </strong> {sex}
         </p>
         <p>
-          <strong>Number of {disease} cases: </strong>
-          {cases}
+          <strong>Number of Chlamydia cases: </strong>
+          {c_cases}
         </p>
         <p>
-          <strong>Per 100,000 people: </strong>
-          {rate}
+          <strong>Number of Syphillis cases: </strong>
+          {s_cases}
+        </p>
+        <p>
+          <strong>Number of Gonorrhea cases: </strong>
+          {g_cases}
         </p>
       </div>
     </div>
