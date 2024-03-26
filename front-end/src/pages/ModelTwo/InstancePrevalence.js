@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
 import { Card, Container, Image, Row, Col } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
-import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
+import CountiesCard from "../ModelOne/CountiesCard";
 
 const InstancePrevalence = () => {
   const location = useLocation();
+  const nav = useNavigate();
+
   const {
-    // id,
-    countyid,
     year,
     sex,
     population,
@@ -18,34 +17,49 @@ const InstancePrevalence = () => {
     g_cases,
     g_rate,
     countyimage,
-    countyName,
+    countyData,
   } = location.state;
 
   // Calculate the maximum value for scaling the chart
   const maxCases = Math.max(c_cases, s_cases, g_cases);
 
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://d1ahbxgizovdow.cloudfront.net/county/${countyid}`
-        );
-        setData(response.data.rows); // Update state with fetched data rows
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const handleClick = (
+    id,
+    name,
+    population,
+    ccases,
+    gcases,
+    scases,
+    escases,
+    tscases,
+    udcases,
+    map,
+    flag
+  ) => {
+    // Pass the object as state along with the URL
+    nav(`/counties/${name}`, {
+      state: {
+        id,
+        name,
+        population,
+        ccases,
+        gcases,
+        scases,
+        escases,
+        tscases,
+        udcases,
+        map,
+        flag,
+      },
+    });
+  };
 
   return (
     <Container className="mt-4">
       <Card>
         <Card.Header as="h5">
           <b>
-            {countyName} {year}
+            {countyData.name} {year}
           </b>
         </Card.Header>
         <Card.Body>
@@ -60,9 +74,9 @@ const InstancePrevalence = () => {
               <div className="border p-3 mb-3">
                 <strong>Description:</strong> The{" "}
                 {sex === "Total" ? "Male and Female" : sex} population in{" "}
-                {countyName} during the year {year} was {population}. Below
-                shows the number of Chlamydia, Syphilis, and Gonorrhea cases
-                for {sex === "Total" ? "Males and Female" : sex}s during this time.
+                {countyData.name} during the year {year} was {population}. Below
+                shows the number of Chlamydia, Syphilis, and Gonorrhea cases for{" "}
+                {sex === "Total" ? "Males and Female" : sex}s during this time.
               </div>
             </Col>
           </Row>
@@ -170,6 +184,8 @@ const InstancePrevalence = () => {
           >
             <h5>Related Content</h5>
           </div>
+          {/* Pass countyData as a prop to CountiesCard component */}
+          <CountiesCard item={countyData} onClick={() => handleClick(countyData.id, countyData.name, countyData.population, countyData.ccases, countyData.gcases, countyData.scases, countyData.escases, countyData.tscases, countyData.udcases, countyData.map, countyData.flag)} />
         </Card.Body>
       </Card>
     </Container>

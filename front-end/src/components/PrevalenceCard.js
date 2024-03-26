@@ -2,28 +2,55 @@ import React, { useState, useEffect } from "react";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ id, countyid, year, sex, population, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyimage }) => {
+const Card = ({
+  id,
+  countyid,
+  year,
+  sex,
+  population,
+  c_cases,
+  c_rate,
+  s_cases,
+  s_rate,
+  g_cases,
+  g_rate,
+  countyimage,
+}) => {
   const nav = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
 
-  const [countyName, setCountyName] = useState('');
+  const [countyData, setCountyData] = useState(null);
 
   useEffect(() => {
     fetch(`https://d1ahbxgizovdow.cloudfront.net/county/${countyid}`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         if (data && data.rows && data.rows.length > 0) {
-          setCountyName(data.rows[0].name);
+          setCountyData(data.rows[0]);
         }
       })
-      .catch(error => {
-        console.error('Error fetching data: ', error);
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
       });
-  }, [id]);
+  }, [countyid]);
 
   const handleClick = () => {
     nav(`/prevalence/${id}`, {
-      state: { id, year, sex, population, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyimage, countyName },
+      state: {
+        id,
+        countyid,
+        year,
+        sex,
+        population,
+        c_cases,
+        c_rate,
+        s_cases,
+        s_rate,
+        g_cases,
+        g_rate,
+        countyimage,
+        countyData, // Pass all county data here
+      },
     });
   };
 
@@ -49,8 +76,19 @@ const Card = ({ id, countyid, year, sex, population, c_cases, c_rate, s_cases, s
       </div>
       <div className="card-content">
         <h5>
-          <strong>About: </strong>Overview of {sex} STD cases for {countyName} in {year}
+          <strong>About: </strong>Overview of {sex} STD cases for{" "}
+          {countyData && countyData.name} in {year}
         </h5>
+        {countyData && (
+          <>
+            <p>
+              <strong>County Name: </strong> {countyData.name}
+            </p>
+            <p>
+              <strong>County Population: </strong> {countyData.population}
+            </p>
+          </>
+        )}
         <p>
           <strong>Gender: </strong> {sex}
         </p>
