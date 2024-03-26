@@ -1,142 +1,98 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import PrevalenceCard from "../src/components/PrevalenceCard"; // Adjust the import path as necessary
-import { useNavigate } from "react-router-dom";
 
-// Mock props to pass to the component
 const mockProps = {
-  year: "2021",
-  disease: "Chlamydia",
-  sex: "Female",
-  cases: "1234",
-  rate: "567",
-  id: "1",
+  id: "1407",
+  countyid: "818",
+  year: "2006",
+  sex: "Total",
+  population: "87584",
+  c_cases: "172",
+  c_rate: "196.4",
+  s_cases: "0",
+  s_rate: "0",
+  g_cases: "28",
+  g_rate: "32",
+  countyimage: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Mendocino_California.jpg"
 };
 
-// Mocking useNavigate
 jest.mock("react-router-dom", () => ({
-  ...jest.requireActual("react-router-dom"), // use actual for all non-hook parts
+  ...jest.requireActual("react-router-dom"),
   useNavigate: jest.fn(),
 }));
 
 describe("PrevalenceCard", () => {
   beforeEach(() => {
-    jest.clearAllMocks(); // Clear mock function's history before each test
+    jest.clearAllMocks();
+
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({ /* mock response data */ })
+      })
+    );
   });
 
-  it("renders correctly with given props", () => {
+  it("renders gender prompt", () => {
     render(
       <BrowserRouter>
         <PrevalenceCard {...mockProps} />
       </BrowserRouter>
     );
     expect(
-      screen.getByText(/overview of female chlamydia cases in 2021/i)
+      screen.getByText(/Gender:/i)
     ).toBeInTheDocument();
   });
 
-  it("displays the correct year for the disease", () => {
+  it("displays the correct year for the card", () => {
     render(
       <BrowserRouter>
         <PrevalenceCard {...mockProps} />
       </BrowserRouter>
     );
     const yearElement = screen.getByText(mockProps.year);
-    expect(yearElement).toHaveTextContent("2021");
+    expect(yearElement).toHaveTextContent("2006");
   });
 
-  it("displays the correct disease", async () => {
+  it("displays the correct sex for the card", () => {
     render(
       <BrowserRouter>
         <PrevalenceCard {...mockProps} />
       </BrowserRouter>
     );
-    const regex = new RegExp(
-      `Overview of Female Chlamydia cases in ${mockProps.year}`,
-      "i"
-    );
-    const diseaseElement = screen.getByText(regex);
-    expect(diseaseElement).toBeInTheDocument();
+    const genderElement = screen.getByText(mockProps.sex);
+    expect(genderElement).toHaveTextContent("Total");
   });
 
-  it("displays the correct sex", async () => {
+  it("displays the correct Chlamydia cases for the card", () => {
     render(
       <BrowserRouter>
         <PrevalenceCard {...mockProps} />
       </BrowserRouter>
     );
-    const sexElement = await screen.findByText(
-      /Overview of Female Chlamydia cases in 2021/i
-    );
-    expect(sexElement).toBeInTheDocument();
+    const c_cases_Element = screen.getByText(mockProps.c_cases);
+    expect(c_cases_Element).toHaveTextContent("172");
   });
 
-  it("displays the correct number of cases", () => {
+  it("displays the correct Syphillis cases for the card", () => {
     render(
       <BrowserRouter>
         <PrevalenceCard {...mockProps} />
       </BrowserRouter>
     );
-    const caseElement = screen.getByText(mockProps.cases);
-    expect(caseElement).toHaveTextContent("1234");
+    const s_cases_Element = screen.getByText(mockProps.s_cases);
+    expect(s_cases_Element).toHaveTextContent("0");
   });
 
-  it("displays the correct rate", () => {
+  it("displays the correct Gonorrhea cases for the card", () => {
     render(
       <BrowserRouter>
         <PrevalenceCard {...mockProps} />
       </BrowserRouter>
     );
-    const rateElement = screen.getByText(mockProps.rate);
-    expect(rateElement).toHaveTextContent("567");
-  });
-
-  it("displays the correct image for the disease", () => {
-    render(
-      <BrowserRouter>
-        <PrevalenceCard {...mockProps} />
-      </BrowserRouter>
-    );
-    const imageElement = screen.getByAltText(mockProps.disease);
-    expect(imageElement).toHaveAttribute(
-      "src",
-      expect.stringContaining("chlamydia.webp")
-    );
-  });
-
-  it("handles mouse enter and leave for hover effect", () => {
-    render(
-      <BrowserRouter>
-        <PrevalenceCard {...mockProps} />
-      </BrowserRouter>
-    );
-    // Ensure your component has a `data-testid="card-container"` attribute
-    const cardElement = screen.getByTestId("card-container");
-    fireEvent.mouseEnter(cardElement);
-    expect(cardElement).toHaveClass("hovered");
-    fireEvent.mouseLeave(cardElement);
-    expect(cardElement).not.toHaveClass("hovered");
-  });
-
-  it("navigates to the correct page on card click", () => {
-    const navigateMock = jest.fn(); // Declare a jest mock function
-    useNavigate.mockImplementation(() => navigateMock); // Use the mock function as the implementation for useNavigate
-
-    render(
-      <BrowserRouter>
-        <PrevalenceCard {...mockProps} />
-      </BrowserRouter>
-    );
-
-    // Simulate user clicking on the card
-    fireEvent.click(screen.getByTestId("card-container"));
-
-    // Check if navigate was called with the correct URL
-    expect(navigateMock).toHaveBeenCalledWith(
-      `/prevalence/${mockProps.id}`,
-      expect.any(Object)
-    );
+    const g_cases_Element = screen.getByText(mockProps.g_cases);
+    expect(g_cases_Element).toHaveTextContent("28");
   });
 });
