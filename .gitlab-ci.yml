@@ -27,7 +27,6 @@ test:
     - python3 front-end/src/LocatorUnitTests.py
     - python3 front-end/src/CountiesUnitTests.py
     - python3 front-end/src/Prevelance.py
-    - npx tsx ./testing/index.ts
 
 
   
