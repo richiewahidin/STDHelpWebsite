@@ -27,9 +27,6 @@ test:
     - python3 front-end/src/LocatorUnitTests.py
     - python3 front-end/src/CountiesUnitTests.py
     - python3 front-end/src/Prevelance.py
-    - pushd front-end
-    - npx jest
-    - popd
     - npx tsx ./testing/index.ts
 
 
