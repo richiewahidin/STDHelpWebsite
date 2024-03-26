@@ -6,7 +6,7 @@ before_script:
   - apt-get install -y chromium
   - python3 -m pip install selenium
   - python3 -m pip install bs4
-  - npm i jest-envrionment-jsdom
+  - npm i jest-environment-jsdom
 
 build:
   stage: build
