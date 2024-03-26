@@ -11,10 +11,10 @@ https://www.stdhelp.site/
 
 # Gitlab SHA
 Phase 1: 52a34d32a02912d36a44299bd28c7b47ad658487
-Phase 2: https://gitlab.com/tommyhuynh02n/cs373-group-20/-/commit/6d00c95c09d09f4970972a9599daf7716cf652d9
+Phase 2: 3803b866d6dbec5f043b4dd6738e81ed35beb9ac
 
 # Gitlab Pipeline URL
-- https://gitlab.com/tommyhuynh02n/cs373-group-20/-/pipelines/1177329596
+- https://gitlab.com/tommyhuynh02n/cs373-group-20/-/pipelines/1227442723
 
 
 # The proposed project:
