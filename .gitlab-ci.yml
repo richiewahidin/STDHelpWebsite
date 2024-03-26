@@ -7,19 +7,8 @@ before_script:
   - python3 -m pip install selenium
   - python3 -m pip install bs4
   - npm i jest-environment-jsdom
+  - npm install --save-dev @babel/preset-env
 
-build:
-  stage: build
-  cache:
-    paths:
-      - node_modules/
-  script:
-    - CI=false npm run build
-  artifacts:
-    paths:
-      - build
-  allow_failure: true
-  
 test:
   stage: test
   cache:
