@@ -8,6 +8,12 @@ before_script:
   - python3 -m pip install bs4
   - npm i jest-environment-jsdom
   - npm install --save-dev @babel/preset-env
+  - npm install --save-dev @babel/preset-react
+  - npm install --save-dev babel-jest
+  - npm install --save-dev identity-obj-proxy
+  - npm install --save-dev jest
+  - npm install --save-dev react-test-renderer
+
 
 test:
   stage: test
