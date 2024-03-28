@@ -42,7 +42,6 @@ class TestGui(unittest.TestCase):
         new_url = self.driver.current_url
         #URL changed?
         self.assertNotEqual(initial_url, new_url)
-        #return True #TODO change later
 
 if __name__ == "__main__":
     unittest.main()

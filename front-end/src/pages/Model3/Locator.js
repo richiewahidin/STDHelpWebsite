@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Locator = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10);
+  const [itemsPerPage] = useState(9);
   const [data, setData] = useState([]);
 
   useEffect(() => {
