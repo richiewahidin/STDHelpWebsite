@@ -1,0 +1,14 @@
+.dropdown-menu-container {
+  max-height: 200px; /* or whatever height you prefer */
+  overflow-y: scroll; /* Adds scrolling */
+}
+
+.dropdownContainer {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.dropdown-button {
+  display: inline;
+  margin: 0 50px;
+}
