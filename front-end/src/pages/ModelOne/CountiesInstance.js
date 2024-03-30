@@ -1,9 +1,8 @@
-import React from 'react';
-import Card from "../../components/LocatorCard";
-import CountiesData from "./CountiesData.json";
-import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import PrevalenceCard from "../../components/PrevalenceCard";
+import LocatorCard from "../../components/LocatorCard";
 import { useLocation } from "react-router-dom";
-import LocatorData from "../Model3/LocatorData";
 
 const CountiesInstance = () => {
     const location = useLocation();
@@ -24,26 +23,72 @@ const CountiesInstance = () => {
       flagurl: flag,
     };
 
-  return (
-    <div style={{ position: 'relative', padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-        <div style={{ marginBottom: '20px' }}>
-            <h1><strong>{instanceCounties.name} County</strong></h1>
+    const [prevalenceData, setPrevalenceData] = useState([]);
+    const [locatorData, setLocatorData] = useState([]);
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', width: '100%' }}>
-                <div style={{ flex: '0 0 60%', marginBottom: '20px' }}>
-                    <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}> Population: {instanceCounties.population} </h3>
-                    <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}> <strong>2021 Cases:</strong></h3>
-                    <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Chlamydia</strong>: {instanceCounties.ccases} </h4>
-                    <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Gonnorhea</strong>: {instanceCounties.gcases}</h4>
-                    <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Primary and Secondary Syphilis</strong>: {instanceCounties.scases} </h4>
-                    <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Early non-primary non-secondary Syphilis</strong>: {instanceCounties.escases} </h4>
-                    <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Total Early Syphilis</strong>: {instanceCounties.tscases} </h4>
-                    <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Unknown Duration or Late Syphilis</strong>: {instanceCounties.udcases} </h4>
-                </div>
-                  <div style={{ flex: '0 0 50%', maxWidth: '300px', position: 'relative' }}>
-                    <img src={instanceCounties.flagurl} style={{ width: '100%', height: 'auto' }}/>
-                  </div>
+    useEffect(() => {
+      const fetchPrevalenceData = async () => {
+        try {
+          const response = await axios.get(
+            "https://d1ahbxgizovdow.cloudfront.net/prevalence"
+          );
+          setPrevalenceData(response.data.rows);
+          console.log("Prevalence data:", response.data.rows);  
+        } catch (error) {
+          console.error("Error fetching prevalence data:", error);
+        }
+      };
+
+      fetchPrevalenceData();
+    }, []);
+
+    useEffect(() => {
+      const fetchLocatorData = async () => {
+        try {
+          const response = await axios.get(
+            "https://d1ahbxgizovdow.cloudfront.net/treatmentcenter"
+          );
+          setLocatorData(response.data.rows);
+          console.log("Locator data:", response.data.rows);  
+        } catch (error) {
+          console.error("Error fetching locator data:", error);
+        }
+      };
+
+      fetchLocatorData();
+    }, []);
+
+    const filteredPrevalenceData = prevalenceData.filter(item =>
+      item.countyid === id && item.year === "2021"
+    );
+
+    const filteredLocatorData = locatorData.filter(item =>
+      item.countyId === id
+    );
+    
+  return (
+    <div style={{ position: 'relative', paddingLeft: '200px', paddingRight: '200px', margin: '0 auto' }}>
+        <div style={{ marginBottom: '20px' }}>
+        {!instanceCounties.name.includes('*') ? (
+          <h1><strong>{instanceCounties.name} County</strong></h1>
+        ) : (
+          <h1><strong>{instanceCounties.name} City </strong></h1>
+        )}
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', width: '100%' }}>
+            <div style={{ flex: '0 0 60%', marginBottom: '20px' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}> Population: {instanceCounties.population} </h3>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}> <strong>2021 Cases:</strong></h3>
+                <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Chlamydia</strong>: {instanceCounties.ccases} </h4>
+                <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Gonnorhea</strong>: {instanceCounties.gcases}</h4>
+                <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Primary and Secondary Syphilis</strong>: {instanceCounties.scases} </h4>
+                <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Early non-primary non-secondary Syphilis</strong>: {instanceCounties.escases} </h4>
+                <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Total Early Syphilis</strong>: {instanceCounties.tscases} </h4>
+                <h4 style={{ fontSize: '1rem', marginBottom: '5px' }}> <strong> Unknown Duration or Late Syphilis</strong>: {instanceCounties.udcases} </h4>
             </div>
+              <div style={{ flex: '0 0 50%', maxWidth: '300px', position: 'relative' }}>
+                <img src={instanceCounties.flagurl} style={{ width: '100%', height: 'auto' }}/>
+              </div>
+        </div>
         </div>
          {/* google maps embedded, responsive */}
         <div style={{ marginBottom: '20px', clear: 'both' }}>
@@ -51,22 +96,28 @@ const CountiesInstance = () => {
         </div> 
         <br></br>
 
-        {/* Adds links to other instances from model 1 */}
-        <h4> <strong> Locations in this county *(locations not correct for this phase): </strong></h4>
-        <div className="grid" style={{alignContent:'flex-start', justifyContent: 'center'}} >
-            {LocatorData.Locator.map((item, index) => (
-                <Card
-                  key={index}
-                  title={item.title}
-                  Address={item.Address}
-                  ZipCode={item.ZipCode}
-                  Services={item.Services}
-                  Phone={item.Phone}
-                  imageUrl={item.imageUrl}
-                  url={item.url}
-                />
-                ))}
-        </div>  
+        {!instanceCounties.name.includes('*') ? (
+          <div>
+            <h4>Prevalence Data for {name} County in 2021:</h4>
+            <div className="grid" style={{ display: 'flex', width: '100%', justifyContent: 'center'}}>
+            {filteredPrevalenceData.map((item, index) => (
+              <div key={index} style={{ width: '55%'}}>
+              <PrevalenceCard {...item} />
+              </div>
+            ))}
+            </div>
+            <h4> Treatment Centers in {name} County: </h4>
+            <div className="grid" style={{ display: 'flex', width: '100%', justifyContent: 'center'}}>
+            {filteredLocatorData.map((item, index) => (
+              <div key={index} style={{ width: '55%'}}>
+                <LocatorCard key={index} {...item} />
+              </div>
+            ))}
+            </div>
+          </div>
+        ) : (
+          <h4> No Prevalence Data or Treatment Centers for individual cities. </h4>
+        )}
     </div>
   );
 };
