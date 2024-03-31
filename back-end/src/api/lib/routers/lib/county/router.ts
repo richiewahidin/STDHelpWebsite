@@ -26,19 +26,25 @@ export const countyRouter = new Hono()
     try {
       const {
         name,
+        map,
+        flag,
         population,
-        ccases,
+        img,
         gcases,
+        ccases,
         scases,
         escases,
         tscases,
         udcases,
       } = await c.req.json();
       const queryText =
-        "INSERT INTO county(name, population, ccases, gcases, scases, escases, tscases, udcases) VALUES($1, $2, $3, $4, $5, $6, $7, $8)";
+        "INSERT INTO county(name, map, flag, population, img, gcases, ccases, scases, escases, tscases, udcases) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)";
       const queryValues = [
         name,
+        map,
+        flag,
         population,
+        img,
         ccases,
         gcases,
         scases,
