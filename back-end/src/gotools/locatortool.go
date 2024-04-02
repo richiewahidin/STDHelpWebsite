@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 
 	"github.com/mrz1836/go-sanitize"
@@ -80,10 +81,12 @@ func mapCityCounty() (map[string]string, map[string]int, error) {
 	}
 
 	numReader := bufio.NewScanner(countyNumFile)
-	id := 0
 	for numReader.Scan() {
-		numMap[numReader.Text()] = id
-		id++
+		row := strings.Split(numReader.Text(), ",")
+		numMap[row[1]], err = strconv.Atoi(row[0])
+		if err != nil {
+			return nil, nil, err
+		}
 	}
 	if numReader.Err() != nil {
 		return nil, nil, err
@@ -101,6 +104,10 @@ func getCountyId(cityMap map[string]string, numMap map[string]int, in types.Loca
 }
 
 func constructLocatorOut(in types.LocatorInResponse, i int, countyid int) string {
+	if len(in.Attributes.Contact.Website) == 0 {
+		return ""
+	}
+
 	var sb strings.Builder
 	sb.WriteString(fmt.Sprint(i))
 	sb.WriteString(",")
@@ -126,11 +133,8 @@ func constructLocatorOut(in types.LocatorInResponse, i int, countyid int) string
 	sb.WriteString(sanitize.AlphaNumeric(in.Attributes.Contact.PhoneRaw, true))
 	sb.WriteString(",")
 
-	if len(in.Attributes.Contact.Website) == 0 {
-		sb.WriteString("no website")
-	} else {
-		sb.WriteString(in.Attributes.Contact.Website)
-	}
+	sb.WriteString(in.Attributes.Contact.Website)
+
 	sb.WriteString("\n")
 
 	return sb.String()
