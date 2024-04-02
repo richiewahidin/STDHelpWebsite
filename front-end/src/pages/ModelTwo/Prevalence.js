@@ -3,7 +3,7 @@ import Card from "../../components/PrevalenceCard";
 import "./Prevalence.css";
 import Pagination from "@mui/material/Pagination";
 import axios from "axios";
-import CustomDropdown from "../../components/DropDown"; // Make sure this path is correct
+import CustomDropdown from "../../components/DropDown";
 
 const Prevalence = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,6 +24,7 @@ const Prevalence = () => {
           "https://d1ahbxgizovdow.cloudfront.net/prevalence"
         );
         setData(response.data.rows);
+        setSortOption("AtoZ")
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -120,7 +121,6 @@ const Prevalence = () => {
     "All Counties",
     ...countyData.map((county) => county.name).sort(),
   ];
-
   const populationOptions = ["All", "Over 100,000", "Under 100,000"];
   const sexOptions = ["All", "Male", "Female", "Total"];
   const sortOptions = ["AtoZ", "Year Ascending"];
