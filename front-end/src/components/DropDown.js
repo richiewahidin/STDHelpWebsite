@@ -24,7 +24,7 @@ const CustomDropdown = ({ title, items, setter, scroll }) => {
       className="dropdown-button"
       title={selectedOption}
     >
-      <Container className="dropdown-menu-container" style={{ maxHeight: '200px', overflowY: 'auto' }}>
+      <Container className="dropdown-menu-container" style={{ maxHeight: '200px', overflowY: 'auto'}}>
         {items.map((item, index) => (
           <Dropdown.Item key={index} onClick={() => handleClick(item)}>
             {item}
