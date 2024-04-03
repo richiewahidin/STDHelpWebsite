@@ -27,28 +27,44 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: "1rem",
+    //backgroundColor: "gray"
+  },
+  aboutContainer: {
+    display: "flex",
+    flexDirection:"column",
     paddingTop: "4.5rem",
+    backgroundColor: "#A52A2A",
+    //width:"80%",
+    //border: "2px solid #000", // Adding a 2px solid black border
   },
   subTextContainer: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     paddingTop: "1.2rem",
+    color:"white"
   },
   title: {
     fontSize: "3rem",
+    fontWeight:"bold",
+    color:"white"
   },
 
   paragraphContainer: {
-    width: "50%",
+    //width: "50%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     paddingTop: "1rem",
+    paddingBottom: "5rem",
+    color:"white"
   },
   paragraph: {
-    fontSize: "1.05rem",
+    //fontSize: "1.05rem",
     textAlign: "center",
+    paddingLeft:"5rem",
+    paddingRight:"5rem"
   },
   cardImageStyle: {
     width: "100%",
@@ -148,35 +164,35 @@ function About() {
   return (
     <div>
       <div style={styles.container}>
-        <div style={styles.titleContainer}>
-          <h1 style={styles.title}>About STDHelp</h1>
-        </div>
-
-        {/* Mission Statement */}
-        <div style={styles.subTextContainer}>
-          <h4>
-            The state of California has an STD problem. We are here to help.
-          </h4>
-        </div>
-
-        {/* Description */}
-        <div style={styles.paragraphContainer}>
-          <h6 style={styles.paragraph}>
-            STDs, or sexually transmitted diseases, are infections that are
-            transmitted through sexual contact, caused by bacteria, viruses, or
-            parasites. Symptoms of STDs can occur in many different ways. Common
-            symptoms include unusual pain in your genital areas, lumps, rashes,
-            and more. If you see any of these symptoms, please visit a treatment
-            center which you can find on our website. We care about fighting
-            against STDs. We really hope that we can help you.
-          </h6>
+        <div style = {styles.aboutContainer}>
+          <div style={styles.titleContainer}>
+            <h1 style={styles.title}>About STDHelp</h1>
+          </div>
+          {/* Mission Statement */}
+          <div style={styles.subTextContainer}>
+            <h4>
+              The state of California has an STD problem. We are here to help.
+            </h4>
+          </div>
+          {/* Description */}
+          <div style={styles.paragraphContainer}>
+            <h4 style={styles.paragraph}>
+              STDs, or sexually transmitted diseases, are infections that are
+              transmitted through sexual contact, caused by bacteria, viruses, or
+              parasites. Symptoms of STDs can occur in many different ways. Common
+              symptoms include unusual pain in your genital areas, lumps, rashes,
+              and more. If you see any of these symptoms, please visit a treatment
+              center which you can find on our website. We care about fighting
+              against STDs. We really hope that we can help you.
+            </h4>
+          </div>
         </div>
 
         {/* Meet the team. */}
         <div style={styles.titleContainer}>
-          <h1 style={styles.title}>Meet the Team</h1>
+          <h1 style={{fontWeight:"bold",color:"gray", fontSize:"50px"}}>Meet the Team</h1>
         </div>
-        <Row style={{ paddingTop: "1rem" }}>
+        <Row style={{ paddingTop: "1rem"}}>
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src={t} style={styles.cardImageStyle} />
@@ -222,8 +238,6 @@ function About() {
               </Card.Body>
             </Card>
           </Col>
-        </Row>
-        <Row style={{ paddingTop: "1.2rem" }}>
           <Col>
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src={m} style={styles.cardImageStyle} />
@@ -255,7 +269,6 @@ function About() {
             </Card>
           </Col>
         </Row>
-
         {/* Total Stats */}
         <Row style={{ paddingTop: "40px" }}>
           <Col className="text-center">

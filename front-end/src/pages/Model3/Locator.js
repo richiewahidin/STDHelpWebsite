@@ -38,7 +38,7 @@ const Locator = () => {
 
   return (
     <div className="container">
-      <h1>Locator</h1>
+      <h1 style={{color:"gray", fontWeight:"bold",fontSize:"50px"}}>Locator</h1>
       <div className="grid">
         {currentItems.map((item, index) => (
           <LocatorCard key={index} {...item} />

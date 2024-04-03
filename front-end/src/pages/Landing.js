@@ -64,7 +64,7 @@ const styles = {
   },
   bodyContainer: {
     display: "flex",
-    flexDirection: "column",//border: "2px solid #000", // Adding a 2px solid black border
+    flexDirection: "column",
   },
   bodyContentWhite: {
     display:"flex",
@@ -134,19 +134,19 @@ function Landing() {
               </a>
             </div>
             <div style = {styles.bodyContentContainer}>
-              <img width="400px" height ="400px" src={countyLanding} alt="Girl in a jacket"></img>
+              <img width="400px" height ="400px" src={countyLanding} alt="Image could not be loaded"></img>
             </div>
           </div>
           <div style = {styles.bodyContentRed}>
             <div style = {styles.bodyContentContainer}>
-              <img width="400px" height ="400px" src={prevLanding} alt="Girl in a jacket"></img>
+              <img width="400px" height ="400px" src={prevLanding} alt="Image could not be loaded"></img>
             </div>
             <div style = {styles.bodyContentContainer}>
-              <h1 style = {styles.bodyHeading}>Statistics</h1>
-              <h3 style={{ color: "gray" }}>
+              <h1 style = {{color:"white", fontWeight:"bold",alignSelf:"flex-start", fontSize:"70px"}}>Statistics</h1>
+              <h3 style={{ color: "white" }}>
                 You are not alone. Learn about county-wide statistics for different kinds of STDs.
               </h3>
-              <a href="https://stdhelp.site/prevalence" style={{ color: "gray" }}>
+              <a href="https://stdhelp.site/prevalence" style={{ color: "white" }}>
                 <h5>learn more</h5>
               </a>
             </div>
@@ -162,7 +162,7 @@ function Landing() {
               </a>
             </div>
             <div style = {styles.bodyContentContainer}>
-              <img width="300px" height ="300px" src={treatment} alt="Girl in a jacket"></img>
+              <img width="300px" height ="300px" src={treatment} alt="Image could not be loaded"></img>
             </div>
           </div>
       </div>
