@@ -26,7 +26,8 @@ const HomePageGallery = () => {
     gap: "20px",
     border: "1px solid black", // Adding border around each entry
     padding: "10px", // Adding padding within each entry
-    paddingBottom: "1rem"
+    paddingBottom: "1rem",
+    background: "#A52A2A"
   };
 
   const testimonies = [
@@ -58,7 +59,7 @@ const HomePageGallery = () => {
             alt={`Testimony ${index}`}
             style={imageStyling}
           />
-          <p>{testimony.caption}</p>
+          <p style={{color:"white", fontSize:"25px"}}>{testimony.caption}</p>
         </div>
       ))}
     </div>

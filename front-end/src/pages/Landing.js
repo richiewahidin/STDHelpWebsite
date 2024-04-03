@@ -167,7 +167,7 @@ function Landing() {
           </div>
       </div>
       <Container fluid style={{ position: "relative", textAlign: "center" }}>
-        <h1 style={{paddingBottom: "1rem"}}>Testimonies</h1>
+        <h1 style={{paddingBottom: "1rem", fontWeight: "bold", color:"gray", fontSize:"60px"}}>Testimonies</h1>
         {/* Replace the existing placeholder with the HomePageGallery component */}
         <HomePageGallery />
       </Container>
