@@ -16,7 +16,6 @@ const Locator = () => {
           "https://d1ahbxgizovdow.cloudfront.net/treatmentcenter"
         );
         setData(response.data.rows); // Update state with fetched data rows
-        console.log("Locator data:", response.data.rows);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

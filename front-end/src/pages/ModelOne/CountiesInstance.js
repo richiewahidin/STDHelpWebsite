@@ -33,7 +33,6 @@ const CountiesInstance = () => {
             "https://d1ahbxgizovdow.cloudfront.net/prevalence"
           );
           setPrevalenceData(response.data.rows);
-          console.log("Prevalence data:", response.data.rows);  
         } catch (error) {
           console.error("Error fetching prevalence data:", error);
         }
@@ -49,7 +48,6 @@ const CountiesInstance = () => {
             "https://d1ahbxgizovdow.cloudfront.net/treatmentcenter"
           );
           setLocatorData(response.data.rows);
-          console.log("Locator data:", response.data.rows);  
         } catch (error) {
           console.error("Error fetching locator data:", error);
         }

@@ -184,7 +184,7 @@ const Counties = () => {
                   item.tscases,
                   item.udcases,
                   item.map,
-                  item.flag
+                  item.flag,
                 )
               }
             />
