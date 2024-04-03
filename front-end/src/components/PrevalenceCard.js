@@ -65,7 +65,7 @@ const Card = ({
       <div className="container">
         <img
           src={countyimage}
-          alt={countyimage}
+          alt={countyData && countyData.img}
           className="transparent-image"
         />
         <div className="overlay">
