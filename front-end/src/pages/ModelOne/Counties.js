@@ -15,6 +15,7 @@ const Counties = () => {
   const [selectedCounty, setSelectedCounty] = useState("");
   const [selectedPopulation, setSelectedPopulation] = useState("");
   const [sortOption, setSortOption] = useState("");
+  const [selectedChlamydia, setSelectedChlamydia] = useState("");
   const nav = useNavigate();
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Counties = () => {
           "https://d1ahbxgizovdow.cloudfront.net/county"
         );
         setData(response.data.rows); // Update state with fetched data rows
-        setSortOption("AtoZ")
+        setSortOption("AtoZ");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -44,6 +45,7 @@ const Counties = () => {
     const populationMatches =
       parseInt(item.population.replace(/,/g, "")) > parseInt(searchTerm);
     const population = parseInt(item.population.replace(/,/g, ""));
+    const chlamydia = parseInt(item.ccases.replace(/,/g, ""));
 
     // Return true if the item name matches or if the population is greater than the search term
     return (
@@ -55,13 +57,18 @@ const Counties = () => {
         ? population > 100000
         : selectedPopulation === "Under 100,000"
         ? population <= 100000
+        : true) &&
+      (selectedChlamydia === "Over 100"
+        ? chlamydia > 100
+        : selectedChlamydia === "Under 100"
+        ? chlamydia <= 100
         : true)
     );
   });
 
-  if (sortOption === "AtoZ") {
+  if (sortOption === "A to Z") {
     filteredData.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortOption === "ZtoA") {
+  } else if (sortOption === "Z to A") {
     filteredData.sort((a, b) => b.name.localeCompare(a.name));
   }
 
@@ -75,7 +82,8 @@ const Counties = () => {
     "Over 100,000",
     "Under 100,000",
   ];
-  const sortOptions = ["AtoZ", "ZtoA"];
+  const sortOptions = ["A to Z", "Z to A"];
+  const chlamydiaOptions = ["All Cases", "Over 100", "Under 100"]
 
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
 
@@ -142,6 +150,11 @@ const Counties = () => {
           title="Select Population"
           items={populationOptions}
           setter={setSelectedPopulation}
+        />
+        <CustomDropdown
+          title="Select Chlamydia"
+          items={chlamydiaOptions}
+          setter={setSelectedChlamydia}
         />
         <CustomDropdown
           title="Sort Data"
