@@ -2,30 +2,47 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import background from "../images/homeimage.png"; // Import your background image
 import HomePageGallery from "../components/Gallery.js";
+import countyLanding from "../images/coutnies.jpeg"
+import prevLanding from "../images/Landing_P.png"
+import treatment from "../images/treatment.webp"
 
 const styles = {
   container: {
     position: "relative", // Needed for the positioning of the overlay
+    flexDirection: "row",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    //alignItems: "center",
     height: "100vh",
     overflow: "hidden", // Prevents any overflow from the container
+    backgroundColor: "#A52A2A",
+    zIndex: -3
+  },
+  headingStyle: {
+    paddingLeft: "40px",
+    fontSize: "4em",
+    fontWeight: "bold",
+    //alignSelf: "flex-start", // Align heading to the start (left) of the container
+    color: "white"
   },
   backgroundLayer: {
+    alignSelf:"center",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "absolute", // Make the background fill the container
-    width: "100%",
-    height: "100%",
-    zIndex: -2, // Ensures background is behind everything
+    width: "95%",
+    height: "80%",
+    zIndex: -2, 
+    // Ensures background is behind everything
+    //margin: "10px 5px"
   },
   tintLayer: {
+    alignSelf:"center",
     position: "absolute", // Overlay on top of the background
-    width: "100%",
-    height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.7)", // Semi-transparent black tint
+    width: "95%",
+    height: "80%",
+    backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent black tint
     zIndex: -1, // Above the background, below the content
   },
   content: {
@@ -35,53 +52,119 @@ const styles = {
     zIndex: 1, // Above the overlay
   },
   title: {
-    fontSize: "5em",
+    fontSize: "4em",
+    color: "white",
   },
   contentContainer: {
-    position: "relative", // Needed for the positioning of the overlay
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "50vh",
-    overflow: "hidden", // Prevents any overflow from the container
-    flexDirection: "column",
+    alignSelf:"flex-end",
+    //border: "2px solid #000", // Adding a 2px solid black border
+    alignItems: "end",
+    position: "absolute",
+    height: "30%",
   },
+  bodyContainer: {
+    display: "flex",
+    flexDirection: "column",//border: "2px solid #000", // Adding a 2px solid black border
+  },
+  bodyContentWhite: {
+    display:"flex",
+    flexDirection:"row",
+    backgroundColor: "white",
+    height:"50vh",
+    justifyContent:"center"
+    //border: "2px solid #000", // Adding a 2px solid black border
+  },
+  bodyContentRed: {
+    //position: "absolute",
+    display:"flex",
+    flexDirection:"row",
+    backgroundColor: "#A52A2A",
+    height:"50vh",
+    justifyContent:"center"
+    //border: "2px solid #000", // Adding a 2px solid black border
+  },
+  bodyContentBlack: {
+    //position: "absolute",
+    display:"flex",
+    flexDirection:"row",
+    backgroundColor: "black",
+    height:"50vh"
+    //border: "2px solid #000", // Adding a 2px solid black border
+  },
+  bodyHeading:{
+    alignSelf:"flex-start",
+    //marginLeft:"3vw",
+    color: "gray",
+    fontWeight: "bold",
+    fontSize:"70px"
+  },
+  bodyContentContainer:{
+    display:"flex",
+    flexDirection:"column",
+    marginLeft:"3vw",
+    justifyContent:"center"
+  }
 };
+
 
 function Landing() {
   return (
     <div>
       <div style={styles.container}>
+        <h1 style={styles.headingStyle}>STDHelp</h1>
         <div style={styles.backgroundLayer}></div> {/* Background image */}
         <div style={styles.tintLayer}></div> {/* Dark tint overlay */}
-        <Container style={{ position: "relative" }}>
-          {" "}
-          {/* Content */}
-          <Row className="justify-content-md-center">
-            <Col md="auto" style={styles.content}>
-              <h1 style={styles.title}>STDHelp</h1>
-              <h3>Here for you</h3>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div style={styles.contentContainer}>
-        <div style={{ paddingTop: "3rem" }}>
-          <h1>
+        <div style={styles.contentContainer}>
+          <h1 style = {styles.title}>
             Help us combat STDs and raise awareness in the state of California.
           </h1>
         </div>
-
-        <h4 style={{ paddingTop: "1rem" }}>
-          We provide you valuable information the spread and treatment of
-          Sexually Transmitted Diseses.
-        </h4>
-        <h5 style={{ width: "70%", paddingTop: "1rem" }}>
-          STDs can drastically impact the quality of life for those affected.
-          Please seek help if you think that you are risk, as treatment is
-          effective. If you think you are at risk, you can find a clinic near
-          you on this website.
-        </h5>
+        <Container style={{ position: "relative" }}>
+        </Container>
+      </div>
+      <div style = {styles.bodyContainer}>
+          <div style = {styles.bodyContentWhite}>
+            <div style = {styles.bodyContentContainer}>
+              <h1 style = {styles.bodyHeading}>Counties</h1>
+              <h3 style={{ color: "gray" }}>
+                Learn about STDs in different counties in California.
+              </h3>
+              <a href="https://stdhelp.site/counties" style={{ color: "gray" }}>
+                <h5>learn more</h5>
+              </a>
+            </div>
+            <div style = {styles.bodyContentContainer}>
+              <img width="400px" height ="400px" src={countyLanding} alt="Girl in a jacket"></img>
+            </div>
+          </div>
+          <div style = {styles.bodyContentRed}>
+            <div style = {styles.bodyContentContainer}>
+              <img width="400px" height ="400px" src={prevLanding} alt="Girl in a jacket"></img>
+            </div>
+            <div style = {styles.bodyContentContainer}>
+              <h1 style = {styles.bodyHeading}>Statistics</h1>
+              <h3 style={{ color: "gray" }}>
+                You are not alone. Learn about county-wide statistics for different kinds of STDs.
+              </h3>
+              <a href="https://stdhelp.site/prevalence" style={{ color: "gray" }}>
+                <h5>learn more</h5>
+              </a>
+            </div>
+          </div>
+          <div style = {styles.bodyContentWhite}>
+            <div style = {styles.bodyContentContainer}>
+              <h1 style = {styles.bodyHeading}>Treatment Centers</h1>
+              <h3 style={{ color: "gray" }}>
+                Locate treatment centers near you.
+              </h3>
+              <a href="https://stdhelp.site/locator" style={{ color: "gray" }}>
+                <h5>learn more</h5>
+              </a>
+            </div>
+            <div style = {styles.bodyContentContainer}>
+              <img width="300px" height ="300px" src={treatment} alt="Girl in a jacket"></img>
+            </div>
+          </div>
       </div>
       <Container fluid style={{ position: "relative", textAlign: "center" }}>
         <h1 style={{paddingBottom: "1rem"}}>Testimonies</h1>

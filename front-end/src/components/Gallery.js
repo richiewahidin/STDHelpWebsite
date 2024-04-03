@@ -15,8 +15,9 @@ const HomePageGallery = () => {
     display: "flex",
     flexDirection: "column",
     gap: "20px",
-    paddingLeft: "50px",
-    paddingRight: "50px",
+    paddingLeft: "25px",
+    paddingRight: "25px",
+    //width: "95%"
   };
 
   const testimonyStyle = {
