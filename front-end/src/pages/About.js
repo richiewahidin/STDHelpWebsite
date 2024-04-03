@@ -194,77 +194,77 @@ function About() {
         </div>
         <Row style={{ paddingTop: "1rem"}}>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" , backgroundColor:"#A52A2A",}}>
               <Card.Img variant="top" src={t} style={styles.cardImageStyle} />
               <Card.Body>
-                <Card.Title>Tommy Huynh</Card.Title>
-                <Card.Text>Role: Full stack developer</Card.Text>
-                <Card.Text>
+                <Card.Title style={{color:"white"}}>Tommy Huynh</Card.Title>
+                <Card.Text style={{color:"white"}}>Role: Full stack developer</Card.Text>
+                <Card.Text style={{color:"white"}}>
                   I am a senior studying Computer Science at UT Austin. I am
                   interested in soccer and fashion.
                 </Card.Text>
-                <Card.Text>Commits: {individualCommits[0]}</Card.Text>
-                <Card.Text>Issues : {individualIssues[0]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Commits: {individualCommits[0]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Issues : {individualIssues[0]}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem", backgroundColor:"#A52A2A"}}>
               <Card.Img variant="top" src={r} style={styles.cardImageStyle} />
               <Card.Body>
-                <Card.Title>Richie Wahidin</Card.Title>
-                <Card.Text>Role: Full stack developer</Card.Text>
-                <Card.Text>
+                <Card.Title style={{color:"white"}}>Richie Wahidin</Card.Title>
+                <Card.Text style={{color:"white"}}>Role: Full stack developer</Card.Text>
+                <Card.Text style={{color:"white"}}>
                   I am a senior studying Computer Science from Indonesia. I like
                   to play soccer and pingpong.
                 </Card.Text>
-                <Card.Text>Commits: {individualCommits[1]}</Card.Text>
-                <Card.Text>Issues : {individualIssues[1]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Commits: {individualCommits[1]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Issues : {individualIssues[1]}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem",backgroundColor:"#A52A2A"}}>
               <Card.Img variant="top" src={k} style={styles.cardImageStyle} />
               <Card.Body>
-                <Card.Title>Kshitij Kapoor</Card.Title>
-                <Card.Text>Role: Full stack developer</Card.Text>
-                <Card.Text>
+                <Card.Title style={{color:"white"}}>Kshitij Kapoor</Card.Title>
+                <Card.Text style={{color:"white"}}>Role: Full stack developer</Card.Text>
+                <Card.Text style={{color:"white"}}>
                   I am a sophomore studying Computer Science. I like to draw and
                   watch American Football.
                 </Card.Text>
-                <Card.Text>Commits: {individualCommits[2]}</Card.Text>
-                <Card.Text>Issues : {individualIssues[2]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Commits: {individualCommits[2]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Issues : {individualIssues[2]}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem",backgroundColor:"#A52A2A" }}>
               <Card.Img variant="top" src={m} style={styles.cardImageStyle} />
               <Card.Body>
-                <Card.Title>Max Huang</Card.Title>
-                <Card.Text>Role: Full stack developer</Card.Text>
-                <Card.Text>
+                <Card.Title style={{color:"white"}}>Max Huang</Card.Title>
+                <Card.Text style={{color:"white"}}>Role: Full stack developer</Card.Text>
+                <Card.Text style={{color:"white"}}>
                   I am a junior studying Computer Science. I like to play chess
                   and practice wushu.
                 </Card.Text>
-                <Card.Text>Commits: {individualCommits[3]}</Card.Text>
-                <Card.Text>Issues : {individualIssues[3]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Commits: {individualCommits[3]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Issues : {individualIssues[3]}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem",backgroundColor:"#A52A2A" }}>
               <Card.Img variant="top" src={b} style={styles.cardImageStyle} />
               <Card.Body>
-                <Card.Title>Brendan Malone</Card.Title>
-                <Card.Text>Role: Backend developer</Card.Text>
-                <Card.Text>
+                <Card.Title style={{color:"white"}}>Brendan Malone</Card.Title>
+                <Card.Text style={{color:"white"}}>Role: Backend developer</Card.Text>
+                <Card.Text style={{color:"white"}}>
                   I am a junior studying Computer Science. I like bouldering and
                   playing video games.
                 </Card.Text>
-                <Card.Text>Commits: {individualCommits[4]}</Card.Text>
-                <Card.Text>Issues : {individualIssues[4]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Commits: {individualCommits[4]}</Card.Text>
+                <Card.Text style={{color:"white"}}>Issues : {individualIssues[4]}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -272,27 +272,28 @@ function About() {
         {/* Total Stats */}
         <Row style={{ paddingTop: "40px" }}>
           <Col className="text-center">
-            <h3>Total Stats:</h3>
+            <h3 style={{color:"gray", fontWeight:"bold", fontSize:"40px"}}>Total Stats</h3>
           </Col>
         </Row>
         <Row>
           <Col className="text-center">
-            <h4>Total Commits: {totalCommits}</h4>
+            <h4 style={{color:"#A52A2A", fontWeight:"bold", fontSize:"30px"}}>Total Commits: {totalCommits}</h4>
           </Col>
         </Row>
         <Row>
           <Col className="text-center">
-            <h4>Total Issues: {totalIssues}</h4>
+            <h4 style={{color:"#A52A2A", fontWeight:"bold", fontSize:"30px"}}>Total Issues: {totalIssues}</h4>
           </Col>
         </Row>
-
-        {/* Tools used */}
-        <Row style={{ paddingTop: "30px" }}>
+      </div>
+      <div style = {styles.aboutContainer}>
+          {/* Tools used */}
+        <Row style={{ paddingTop: "10px" }}>
           <Col className="text-center">
-            <h2>Tools Used:</h2>
+            <h2 style={{color:"white", fontWeight:"bold", fontSize:"50px"}}>Tools Used</h2>
           </Col>
         </Row>
-        <Row style={{ paddingTop: "20px" }}>
+        <Row style={{ paddingTop: "20px",paddingLeft:"30px",paddingRight:"30px"}}>
           <Col>
             <Card>
               <Card.Img
@@ -333,20 +334,10 @@ function About() {
               <Card.Text style={styles.cardTextStyle}>Hono</Card.Text>
             </Card>
           </Col>
-          <Col>
-            <Card>
-              <Card.Img
-                variant="top"
-                src={nodeJS}
-                style={styles.toolCardImageStyle}
-              />
-              <Card.Text style={styles.cardTextStyle}>NodeJS</Card.Text>
-            </Card>
-          </Col>
         </Row>
 
         {/* Second Row */}
-        <Row style={{ paddingTop: "20px" }}>
+        <Row style={{ paddingTop: "30px", paddingBottom: "50px", paddingLeft:"30px",paddingRight:"30px"}}>
           <Col>
             <Card>
               <Card.Img
@@ -377,25 +368,40 @@ function About() {
               <Card.Text style={styles.cardTextStyle}>Postman</Card.Text>
             </Card>
           </Col>
-        </Row>
-
-        {/* Additional Links */}
-        <Row style={{ paddingTop: "30px" }}>
-          <Col className="text-center">
-            <h2>Additional Links:</h2>
+          <Col>
+            <Card>
+              <Card.Img
+                variant="top"
+                src={nodeJS}
+                style={styles.toolCardImageStyle}
+              />
+              <Card.Text style={styles.cardTextStyle}>NodeJS</Card.Text>
+            </Card>
           </Col>
         </Row>
-        <h5 style={{ paddingTop: "20px" }}>
-          <a href="https://gitlab.com/tommyhuynh02n/cs373-group-20">
-            GitLab Repository
-          </a>
-        </h5>
-        <h5 style={{ paddingTop: "20px" }}>
-          <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21">
-            Postman API
-          </a>
-        </h5>
-      </div>
+        </div>
+        {/* Additional Links */}
+        <Row style={{ paddingTop: "20px" }}>
+          <Col className="text-center">
+            <h2 style={{color:"gray", fontWeight:"bold", fontSize:"50px"}}>Additional Links:</h2>
+          </Col>
+        </Row>
+        <Row style={{ paddingTop: "10px" }}>
+          <Col className="text-center">
+            <a href="https://gitlab.com/tommyhuynh02n/cs373-group-20" style={{color:"#A52A2A", fontSize:"30px"}}>
+              GitLab Repository
+            </a>
+          </Col>
+        </Row>
+        <Row style={{ paddingTop: "20px" }}>
+          <Col className="text-center">
+            <h5 style={{color:"#A52A2A"}}>
+              <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21" style={{color:"#A52A2A", fontSize:"30px"}}>
+                Postman API
+              </a>
+            </h5>
+          </Col>
+        </Row>
     </div>
   );
 }
