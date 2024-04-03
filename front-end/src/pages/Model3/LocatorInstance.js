@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import ScreenShot from "../../components/ScreenShot";
 import { useLocation } from "react-router-dom";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
