@@ -202,7 +202,7 @@ function About() {
        </div>
        <Row style={{ paddingTop: "1rem"}}>
          <Col>
-           <Card style={{ width: "18rem" , backgroundColor:"#A52A2A",}}>
+           <Card style={{ width: "17rem" , backgroundColor:"#A52A2A",}}>
              <Card.Img variant="top" src={t} style={styles.cardImageStyle} />
              <Card.Body>
                <Card.Title style={{color:"white"}}>Tommy Huynh</Card.Title>
@@ -217,7 +217,7 @@ function About() {
            </Card>
          </Col>
          <Col>
-           <Card style={{ width: "18rem", backgroundColor:"#A52A2A"}}>
+           <Card style={{ width: "17rem", backgroundColor:"#A52A2A"}}>
              <Card.Img variant="top" src={r} style={styles.cardImageStyle} />
              <Card.Body>
                <Card.Title style={{color:"white"}}>Richie Wahidin</Card.Title>
@@ -232,7 +232,7 @@ function About() {
            </Card>
          </Col>
          <Col>
-           <Card style={{ width: "18rem",backgroundColor:"#A52A2A"}}>
+           <Card style={{ width: "17rem",backgroundColor:"#A52A2A"}}>
              <Card.Img variant="top" src={k} style={styles.cardImageStyle} />
              <Card.Body>
                <Card.Title style={{color:"white"}}>Kshitij Kapoor</Card.Title>
@@ -247,7 +247,7 @@ function About() {
            </Card>
          </Col>
          <Col>
-           <Card style={{ width: "18rem",backgroundColor:"#A52A2A" }}>
+           <Card style={{ width: "17rem",backgroundColor:"#A52A2A" }}>
              <Card.Img variant="top" src={m} style={styles.cardImageStyle} />
              <Card.Body>
                <Card.Title style={{color:"white"}}>Max Huang</Card.Title>
@@ -262,7 +262,7 @@ function About() {
            </Card>
          </Col>
          <Col>
-           <Card style={{ width: "18rem",backgroundColor:"#A52A2A" }}>
+           <Card style={{ width: "17rem",backgroundColor:"#A52A2A" }}>
              <Card.Img variant="top" src={b} style={styles.cardImageStyle} />
              <Card.Body>
                <Card.Title style={{color:"white"}}>Brendan Malone</Card.Title>
@@ -392,7 +392,7 @@ function About() {
        {/* Additional Links */}
        <Row style={{ paddingTop: "20px" }}>
          <Col className="text-center">
-           <h2 style={{color:"gray", fontWeight:"bold", fontSize:"50px"}}>Additional Links:</h2>
+           <h2 style={{color:"gray", fontWeight:"bold", fontSize:"45px"}}>Additional Links</h2>
          </Col>
        </Row>
        <Row style={{ paddingTop: "10px" }}>
@@ -404,11 +404,9 @@ function About() {
        </Row>
        <Row style={{ paddingTop: "20px" }}>
          <Col className="text-center">
-           <h5 style={{color:"#A52A2A"}}>
-             <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21" style={{color:"#A52A2A", fontSize:"30px"}}>
-               Postman API
-             </a>
-           </h5>
+            <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21" style={{color:"#A52A2A", fontSize:"30px"}}>
+              Postman API
+            </a>
          </Col>
        </Row>
    </div>

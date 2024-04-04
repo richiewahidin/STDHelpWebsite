@@ -53,7 +53,7 @@ const styles = {
    zIndex: 1, // Above the overlay
  },
  title: {
-   fontSize: "4em",
+   fontSize: "3.6em",
    color: "white",
  },
  contentContainer: {
@@ -107,9 +107,6 @@ const styles = {
  }
 };
 
-
-
-
 function Landing() {
  return (
    <div>
@@ -137,12 +134,12 @@ function Landing() {
              </a>
            </div>
            <div style = {styles.bodyContentContainer}>
-             <img width="400px" height ="400px" src={countyLanding} alt="Image could not be loaded"></img>
+             <img width="350px" height ="350px" src={countyLanding} alt="Image could not be loaded"></img>
            </div>
          </div>
          <div style = {styles.bodyContentRed}>
            <div style = {styles.bodyContentContainer}>
-             <img width="400px" height ="400px" src={prevLanding} alt="Image could not be loaded"></img>
+             <img width="350px" height ="350px" src={prevLanding} alt="Image could not be loaded"></img>
            </div>
            <div style = {styles.bodyContentContainer}>
              <h1 style = {{color:"white", fontWeight:"bold",alignSelf:"flex-start", fontSize:"70px"}}>Statistics</h1>
