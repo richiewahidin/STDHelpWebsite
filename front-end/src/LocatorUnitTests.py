@@ -43,6 +43,14 @@ class TestGui(unittest.TestCase):
         #URL changed?
         self.assertNotEqual(initial_url, new_url)
         return True
+    
+    def test_button(self):
+        #elements = self.driver.find_elements(By.CLASS_NAME,"dropdown-button dropdown")
+        elements = WebDriverWait(self.driver, 30).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "container"))
+        )
+        x = (elements.find_elements(By.TAG_NAME,"button"))
+        self.assertGreater(len(x), 0)
 
 if __name__ == "__main__":
     unittest.main()

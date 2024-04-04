@@ -77,7 +77,8 @@ class TestGui(unittest.TestCase):
         for element in elements:
             href_value = element.get_attribute("href")
             b = b or href_value == ref
-        self.assertEqual(True,b)    
+            print(href_value)
+        self.assertEqual(True,b)       
 
 if __name__ == "__main__":
     unittest.main()
