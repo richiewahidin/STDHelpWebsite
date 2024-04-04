@@ -32,5 +32,23 @@ class TestGui(unittest.TestCase):
         cards = self.soup.find_all('div', class_='card')
         self.assertEqual(len(cards), 13)
 
+    def test_gitlab_link(self):
+        elements = self.driver.find_elements(By.TAG_NAME,"a")
+        b = False
+        gitlabRef = "https://gitlab.com/tommyhuynh02n/cs373-group-20"
+        for element in elements:
+            href_value = element.get_attribute("href")
+            b = b or href_value == gitlabRef
+        self.assertEqual(True,b)
+
+    def test_postman_link(self):
+        elements = self.driver.find_elements(By.TAG_NAME,"a")
+        b = False
+        postManRef = "https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21"
+        for element in elements:
+            href_value = element.get_attribute("href")
+            b = b or href_value == postManRef
+        self.assertEqual(True,b)
+
 if __name__ == "__main__":
     unittest.main()

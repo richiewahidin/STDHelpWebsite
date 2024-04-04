@@ -404,11 +404,9 @@ function About() {
        </Row>
        <Row style={{ paddingTop: "20px" }}>
          <Col className="text-center">
-           <h5 style={{color:"#A52A2A"}}>
-             <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21" style={{color:"#A52A2A", fontSize:"30px"}}>
-               Postman API
-             </a>
-           </h5>
+            <a href="https://www.postman.com/bmaloneut/workspace/stdhelp/api/c441db53-30a6-4e53-91ac-4842697ffc21" style={{color:"#A52A2A", fontSize:"30px"}}>
+              Postman API
+            </a>
          </Col>
        </Row>
    </div>

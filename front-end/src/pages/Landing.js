@@ -107,9 +107,6 @@ const styles = {
  }
 };
 
-
-
-
 function Landing() {
  return (
    <div>
