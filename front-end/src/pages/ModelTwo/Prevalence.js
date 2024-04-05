@@ -164,7 +164,7 @@ const Prevalence = () => {
       </div>
       <div className="grid">
         {currentItems.map((item, index) => (
-          <Card key={index} {...item} />
+          <Card key={index} {...item} searchTerm={searchTerm}/>
         ))}
       </div>
       <Pagination

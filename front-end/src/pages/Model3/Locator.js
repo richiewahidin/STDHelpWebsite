@@ -131,7 +131,7 @@ const Locator = () => {
       </div>
       <div className="grid">
         {currentItems.map((item, index) => (
-          <LocatorCard key={index} {...item} />
+          <LocatorCard key={index} {...item} searchTerm={searchTerm}/>
         ))}
       </div>
       <Pagination

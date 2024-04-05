@@ -11,6 +11,7 @@ const Card = ({
   website,
   phonenumber,
   imageUrl,
+  searchTerm,
 }) => {
   const nav = useNavigate();
   const mapRef = useRef(null);
@@ -38,10 +39,6 @@ const Card = ({
                 "photos",
               ],
             };
-            // service.findPlaceFromQuery(request, function (place, status) {
-            //   if (status === google.maps.places.PlacesServiceStatus.OK) {
-            //   }
-            // });
           }
         } else {
           console.error(
@@ -60,6 +57,22 @@ const Card = ({
       state: { id, name, address, website, phonenumber },
     });
   };
+
+// Function to highlight the matched search term
+const highlightMatch = (text) => {
+  if (!searchTerm) return text;
+
+  // Split the searchTerm into words and trim spaces
+  const searchWords = searchTerm.toLowerCase().split(" ").map(word => word.trim()).filter(word => word !== "");
+
+  // Create a regex pattern for each word
+  const patterns = searchWords.map(word => `(${word})`).join("|");
+  const regex = new RegExp(patterns, "gi");
+
+  // Replace each match with <mark> tag
+  return text.replace(regex, (match) => `<mark>${match}</mark>`);
+};
+
 
   return (
     <div onClick={handleClick} className="card">
@@ -85,17 +98,19 @@ const Card = ({
           </Map>
         </div>
         <h5>
-          <strong>{name}</strong>
+          <strong dangerouslySetInnerHTML={{ __html: highlightMatch(name) }} />
         </h5>
         <p>
-          <strong>Address: </strong> {address}
+          <strong>Address: </strong>{" "}
+          <span dangerouslySetInnerHTML={{ __html: highlightMatch(address) }} />
         </p>
         <p>
-          <strong>Website: </strong> {website}
+          <strong>Website: </strong>{" "}
+          <span dangerouslySetInnerHTML={{ __html: highlightMatch(website) }} />
         </p>
         <p>
-          <strong>Phone: </strong>
-          {phonenumber}
+          <strong>Phone: </strong>{" "}
+          <span dangerouslySetInnerHTML={{ __html: highlightMatch(phonenumber) }} />
         </p>
       </div>
     </div>
@@ -105,4 +120,3 @@ const Card = ({
 export default GoogleApiWrapper({
   apiKey: process.env.REACT_APP_API_KEY,
 })(Card);
-

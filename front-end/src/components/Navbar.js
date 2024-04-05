@@ -11,10 +11,10 @@ function NB({setSearchQuery}) {
 
   const handleSearch = (e) => {
     const query = e.target.value;
-    if (query === "") {
+    if (query === "" && e.key === 'Enter') {
       navigate('/');
     }
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && query !== "") {
       navigate(`/search/${query}`);
     }
   };

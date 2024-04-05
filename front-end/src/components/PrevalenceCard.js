@@ -15,10 +15,10 @@ const Card = ({
   g_cases,
   g_rate,
   countyimage,
+  searchTerm
 }) => {
   const nav = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
-
   const [countyData, setCountyData] = useState(null);
 
   useEffect(() => {
@@ -54,6 +54,25 @@ const Card = ({
     });
   };
 
+  const highlightMatch = (text) => {
+    if (!searchTerm || !text) return text;
+  
+    const searchTerms = searchTerm.split(" ").filter((term) => term.trim() !== "");
+  
+    let highlightedText = text;
+    searchTerms.forEach((term) => {
+      const pattern = new RegExp(`(${term})`, "gi");
+      highlightedText = highlightedText.replace(pattern, `<mark>$1</mark>`);
+    });
+  
+    return (
+      <span
+        dangerouslySetInnerHTML={{ __html: highlightedText }}
+        data-testid="highlighted-text"
+      />
+    );
+  };
+
   return (
     <div
       onClick={handleClick}
@@ -69,40 +88,39 @@ const Card = ({
           className="transparent-image"
         />
         <div className="overlay">
-          {" "}
-          {/* Corrected to className */}
-          <b>{year}</b>
+          <b>{highlightMatch(year)}</b>
         </div>
       </div>
       <div className="card-content">
         <h5>
-          <strong>About: </strong>Overview of {sex} STD cases for{" "}
-          {countyData && countyData.name} in {year}
+          <strong>About: </strong>Overview of {highlightMatch(sex)} STD cases for{" "}
+          {countyData && highlightMatch(countyData.name)} in {highlightMatch(year)}
         </h5>
         {countyData && (
           <>
             <p>
-              <strong>County Name: </strong> {countyData.name}
+              <strong>County Name: </strong> {highlightMatch(countyData.name)}
             </p>
             <p>
-              <strong>County Population: </strong> {countyData.population}
+              <strong>County Population: </strong>{" "}
+              {highlightMatch(countyData.population)}
             </p>
           </>
         )}
         <p>
-          <strong>Gender: </strong> {sex}
+          <strong>Gender: </strong> {highlightMatch(sex)}
         </p>
         <p>
           <strong>Number of Chlamydia cases: </strong>
-          {c_cases}
+          {highlightMatch(c_cases)}
         </p>
         <p>
-          <strong>Number of Syphillis cases: </strong>
-          {s_cases}
+          <strong>Number of Syphilis cases: </strong>
+          {highlightMatch(s_cases)}
         </p>
         <p>
           <strong>Number of Gonorrhea cases: </strong>
-          {g_cases}
+          {highlightMatch(g_cases)}
         </p>
       </div>
     </div>
