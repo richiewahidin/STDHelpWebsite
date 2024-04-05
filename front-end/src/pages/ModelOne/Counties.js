@@ -187,6 +187,7 @@ const Counties = () => {
                   item.flag,
                 )
               }
+              searchTerm={searchTerm} // Pass the searchTerm to CountiesCard
             />
           </Col>
         ))}
