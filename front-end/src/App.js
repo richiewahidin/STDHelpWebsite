@@ -11,6 +11,7 @@ import Prevalence from "./pages/ModelTwo/Prevalence";
 import CountiesInstance from "./pages/ModelOne/CountiesInstance";
 import InstancePrevalence from "./pages/ModelTwo/InstancePrevalence";
 import LocatorInstance from "./pages/Model3/LocatorInstance";
+import SearchResultsPage from "./pages/SearchResultsPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/counties/:id" element={<CountiesInstance />} />
         <Route path="/prevalence/:id" element={<InstancePrevalence />} />
         <Route path="/locator/:id" element={<LocatorInstance />} />
+        <Route path="/search/:query" element={<SearchResultsPage />} />
       </Routes>
     </Router>
   );
