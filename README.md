@@ -12,6 +12,7 @@ https://www.stdhelp.site/
 # Gitlab SHA
 Phase 1: 52a34d32a02912d36a44299bd28c7b47ad658487
 Phase 2: 3803b866d6dbec5f043b4dd6738e81ed35beb9ac
+Phase 3: c00e08c1ed4ebe90401e08ea2c24c16f43d51572
 
 # Gitlab Pipeline URL
 - https://gitlab.com/tommyhuynh02n/cs373-group-20/-/pipelines/1227442723
