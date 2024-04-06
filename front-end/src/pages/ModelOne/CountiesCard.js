@@ -22,7 +22,7 @@ const CountiesCard = ({ item, onClick, searchTerm }) => {
           <ListGroup className='list-group-flush'>
             <ListGroupItem>
               {/* Highlight the population */}
-              Population: [item.population]<br />
+              Population: {item.population}<br />
             </ListGroupItem>
             <ListGroupItem>
               <strong>2021 cases:</strong><br />
