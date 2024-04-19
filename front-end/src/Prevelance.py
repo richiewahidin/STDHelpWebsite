@@ -28,7 +28,7 @@ class TestGui(unittest.TestCase):
         title = self.soup.find('h1')
 
         self.assertEqual(len(title), 1)
-        self.assertEqual(next(iter(title)).text, "Prevalence of STDs from 2003-2021")
+        self.assertEqual(next(iter(title)).text, "Prevalence of STDs from 2001-2021")
 
     def test_card_clickable(self):
         card = WebDriverWait(self.driver, 10).until(
