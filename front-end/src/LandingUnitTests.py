@@ -32,7 +32,7 @@ class TestGui(unittest.TestCase):
         title = self.soup.find('h3')
 
         self.assertEqual(len(title), 1)
-        self.assertEqual(next(iter(title)).text, "Here for you")
+        self.assertEqual(next(iter(title)).text, "Learn about STDs in different counties in California.")
 
     def test_navbar_about(self):
         elements = self.driver.find_elements(By.TAG_NAME,"a")
