@@ -135,7 +135,7 @@ const Prevalence = () => {
         onChange={handleSearchChange}
         style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
       />
-      <div style={{ padding: 10 }}>
+      <div style={{ padding: 10, display: 'flex', flexWrap: 'wrap', gap: 10 }}>
         <CustomDropdown
           title="Select Year"
           items={years}
