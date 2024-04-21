@@ -64,7 +64,7 @@ const HomePageGallery = () => {
            alt={`Testimony ${index}`}
            style={imageStyling}
          />
-         <p style={{color:"white", fontSize:"25px"}}>{testimony.caption}</p>
+         <p style={{color:"white", fontSize:"1.5rem"}}>{testimony.caption}</p>
        </div>
      ))}
    </div>
