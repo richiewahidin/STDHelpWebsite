@@ -12,7 +12,7 @@ const CountiesCard = ({ item, onClick, searchTerm }) => {
 
   return (
     <Card style={{ width: '20rem' }} onClick={onClick}>
-      <Card.Img src={item.img} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+      <Card.Img src={item.imgurl} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
       <Card.Body>
         <Card.Title>
           {/* Highlight the county name */}

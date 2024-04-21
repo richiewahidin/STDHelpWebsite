@@ -178,8 +178,8 @@ const Counties = () => {
                 item.escases,
                 item.tscases,
                 item.udcases,
-                item.map,
-                item.flag
+                item.mapurl,
+                item.flagurl
               )
             }
           >
@@ -196,8 +196,8 @@ const Counties = () => {
                   item.escases,
                   item.tscases,
                   item.udcases,
-                  item.map,
-                  item.flag,
+                  item.mapurl,
+                  item.flagurl,
                 )
               }
               searchTerm={searchTerm} // Pass the searchTerm to CountiesCard
