@@ -19,13 +19,14 @@ svg {
 .visualization-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* This centers the child elements horizontally */
-  margin-top: 20px; /* Optional: Adds some space at the top of the container */
+  padding-bottom: 10px;
+  align-items: center; 
+  margin-top: 20px;
 }
 
 .visualization-heading {
   text-align: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 10px; */
   padding: 10px;
   border: 1px solid #746d6d;
   border-radius: 5px;
