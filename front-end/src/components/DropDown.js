@@ -5,8 +5,6 @@ import Container from "react-bootstrap/Container";
 import "./DropDown.css";
 
 const CustomDropdown = ({ title, items, setter, scroll }) => {
-  console.log(setter); // Add this line to check what setter is
-
   const [selectedOption, setSelectedOption] = useState(title);
 
   function handleClick(value) {
@@ -24,7 +22,10 @@ const CustomDropdown = ({ title, items, setter, scroll }) => {
       className="dropdown-button"
       title={selectedOption}
     >
-      <Container className="dropdown-menu-container" style={{ maxHeight: '200px', overflowY: 'auto'}}>
+      <Container
+        className="dropdown-menu-container"
+        style={{ maxHeight: "200px", overflowY: "auto" }}
+      >
         {items.map((item, index) => (
           <Dropdown.Item key={index} onClick={() => handleClick(item)}>
             {item}
@@ -36,3 +37,4 @@ const CustomDropdown = ({ title, items, setter, scroll }) => {
 };
 
 export default CustomDropdown;
+

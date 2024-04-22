@@ -24,10 +24,32 @@ export const prevalenceRouter = new Hono()
   })
   .post("/", async (c) => {
     try {
-      const { year, gender, cases, casesper100k } = await c.req.json();
+      const {
+        countyId,
+        year,
+        sex,
+        c_cases,
+        c_rate,
+        s_cases,
+        s_rate,
+        g_cases,
+        g_rate,
+        countyImage,
+      } = await c.req.json();
       const queryText =
-        "INSERT INTO prevalence(year, gender, cases, casesper100k) VALUES($1, $2, $3, $4) RETURNING *";
-      const queryValues = [year, gender, cases, casesper100k];
+        "INSERT INTO prevalence(countyid, year, sex, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyimage) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *";
+      const queryValues = [
+        countyId,
+        year,
+        sex,
+        c_cases,
+        c_rate,
+        s_cases,
+        s_rate,
+        g_cases,
+        g_rate,
+        countyImage,
+      ];
       const res = await pool.query(queryText, queryValues);
       return c.json(res);
     } catch (err) {
