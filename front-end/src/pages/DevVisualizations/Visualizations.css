@@ -1,0 +1,27 @@
+.visualization-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the child elements horizontally */
+    justify-content: center;
+  }
+  
+  svg {
+    display: block;
+    margin: auto;
+  }
+  
+  .bar {
+    fill: steelblue;
+  }
+  
+  .axis text {
+    font-size: 12px;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+  }
+  
