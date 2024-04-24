@@ -35,6 +35,12 @@ const styles = {
     paddingTop: "4.5rem",
     backgroundColor: "#A52A2A",
   },
+  critiqueContainer: {
+    display: "flex",
+    flexDirection: "column",
+    paddingTop: "1rem",
+    backgroundColor: "#A52A2A",
+  },
   subTextContainer: {
     display: "flex",
     justifyContent: "center",
@@ -100,7 +106,7 @@ function About() {
 
       while (hasNextPage) {
         const response = await fetch(
-          `https://gitlab.com/api/v4/projects/54614721/repository/commits?all=true&per_page=100&page=${page}`,
+          `https://gitlab.com/api/v4/projects/54614721/repository/commits?all=true&per_page=100&page=${page}`
         );
 
         if (response.headers.get("X-Next-Page")) {
@@ -133,7 +139,7 @@ function About() {
       let issues = [0, 0, 0, 0, 0];
       for (let i = 0; i < names.length; i++) {
         const response = await axios.get(
-          `https://gitlab.com/api/v4/projects/54614721/issues_statistics?author_username=${names[i]}`,
+          `https://gitlab.com/api/v4/projects/54614721/issues_statistics?author_username=${names[i]}`
         );
 
         issues[i] = response.data.statistics.counts.all;
@@ -253,6 +259,12 @@ function About() {
                 </Card.Body>
               </Card>
             </Col>
+          </Row>
+        )}
+        {individualCommits[0] === 0 ? (
+          <div></div>
+        ) : (
+          <Row style={{ paddingTop: "1rem" }}>
             <Col>
               <Card style={{ width: "17rem", backgroundColor: "#A52A2A" }}>
                 <Card.Img variant="top" src={m} style={styles.cardImageStyle} />
@@ -361,7 +373,7 @@ function About() {
                 src={docker}
                 style={styles.toolCardImageStyle}
               />
-              <Card.Text style={styles.cardTextStyle}>docker</Card.Text>
+              <Card.Text style={styles.cardTextStyle}>Docker</Card.Text>
             </Card>
           </Col>
           <Col>
