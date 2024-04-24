@@ -28,8 +28,8 @@ class TestGui(unittest.TestCase):
         self.assertEqual(len(title), 1)
         self.assertEqual(next(iter(title)).text, "STDHelp")
 
-    # def test_home_page_heading3(self):
-    #     title = self.soup.find('h3')
+    def test_home_page_heading3(self):
+        title = self.soup.find('h3')
 
         self.assertEqual(len(title), 1)
         self.assertEqual(next(iter(title)).text, "Learn about STDs in different counties in California.")
