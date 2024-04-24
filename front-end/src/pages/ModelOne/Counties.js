@@ -131,6 +131,7 @@ const Counties = () => {
     <div className="container">
       <div style={{ padding: "20px" }}>
         <h1>Counties</h1>
+        <h5> Each instance represents a county in the State of California, and they contain information about population as well as the number of cases of different STDs in each state in the year 2021.</h5>
       </div>
       <Form.Group className="mb-3">
         <Form.Control

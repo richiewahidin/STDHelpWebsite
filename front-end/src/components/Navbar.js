@@ -38,6 +38,7 @@ function NB({setSearchQuery}) {
             <Nav.Link as={Link} to="/locator">Locator</Nav.Link>
             <Nav.Link as={Link} to="/prevalence">Prevalence</Nav.Link>
             <Nav.Link as={Link} to="/visualizations">Visualizations</Nav.Link>
+            <Nav.Link as={Link} to="/dev-visualizations">Developer Visualizations</Nav.Link>
           </Nav>
           <div>
             <input type="text" placeholder="Search..." onKeyDown={handleSearch} />
