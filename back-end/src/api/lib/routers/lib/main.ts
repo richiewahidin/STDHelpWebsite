@@ -6,7 +6,10 @@ import { utilsRouter } from "./utils/router.js";
 import { testRouter } from "./router.js";
 
 export const mainRouter = new Hono()
+<<<<<<< HEAD
   .route("/", testRouter)
+=======
+>>>>>>> fd9d021 (insert changes)
   .route("/prevalence", prevalenceRouter)
   .route("/county", countyRouter)
   .route("/treatmentcenter", treatmentCenterRouter)

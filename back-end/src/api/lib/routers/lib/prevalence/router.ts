@@ -28,6 +28,10 @@ export const prevalenceRouter = new Hono()
         countyId,
         year,
         sex,
+<<<<<<< HEAD
+=======
+        population,
+>>>>>>> bc30eb5be2cdebb61d5bf589a39c5d6d10de67ce
         c_cases,
         c_rate,
         s_cases,
@@ -36,12 +40,22 @@ export const prevalenceRouter = new Hono()
         g_rate,
         countyImage,
       } = await c.req.json();
+<<<<<<< HEAD
       const queryText =
         "INSERT INTO prevalence(countyid, year, sex, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyimage) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *";
+=======
+
+      const queryText =
+        "INSERT INTO prevalence(countyId, year, sex, population, c_cases, c_rate, s_cases, s_rate, g_cases, g_rate, countyImage) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *";
+>>>>>>> bc30eb5be2cdebb61d5bf589a39c5d6d10de67ce
       const queryValues = [
         countyId,
         year,
         sex,
+<<<<<<< HEAD
+=======
+        population,
+>>>>>>> bc30eb5be2cdebb61d5bf589a39c5d6d10de67ce
         c_cases,
         c_rate,
         s_cases,
