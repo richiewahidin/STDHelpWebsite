@@ -21,7 +21,7 @@ const styles = {
  },
  headingStyle: {
    paddingLeft: "40px",
-   fontSize: "4em",
+   fontSize: "4vw",
    fontWeight: "bold",
    //alignSelf: "flex-start", // Align heading to the start (left) of the container
    color: "white"
@@ -53,7 +53,7 @@ const styles = {
    zIndex: 1, // Above the overlay
  },
  title: {
-   fontSize: "3.6em",
+   fontSize: "3.6vw",
    color: "white",
  },
  contentContainer: {
@@ -134,12 +134,12 @@ function Landing() {
              </a>
            </div>
            <div style = {styles.bodyContentContainer}>
-             <img width="350px" height ="350px" src={countyLanding} alt="Image could not be loaded"></img>
+             <img style={{width:"100%", aspectRatio:"1/1"}} width="350px" height ="350px" src={countyLanding} alt="Image could not be loaded"></img>
            </div>
          </div>
          <div style = {styles.bodyContentRed}>
            <div style = {styles.bodyContentContainer}>
-             <img width="350px" height ="350px" src={prevLanding} alt="Image could not be loaded"></img>
+             <img style={{width:"100%", aspectRatio:"1/1"}} width="350px" height ="350px" src={prevLanding} alt="Image could not be loaded"></img>
            </div>
            <div style = {styles.bodyContentContainer}>
              <h1 style = {{color:"white", fontWeight:"bold",alignSelf:"flex-start", fontSize:"70px"}}>Statistics</h1>
@@ -162,7 +162,7 @@ function Landing() {
              </a>
            </div>
            <div style = {styles.bodyContentContainer}>
-             <img width="300px" height ="300px" src={treatment} alt="Image could not be loaded"></img>
+             <img style={{width:"100%", aspectRatio:"1/1"}} width="300px" height ="300px" src={treatment} alt="Image could not be loaded"></img>
            </div>
          </div>
      </div>

@@ -40,6 +40,9 @@ const LocatorInstance = ({ google }) => {
                 "formatted_address",
                 "business_status",
                 "photos",
+                "opening_hours",
+                "rating",
+                "user_ratings_total",
               ],
             };
             service.findPlaceFromQuery(request, function (place, status) {
@@ -106,7 +109,11 @@ const LocatorInstance = ({ google }) => {
           </div>
           <Card.Text>Phone Number: {phonenumber}</Card.Text>
           <Card.Text>Website: {website}</Card.Text>
+          <Card.Text>Status: {placeDetails && placeDetails.length > 0 && placeDetails[0].business_status}</Card.Text>
+          <Card.Text>rating: {placeDetails && placeDetails.length > 0 && placeDetails[0].rating}</Card.Text>
+          <Card.Text>total ratings: {placeDetails && placeDetails.length > 0 && placeDetails[0].user_ratings_total}</Card.Text>
           <div>
+            <Card.Text>Images:</Card.Text>
             {placeDetails &&
             placeDetails.length > 0 &&
             placeDetails[0].photos ? (
