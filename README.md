@@ -10,13 +10,16 @@ Max Huang, Tommy Huynh, Kshitij Kapoor, Brendan Malone, Richie Wahidin
 https://www.stdhelp.site/
 
 # Gitlab SHA
-Phase 1: 52a34d32a02912d36a44299bd28c7b47ad658487
-Phase 2: 3803b866d6dbec5f043b4dd6738e81ed35beb9ac
-Phase 3: c00e08c1ed4ebe90401e08ea2c24c16f43d51572
+- Phase 1: 52a34d32a02912d36a44299bd28c7b47ad658487
+- Phase 2: 3803b866d6dbec5f043b4dd6738e81ed35beb9ac
+- Phase 3: c00e08c1ed4ebe90401e08ea2c24c16f43d51572
+- Phase 4: e04187046a7eae1714fb5dd70f7a35228852353e
 
 # Gitlab Pipeline URL
 - https://gitlab.com/tommyhuynh02n/cs373-group-20/-/pipelines/1227442723
 
+# PechaKucha YouTube Presentation:
+- https://www.youtube.com/watch?v=1h7cQmDc7wk
 
 # The proposed project:
 STD cases in California are relatively higher when compared to the rest of the country. There is a stigma against STD testing, so we want to raise
