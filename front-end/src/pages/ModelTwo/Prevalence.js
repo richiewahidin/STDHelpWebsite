@@ -53,6 +53,10 @@ const Prevalence = () => {
     acc[curr.id] = curr.name;
     return acc;
   }, {});
+  const countyMapPop = countyData.reduce((pcc, curr) => {
+    pcc[curr.id] = curr.population;
+    return pcc;
+  }, {});
 
   const searchData = data.filter((item) => {
     const countyName = countyMap[item.countyid]?.toLowerCase();
@@ -60,7 +64,13 @@ const Prevalence = () => {
     const sex = item.sex.toLowerCase();
     const male = "male";
     const searchWords = searchTerm.toLowerCase().split(" ");
-    const population = item.population;
+    const populationStringWithCommas = countyMapPop[item.countyid]; // This should be a string with commas.
+    const populationStringWithoutCommas = populationStringWithCommas.replace(
+      /,/g,
+      ""
+    );
+    const population = parseInt(populationStringWithoutCommas, 10);
+    console.log(population);
 
     return (
       searchWords.every(
@@ -147,7 +157,9 @@ const Prevalence = () => {
           onChange={handleSearchChange}
         />
       </Form.Group>
-      <div style={{ padding: 10, display: "flex", flexWrap: "wrap", gap: "5px" }}>
+      <div
+        style={{ padding: 10, display: "flex", flexWrap: "wrap", gap: "5px" }}
+      >
         <CustomDropdown
           title="Select Year"
           items={years}
