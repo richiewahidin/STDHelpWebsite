@@ -53,19 +53,22 @@ const styles = {
     fontWeight: "bold",
     color: "white",
   },
-
   paragraphContainer: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     paddingTop: "1rem",
     paddingBottom: "5rem",
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
     color: "white",
   },
   paragraph: {
     textAlign: "center",
     paddingLeft: "5rem",
     paddingRight: "5rem",
+    padding: '10px', // Example padding inside the paragraph
+    border: '2px solid white'
   },
   cardImageStyle: {
     width: "100%",
