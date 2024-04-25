@@ -1,3 +1,4 @@
+import { Form } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import LocatorCard from "../../components/LocatorCard";
 import Pagination from "@mui/material/Pagination";
@@ -105,13 +106,21 @@ const Locator = () => {
   return (
     <div className="container">
       <h1>Locator</h1>
-      <input
-        type="text"
-        placeholder="Search by name, address, or zip code..."
-        value={searchTerm}
-        onChange={handleSearchChange}
-        style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
-      />
+      <div>
+        <h5>
+          The locator model page displays various treatment centers located all
+          over the state of California. Each instance card provides an address,
+          phone number, and website of that specific treatment center.
+        </h5>
+      </div>
+      <Form.Group className="mb-3">
+        <Form.Control
+          type="text"
+          placeholder="Search by name, address, or zip code..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      </Form.Group>
       <div style={{ padding: 10 }}>
         <CustomDropdown
           title="Select County"
@@ -131,7 +140,7 @@ const Locator = () => {
       </div>
       <div className="grid">
         {currentItems.map((item, index) => (
-          <LocatorCard key={index} {...item} searchTerm={searchTerm}/>
+          <LocatorCard key={index} {...item} searchTerm={searchTerm} />
         ))}
       </div>
       <Pagination
